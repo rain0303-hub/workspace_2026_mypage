@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+.l-footer {
+    display: flex;
+    background-color: rgb(252, 237, 219);
+}
