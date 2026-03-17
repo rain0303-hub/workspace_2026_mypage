@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+@property --ring-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
 body {
     background-color: #f6f3ee;
 }
@@ -65,6 +71,79 @@ main {
     color: #6f6f6f;
     font-size: 1rem;
     line-height: 1.8;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 28px;
+    color: #6f6f6f;
+    text-decoration: none;
+}
+
+.project-link__label {
+    position: relative;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.project-link__label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background-color: #222222;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.25s ease;
+}
+
+.project-link__circle {
+    --ring-angle: 0deg;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: conic-gradient(
+        from -90deg,
+        #d63d34 0deg var(--ring-angle),
+        #c9c9c9 var(--ring-angle) 360deg
+    );
+    transition: --ring-angle 0.25s ease;
+}
+
+.project-link__circle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transform: scale(0.89);
+}
+
+.project-link__arrow {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.project-link:hover .project-link__label::after,
+.project-link:focus-visible .project-link__label::after {
+    transform: scaleX(1);
+}
+
+.project-link:hover .project-link__circle,
+.project-link:focus-visible .project-link__circle {
+    --ring-angle: 360deg;
 }
 
 .sub-area-02 {
@@ -149,6 +228,11 @@ main {
     .sub-area-02__text-box {
         margin-top: -32px;
         padding: 28px;
+    }
+
+    .project-link__circle {
+        width: 56px;
+        height: 56px;
     }
 
     .sub-area-01__text-box {
