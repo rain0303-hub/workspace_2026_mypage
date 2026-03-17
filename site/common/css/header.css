@@ -38,6 +38,20 @@
     transform: translateY(-100%);
 }
 
+.header-tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    padding-right: 40px;
+}
+
+.header-language {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 900px) {
     .l-header {
         justify-content: space-between;
@@ -47,6 +61,16 @@
 
     .header-logo {
         margin-left: 20px;
+    }
+
+    .header-tools {
+        gap: 8px;
+        padding-right: 16px;
+    }
+
+    .header-language {
+        display: flex;
+        align-items: center;
     }
 
     .l-header.is-menu-open {

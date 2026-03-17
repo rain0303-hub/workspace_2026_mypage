@@ -18,12 +18,6 @@
                 <img src="./common/images/id.svg" alt="header-logo">
             </a>
 
-            <button class="navi-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
-                <span class="navi-toggle__line"></span>
-                <span class="navi-toggle__line"></span>
-                <span class="navi-toggle__line"></span>
-            </button>
-
             <nav class="l-navi" id="site-navigation">
                 <div class="navi-btn-container">
                     <a class="navi-btn" href="#about">ABOUT</a>
@@ -32,6 +26,28 @@
                     <a class="navi-btn" href="#contact">CONTACT</a>
                 </div>
             </nav>
+
+            <div class="header-tools">
+                <div class="header-language">
+                    <div class="language-menu">
+                        <button class="navi-btn language-menu__toggle" type="button" aria-expanded="false" aria-controls="language-dropdown">
+                            <img class="language-menu__icon" src="./common/images/language.svg" alt="">
+                            LANGUAGE
+                        </button>
+                        <div class="language-menu__dropdown" id="language-dropdown">
+                            <button class="language-menu__option" type="button">中文</button>
+                            <button class="language-menu__option" type="button">日文</button>
+                            <button class="language-menu__option" type="button">英文</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="navi-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+                    <span class="navi-toggle__line"></span>
+                    <span class="navi-toggle__line"></span>
+                    <span class="navi-toggle__line"></span>
+                </button>
+            </div>
         </header>
 
         <main>

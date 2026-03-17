@@ -2,6 +2,8 @@ const contactCopyButtons = document.querySelectorAll(".contact-copy-btn");
 const header = document.querySelector(".l-header");
 const navToggle = document.querySelector(".navi-toggle");
 const navLinks = document.querySelectorAll(".navi-btn");
+const languageMenu = document.querySelector(".language-menu");
+const languageToggle = document.querySelector(".language-menu__toggle");
 let activeCopyState = null;
 let lastScrollY = window.scrollY;
 
@@ -73,10 +75,20 @@ if (header) {
 }
 
 if (header && navToggle) {
+    const closeLanguageMenu = () => {
+        if (!languageMenu || !languageToggle) {
+            return;
+        }
+
+        languageMenu.classList.remove("is-open");
+        languageToggle.setAttribute("aria-expanded", "false");
+    };
+
     const closeMenu = () => {
         header.classList.remove("is-menu-open");
         navToggle.setAttribute("aria-expanded", "false");
         navToggle.setAttribute("aria-label", "Open navigation");
+        closeLanguageMenu();
     };
 
     navToggle.addEventListener("click", () => {
@@ -86,6 +98,10 @@ if (header && navToggle) {
     });
 
     navLinks.forEach((link) => {
+        if (link === languageToggle) {
+            return;
+        }
+
         link.addEventListener("click", closeMenu);
     });
 
@@ -94,4 +110,18 @@ if (header && navToggle) {
             closeMenu();
         }
     });
+
+    if (languageMenu && languageToggle) {
+        languageToggle.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const isOpen = languageMenu.classList.toggle("is-open");
+            languageToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!languageMenu.contains(event.target)) {
+                closeLanguageMenu();
+            }
+        });
+    }
 }
