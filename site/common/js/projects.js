@@ -1,21 +1,21 @@
 const projectTabContent = {
     web: {
-        panelLabel: "Web projects",
-        eyebrow: "PROJECT FOLDER",
-        title: "Web Projects",
-        text: "This tab can hold website projects, landing pages, and frontend redesign work."
+        panelLabel: "Citizen projects",
+        eyebrow: "Citizen",
+        title: "Convenient Navigation",
+        text: "A simple preview area for public-service style projects. We can place cards, screenshots, and detail blocks here next."
     },
     app: {
-        panelLabel: "App projects",
-        eyebrow: "APP FOLDER",
-        title: "App Projects",
-        text: "This tab fits mobile apps, admin dashboards, and product interface case studies."
+        panelLabel: "Child care projects",
+        eyebrow: "Child Care",
+        title: "Support For Families",
+        text: "This area can present child-care, family support, or reservation related projects in a clean and structured way."
     },
     other: {
-        panelLabel: "Other projects",
-        eyebrow: "ARCHIVE FOLDER",
-        title: "Other Projects",
-        text: "This tab can cover scripts, automation, AI agent work, and experimental side projects."
+        panelLabel: "Senior citizen projects",
+        eyebrow: "Senior Citizen",
+        title: "Accessible Information",
+        text: "This area can present services for seniors, guidance systems, and accessibility-oriented project work."
     }
 };
 
