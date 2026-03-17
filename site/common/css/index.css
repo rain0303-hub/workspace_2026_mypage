@@ -14,6 +14,14 @@ main {
     padding-top: 80px;
 }
 
+.main-shell {
+    width: 100%;
+}
+
+.section-shell {
+    width: 100%;
+}
+
 .main-img{
     display: flex;
     background-color: rgb(201, 219, 204);
