@@ -4,6 +4,10 @@ body {
     background-color: #f6f3ee;
 }
 
+main {
+    padding-top: 80px;
+}
+
 .main-img{
     display: flex;
     background-color: rgb(201, 219, 204);
@@ -46,6 +50,7 @@ body {
     background-color: #ffffff;
     box-sizing: border-box;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .sub-area-01__title {
@@ -81,6 +86,13 @@ body {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 1;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sub-area-01__text-box:hover,
+.sub-area-02__text-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.12);
 }
 
 .sub-area-02__img {
