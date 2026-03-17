@@ -16,6 +16,7 @@ body {
     max-width: 1000px;
     margin: 80px auto;
     padding: 0 24px;
+    scroll-margin-top: 110px;
 }
 
 .sub-area-01__img {
@@ -62,6 +63,7 @@ body {
     max-width: 1000px;
     margin: 80px auto;
     padding: 0 24px;
+    scroll-margin-top: 110px;
 }
 
 .sub-area-02__text-box {
