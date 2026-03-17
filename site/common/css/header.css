@@ -6,7 +6,7 @@ body {
 
 .l-header {
     display: flex;
-    background-color: rgb(116, 116, 116);
+    background-color: #F5F5F7;
     height: 80px;
     align-items: center;
     gap: 48px; /* 子级div间隔 */
@@ -17,7 +17,7 @@ body {
 }
 .navi-btn {
     text-decoration: none; /* 去掉a标签下划线8 */
-    color: aliceblue;
+    color: #111111;
     font-size: 1rem;
     font-weight: 450;  /* 字体粗细 */
     font-family: "Inter Tight", sans-serif; 
