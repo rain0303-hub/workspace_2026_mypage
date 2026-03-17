@@ -1,5 +1,7 @@
 const contactCopyButtons = document.querySelectorAll(".contact-copy-btn");
+const header = document.querySelector(".l-header");
 let activeCopyState = null;
+let lastScrollY = window.scrollY;
 
 const resetCopyState = (state) => {
     if (!state) {
@@ -46,3 +48,24 @@ contactCopyButtons.forEach((button) => {
         }
     });
 });
+
+if (header) {
+    window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+        const scrollDelta = currentScrollY - lastScrollY;
+
+        if (currentScrollY <= 0) {
+            header.classList.remove("is-hidden");
+            lastScrollY = currentScrollY;
+            return;
+        }
+
+        if (scrollDelta > 6) {
+            header.classList.add("is-hidden");
+        } else if (scrollDelta < -6) {
+            header.classList.remove("is-hidden");
+        }
+
+        lastScrollY = currentScrollY;
+    });
+}
