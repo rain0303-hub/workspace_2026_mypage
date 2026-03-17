@@ -68,10 +68,14 @@ main {
 }
 
 .sub-area-01__text {
-    margin: 0;
+    margin: 1em 0 0;
     color: #6f6f6f;
     font-size: 1rem;
     line-height: 1.8;
+}
+
+.indent {
+    text-indent: 1em;
 }
 
 .project-link {
