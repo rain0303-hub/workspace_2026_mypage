@@ -287,6 +287,12 @@ main {
     height: 35px;
 }
 
+.contact-copy-btn:hover .contact-copy-icon:not(.contact-copy-icon--checked),
+.contact-copy-btn:focus-visible .contact-copy-icon:not(.contact-copy-icon--checked) {
+    width: 30px;
+    height: 30px;
+}
+
 @media (max-width: 900px) {
     .sub-area-01,
     .sub-area-02 {
