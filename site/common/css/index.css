@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 0;
 }
 
 .main-shell {
@@ -306,10 +306,6 @@ main {
 }
 
 @media (max-width: 900px) {
-    main {
-        padding-top: 72px;
-    }
-
     .sub-area-01,
     .sub-area-02 {
         flex-direction: column;
