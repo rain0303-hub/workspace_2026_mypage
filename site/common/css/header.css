@@ -4,6 +4,13 @@ body {
     margin: 0;
 }
 
+.header-logo{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+}
 .l-header {
     display: flex;
     background-color: #F5F5F7;
@@ -22,44 +29,4 @@ body {
     font-weight: 450;  /* 字体粗细 */
     font-family: "Inter Tight", sans-serif; 
 
-}
-
-.main-slider-container {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    height: 70vh;
-}
-.main-slider-up-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 24px;
-    flex: 9;
-}
-.slider-btn {
-    display: flex;
-    justify-content: center;
-    flex: 1.5;
-}
-.main-slider-center-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 36px;
-    flex: 7;
-}
-.slider-text {
-    margin-right: auto;
-}
-.slider-image {
-    margin-right: auto;
-}
-
-.main-slider-down-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
 }
