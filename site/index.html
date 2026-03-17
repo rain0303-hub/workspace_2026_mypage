@@ -2,6 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>hero</title>
         <link rel="stylesheet" href="./common/css/index.css">
         <link rel="stylesheet" href="./common/css/header.css">
@@ -17,7 +18,13 @@
                 <img src="./common/images/id.svg" alt="header-logo">
             </a>
 
-            <nav class="l-navi">
+            <button class="navi-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+                <span class="navi-toggle__line"></span>
+                <span class="navi-toggle__line"></span>
+                <span class="navi-toggle__line"></span>
+            </button>
+
+            <nav class="l-navi" id="site-navigation">
                 <div class="navi-btn-container">
                     <a class="navi-btn" href="#about">ABOUT</a>
                     <a class="navi-btn" href="#skill">SKILL</a>

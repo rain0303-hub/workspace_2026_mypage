@@ -306,10 +306,15 @@ main {
 }
 
 @media (max-width: 900px) {
+    main {
+        padding-top: 72px;
+    }
+
     .sub-area-01,
     .sub-area-02 {
         flex-direction: column;
         margin: 56px auto;
+        padding: 0 20px;
     }
 
     .sub-area-01__img,
@@ -321,6 +326,16 @@ main {
 
     .sub-area-01__img,
     .sub-area-02__img {
+        order: 1;
+    }
+
+    .sub-area-01__text-box,
+    .sub-area-02__text-box {
+        order: 2;
+    }
+
+    .sub-area-01__img,
+    .sub-area-02__img {
         min-height: 280px;
     }
 
@@ -328,6 +343,13 @@ main {
     .sub-area-02__text-box {
         margin-top: -32px;
         padding: 28px;
+        border-radius: 0;
+    }
+
+    .sub-area-01__text-box:hover,
+    .sub-area-02__text-box:hover {
+        transform: none;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     }
 
     .project-link__circle {

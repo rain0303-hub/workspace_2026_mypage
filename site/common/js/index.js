@@ -1,5 +1,7 @@
 const contactCopyButtons = document.querySelectorAll(".contact-copy-btn");
 const header = document.querySelector(".l-header");
+const navToggle = document.querySelector(".navi-toggle");
+const navLinks = document.querySelectorAll(".navi-btn");
 let activeCopyState = null;
 let lastScrollY = window.scrollY;
 
@@ -67,5 +69,29 @@ if (header) {
         }
 
         lastScrollY = currentScrollY;
+    });
+}
+
+if (header && navToggle) {
+    const closeMenu = () => {
+        header.classList.remove("is-menu-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Open navigation");
+    };
+
+    navToggle.addEventListener("click", () => {
+        const isOpen = header.classList.toggle("is-menu-open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    });
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+            closeMenu();
+        }
     });
 }

@@ -28,7 +28,10 @@ body {
     width: 100%;
     z-index: 1000;
     display: flex;
-    background-color: #F5F5F7;
+    background: rgba(245, 245, 247, 0.62);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 10px 30px rgba(41, 45, 50, 0.08);
+    backdrop-filter: blur(18px) saturate(140%);
     height: 80px;
     align-items: center;
     gap: 48px;
@@ -39,9 +42,44 @@ body {
     transform: translateY(-100%);
 }
 
+.navi-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    cursor: pointer;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.navi-toggle__line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #111111;
+    border-radius: 999px;
+    transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
 .navi-btn-container {
     display: flex;
     gap: 36px;
+    padding: 12px 22px;
+    border: 1px solid rgba(17, 17, 17, 0.06);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.42);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(14px) saturate(140%);
 }
 
 .navi-btn {
@@ -50,4 +88,58 @@ body {
     font-size: 1rem;
     font-weight: 450;
     font-family: "Inter Tight", sans-serif;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.navi-btn:hover,
+.navi-btn:focus-visible {
+    color: #000000;
+    opacity: 0.72;
+}
+
+@media (max-width: 900px) {
+    .l-header {
+        justify-content: space-between;
+        gap: 16px;
+        height: 72px;
+    }
+
+    .navi-btn-container {
+        padding: 14px;
+        border-radius: 24px;
+    }
+
+    .header-logo {
+        margin-left: 20px;
+    }
+
+    .navi-toggle {
+        display: inline-flex;
+    }
+
+    .navi-toggle:hover,
+    .navi-toggle:focus-visible {
+        opacity: 0.68;
+        transform: translateY(-1px);
+    }
+
+    .l-header.is-menu-open {
+        transform: translateY(0);
+    }
+
+    .l-header.is-menu-open .navi-toggle {
+        opacity: 1;
+    }
+
+    .l-header.is-menu-open .navi-toggle__line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .l-header.is-menu-open .navi-toggle__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .l-header.is-menu-open .navi-toggle__line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
 }
