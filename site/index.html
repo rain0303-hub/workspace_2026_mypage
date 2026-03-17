@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./common/css/navi.css">
         <link rel="stylesheet" href="./common/css/footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+        <script src="./common/js/index.js" defer></script>
     </head>
 
     <body>
@@ -50,10 +51,24 @@
             <section class="sub-area-02" id="skill">
                 <div class="sub-area-02__text-box">
                     <h2 class="sub-area-02__title">スキル</h2>
-                    <p class="sub-area-02__text">・フロントエンド: HTML / CSS / JavaScript / React / Vue</p>
-                    <p class="sub-area-02__text">・バックエンド: Java / Servlet / MyBatis / Spring / SpringBoot / SpringBatch</p>
-                    <p class="sub-area-02__text">・クラウド: AWS</p>
-                    <p class="sub-area-02__text">・その他: Shell / VBA</p>
+                    <ul class="skill-list">
+                        <li class="skill-list__item">
+                            <span class="skill-list__label">フロントエンド</span>
+                            <span class="skill-list__value">HTML / CSS / JavaScript / React / Vue</span>
+                        </li>
+                        <li class="skill-list__item">
+                            <span class="skill-list__label">バックエンド</span>
+                            <span class="skill-list__value">Java / Servlet / MyBatis / Spring / SpringBoot / SpringBatch</span>
+                        </li>
+                        <li class="skill-list__item">
+                            <span class="skill-list__label">クラウド</span>
+                            <span class="skill-list__value">AWS</span>
+                        </li>
+                        <li class="skill-list__item">
+                            <span class="skill-list__label">その他</span>
+                            <span class="skill-list__value">Shell / VBA</span>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="sub-area-02__img">
@@ -86,8 +101,20 @@
                     <h2 class="sub-area-02__title">Contact</h2>
                     <p class="sub-area-02__text">ご覧いただきありがとうございます。</p>
                     <p class="sub-area-02__text">お仕事のご相談などございましたら、お気軽にご連絡ください。</p>
-                    <p class="sub-area-02__text">Email: ...@icloud.com</p>
-                    <p class="sub-area-02__text">GitHub: https://github.com/...</p>
+                    <p class="sub-area-02__text contact-copy-row">
+                        <span class="contact-copy-label">Email:</span>
+                        <span class="contact-copy-value">...@icloud.com</span>
+                        <button class="contact-copy-btn" type="button" aria-label="Copy email">
+                            <img class="contact-copy-icon" src="./common/images/copy.svg" alt="">
+                        </button>
+                    </p>
+                    <p class="sub-area-02__text contact-copy-row">
+                        <span class="contact-copy-label">GitHub:</span>
+                        <span class="contact-copy-value">https://github.com/...</span>
+                        <button class="contact-copy-btn" type="button" aria-label="Copy GitHub link">
+                            <img class="contact-copy-icon" src="./common/images/copy.svg" alt="">
+                        </button>
+                    </p>
                 </div>
 
                 <div class="sub-area-02__img">

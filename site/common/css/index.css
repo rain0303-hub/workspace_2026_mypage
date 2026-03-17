@@ -54,6 +54,7 @@ main {
     margin-left: -60px;
     padding: 40px;
     background-color: #ffffff;
+    border-radius: 6px;
     box-sizing: border-box;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -161,6 +162,7 @@ main {
     margin-right: -60px;
     padding: 40px;
     background-color: #ffffff;
+    border-radius: 6px;
     box-sizing: border-box;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     position: relative;
@@ -168,10 +170,14 @@ main {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+#skill .sub-area-02__text-box {
+    padding: 24px 40px;
+}
+
 .sub-area-01__text-box:hover,
 .sub-area-02__text-box:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 24px 52px rgba(0, 0, 0, 0.16);
 }
 
 .sub-area-02__img {
@@ -198,11 +204,87 @@ main {
     color: #222222;
 }
 
+.skill-list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skill-list__item {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    align-items: start;
+    gap: 16px;
+    padding-bottom: 0;
+    padding-top: 10px;
+    border-top: 1px solid rgba(34, 34, 34, 0.08);
+}
+
+.skill-list__item:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+.skill-list__label {
+    color: #222222;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.skill-list__value {
+    color: #6f6f6f;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
 .sub-area-02__text {
     margin: 0;
     color: #6f6f6f;
     font-size: 1rem;
     line-height: 1.8;
+}
+
+.contact-copy-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.contact-copy-label {
+    flex: 0 0 auto;
+}
+
+.contact-copy-value {
+    word-break: break-all;
+}
+
+.contact-copy-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.contact-copy-icon {
+    width: 25px;
+    height: 25px;
+    flex: 0 0 auto;
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+.contact-copy-icon--checked {
+    width: 35px;
+    height: 35px;
 }
 
 @media (max-width: 900px) {
@@ -233,6 +315,11 @@ main {
     .project-link__circle {
         width: 56px;
         height: 56px;
+    }
+
+    .skill-list__item {
+        grid-template-columns: 1fr;
+        gap: 6px;
     }
 
     .sub-area-01__text-box {
