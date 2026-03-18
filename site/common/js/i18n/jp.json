@@ -12,7 +12,7 @@
     },
     "nav": {
         "about": "ABOUT",
-        "skill": "SKILL",
+        "skill": "STACK",
         "works": "WORKS",
         "contact": "CONTACT"
     },
@@ -23,7 +23,7 @@
             "body_2": "チーム開発では、安定した実装と継続的な改善を大切にしています。"
         },
         "skill": {
-            "title": "スキル",
+            "title": "技術スタック",
             "frontend_label": "フロントエンド",
             "backend_label": "バックエンド",
             "cloud_label": "クラウド",
