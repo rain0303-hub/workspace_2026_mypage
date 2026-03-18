@@ -291,6 +291,78 @@
     }
 }
 
+@media (max-width: 932px) and (max-height: 540px) and (orientation: landscape) {
+    .main-img {
+        height: 320px;
+    }
+
+    .main-img img {
+        object-position: center center;
+    }
+
+    .sub-area-01,
+    .sub-area-02 {
+        max-width: 880px;
+        margin: 44px auto;
+        padding: 0 18px;
+    }
+
+    .sub-area-01__img,
+    .sub-area-02__img {
+        min-height: 260px;
+    }
+
+    .sub-area-01__text-box,
+    .sub-area-02__text-box {
+        min-height: 220px;
+        padding: 24px;
+    }
+
+    #skill .sub-area-02__text-box {
+        padding: 20px 24px;
+    }
+
+    .sub-area-01__text-box {
+        margin-left: -32px;
+    }
+
+    .sub-area-02__text-box {
+        margin-right: -32px;
+    }
+
+    .sub-area-01__title,
+    .sub-area-02__title {
+        margin-bottom: 14px;
+        font-size: 1.7rem;
+    }
+
+    .sub-area-01__text,
+    .sub-area-02__text,
+    .skill-list__value {
+        font-size: 0.92rem;
+        line-height: 1.6;
+    }
+
+    .skill-list {
+        gap: 8px;
+    }
+
+    .skill-list__item {
+        grid-template-columns: 108px 1fr;
+        gap: 12px;
+        padding-top: 8px;
+    }
+
+    .project-link {
+        gap: 14px;
+        margin-top: 20px;
+    }
+
+    .project-link__label {
+        font-size: 0.92rem;
+    }
+}
+
 @media (max-width: 575px) {
     .main-img {
         height: 389px;

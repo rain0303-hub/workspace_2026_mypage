@@ -159,7 +159,7 @@
     transform: translateX(4px);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
     .navi-toggle {
         display: inline-flex;
     }
@@ -304,5 +304,46 @@
 
     .l-header.is-menu-open .navi-toggle__line:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 932px) and (max-height: 540px) and (orientation: landscape) {
+    .navi-btn-container {
+        gap: 16px;
+    }
+
+    .navi-btn {
+        padding: 10px 12px;
+        font-size: 0.76rem;
+        letter-spacing: 0.08em;
+    }
+
+    .navi-btn::after {
+        left: 12px;
+        right: 12px;
+        bottom: 6px;
+    }
+
+    .language-menu__toggle {
+        gap: 6px;
+        padding: 10px 12px;
+    }
+
+    .language-menu__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .language-menu__dropdown {
+        top: calc(100% + 8px);
+        min-width: 124px;
+        padding: 8px;
+        border-radius: 16px;
+    }
+
+    .language-menu__option {
+        padding: 10px 12px;
+        border-radius: 12px;
+        font-size: 0.76rem;
     }
 }
