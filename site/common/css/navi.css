@@ -226,9 +226,7 @@
     }
 
     .navi-btn::after {
-        left: 18px;
-        right: 18px;
-        bottom: 14px;
+        display: none;
     }
 
     .navi-btn:hover,
