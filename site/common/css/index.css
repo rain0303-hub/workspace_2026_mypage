@@ -323,7 +323,7 @@ main {
     height: 30px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 767px) {
     .main-img {
         height: 389px;
     }

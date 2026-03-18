@@ -249,7 +249,7 @@ main {
     line-height: 1.8;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 767px) {
     body {
         grid-template-rows: 72px 1fr auto;
     }
