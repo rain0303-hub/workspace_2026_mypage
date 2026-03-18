@@ -68,6 +68,36 @@ const initHeaderScroll = () => {
     }
 
     let lastScrollY = window.scrollY;
+    let hasEnteredHeaderAfterReveal = false;
+    const updateHeaderVisibilityOnPointerMove = (event) => {
+        if (window.innerWidth <= 767) {
+            return;
+        }
+
+        if (window.scrollY <= 0) {
+            header.classList.remove("is-hidden");
+            return;
+        }
+
+        if (event.clientY <= 40) {
+            header.classList.remove("is-hidden");
+            return;
+        }
+
+        if (header.contains(event.target)) {
+            hasEnteredHeaderAfterReveal = true;
+            return;
+        }
+
+        if (header.classList.contains("is-menu-open") || languageMenu?.classList.contains("is-open")) {
+            return;
+        }
+
+        if (hasEnteredHeaderAfterReveal) {
+            header.classList.add("is-hidden");
+            hasEnteredHeaderAfterReveal = false;
+        }
+    };
 
     window.addEventListener("scroll", () => {
         const currentScrollY = window.scrollY;
@@ -75,18 +105,23 @@ const initHeaderScroll = () => {
 
         if (currentScrollY <= 0) {
             header.classList.remove("is-hidden");
+            hasEnteredHeaderAfterReveal = false;
             lastScrollY = currentScrollY;
             return;
         }
 
         if (scrollDelta > 6) {
             header.classList.add("is-hidden");
+            hasEnteredHeaderAfterReveal = false;
         } else if (scrollDelta < -6) {
             header.classList.remove("is-hidden");
+            hasEnteredHeaderAfterReveal = false;
         }
 
         lastScrollY = currentScrollY;
     });
+
+    window.addEventListener("mousemove", updateHeaderVisibilityOnPointerMove);
 };
 
 const initNavigation = () => {
