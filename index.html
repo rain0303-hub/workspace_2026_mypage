@@ -4,20 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title data-i18n="meta.home_title">Hong XL</title>
-        <link rel="stylesheet" href="./common/css/base.css">
-        <link rel="stylesheet" href="./common/css/index.css">
-        <link rel="stylesheet" href="./common/css/header.css">
-        <link rel="stylesheet" href="./common/css/navi.css">
-        <link rel="stylesheet" href="./common/css/footer.css">
+        <link rel="stylesheet" href="./site/common/css/base.css">
+        <link rel="stylesheet" href="./site/common/css/index.css">
+        <link rel="stylesheet" href="./site/common/css/header.css">
+        <link rel="stylesheet" href="./site/common/css/navi.css">
+        <link rel="stylesheet" href="./site/common/css/footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
-        <script src="./common/js/main.js" defer></script>
-        <script src="./common/js/index.js" defer></script>
+        <script src="./site/common/js/main.js" defer></script>
+        <script src="./site/common/js/index.js" defer></script>
     </head>
 
     <body data-page="home">
         <header class="l-header">
             <a class="header-logo" href="./index.html" aria-label="Back to top" data-i18n-aria-label="common.back_to_top">
-                <img src="./common/images/id.svg" alt="header-logo">
+                <img src="./site/common/images/id.svg" alt="header-logo">
             </a>
 
             <nav class="l-navi" id="site-navigation">
@@ -38,7 +38,7 @@
                             aria-expanded="false"
                             aria-controls="language-dropdown"
                         >
-                            <img class="language-menu__icon" src="./common/images/language.svg" alt="">
+                            <img class="language-menu__icon" src="./site/common/images/language.svg" alt="">
                             <span data-i18n="common.language">LANGUAGE</span>
                         </button>
                         <div class="language-menu__dropdown" id="language-dropdown">
@@ -67,15 +67,15 @@
         <main>
             <div class="main-img">
                 <picture>
-                    <source media="(max-width: 575px)" srcset="./common/images/bana02.jpg">
-                    <img src="./common/images/bana01.jpg" alt="">
+                    <source media="(max-width: 575px)" srcset="./site/common/images/bana02.jpg">
+                    <img src="./site/common/images/bana01.jpg" alt="">
                 </picture>
             </div>
 
             <div class="main-shell">
                 <section class="sub-area-01" id="about">
                     <div class="sub-area-01__img">
-                        <img src="./common/images/img01-02.jpg" alt="about visual">
+                        <img src="./site/common/images/img01-02.jpg" alt="about visual">
                     </div>
 
                     <div class="sub-area-01__text-box">
@@ -113,13 +113,13 @@
                     </div>
 
                     <div class="sub-area-02__img">
-                        <img src="./common/images/img02.jpg" alt="skill visual">
+                        <img src="./site/common/images/img02.jpg" alt="skill visual">
                     </div>
                 </section>
 
                 <section class="sub-area-01" id="works">
                     <div class="sub-area-01__img">
-                        <img src="./common/images/img03-02.jpg" alt="project visual">
+                        <img src="./site/common/images/img03-02.jpg" alt="project visual">
                     </div>
 
                     <div class="sub-area-01__text-box">
@@ -127,10 +127,10 @@
                         <p class="sub-area-01__text indent" data-i18n="home.works.body">
                             金融、公共、自動車、医療、子育て支援など、幅広い分野で要件整理から実装まで担当してきました。
                         </p>
-                        <a class="project-link" href="./#">
+                        <a class="project-link" href="./site/projects.html">
                             <span class="project-link__label" data-i18n="home.works.link">プロジェクト詳細を見る</span>
                             <span class="project-link__circle" aria-hidden="true">
-                                <img class="project-link__arrow" src="./common/images/arrow-next.svg" alt="">
+                                <img class="project-link__arrow" src="./site/common/images/arrow-next.svg" alt="">
                             </span>
                         </a>
                     </div>
@@ -145,20 +145,20 @@
                             <span class="contact-copy-label">Email:</span>
                             <span class="contact-copy-value">...@icloud.com</span>
                             <button class="contact-copy-btn" type="button" aria-label="Copy email" data-i18n-aria-label="home.contact.copy_email">
-                                <img class="contact-copy-icon" src="./common/images/copy.svg" alt="">
+                                <img class="contact-copy-icon" src="./site/common/images/copy.svg" alt="">
                             </button>
                         </p>
                         <p class="sub-area-02__text contact-copy-row">
                             <span class="contact-copy-label">GitHub:</span>
                             <span class="contact-copy-value">https://github.com/...</span>
                             <button class="contact-copy-btn" type="button" aria-label="Copy GitHub link" data-i18n-aria-label="home.contact.copy_github">
-                                <img class="contact-copy-icon" src="./common/images/copy.svg" alt="">
+                                <img class="contact-copy-icon" src="./site/common/images/copy.svg" alt="">
                             </button>
                         </p>
                     </div>
 
                     <div class="sub-area-02__img">
-                        <img src="./common/images/img04.jpg" alt="contact visual">
+                        <img src="./site/common/images/img04.jpg" alt="contact visual">
                     </div>
                 </section>
             </div>
@@ -169,7 +169,7 @@
                 <p class="l-footer__brand">HONG XL</p>
                 <nav class="l-footer__nav" aria-label="Footer" data-i18n-aria-label="common.footer">
                     <a class="l-footer__link" href="#about" data-i18n="nav.about">ABOUT</a>
-                    <a class="l-footer__link" href="#skill" data-i18n="nav.skill">SKILL</a>
+                    <a class="l-footer__link" href="#skill" data-i18n="nav.skill">STACK</a>
                     <a class="l-footer__link" href="#works" data-i18n="nav.works">WORKS</a>
                     <a class="l-footer__link" href="#contact" data-i18n="nav.contact">CONTACT</a>
                 </nav>

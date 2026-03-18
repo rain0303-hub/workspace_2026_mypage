@@ -3,6 +3,13 @@ const navToggle = document.querySelector(".navi-toggle");
 const navLinks = document.querySelectorAll(".navi-btn");
 const languageMenu = document.querySelector(".language-menu");
 const languageToggle = document.querySelector(".language-menu__toggle");
+const indexScript =
+    document.currentScript ??
+    document.querySelector('script[src$="/common/js/index.js"]') ??
+    document.querySelector('script[src$="common/js/index.js"]');
+const resolveIndexAssetUrl = (path) => new URL(path, indexScript?.src ?? window.location.href).toString();
+const copyIconUrl = resolveIndexAssetUrl("../images/copy.svg");
+const checkIconUrl = resolveIndexAssetUrl("../images/check.svg");
 
 const getMessage = (key, fallback) => window.siteI18n?.t(key) ?? fallback;
 
@@ -21,7 +28,7 @@ const initCopyButtons = () => {
         }
 
         window.clearTimeout(state.timeoutId);
-        state.icon.src = "./common/images/copy.svg";
+        state.icon.src = copyIconUrl;
         state.icon.classList.remove("contact-copy-icon--checked");
         delete state.button.dataset.copied;
 
@@ -46,7 +53,7 @@ const initCopyButtons = () => {
                 }
 
                 await navigator.clipboard.writeText(value);
-                icon.src = "./common/images/check.svg";
+                icon.src = checkIconUrl;
                 icon.classList.add("contact-copy-icon--checked");
                 button.dataset.copied = "true";
 

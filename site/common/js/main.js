@@ -1,8 +1,13 @@
 const I18N_STORAGE_KEY = "site-language";
+const mainScript =
+    document.currentScript ??
+    document.querySelector('script[src$="/common/js/main.js"]') ??
+    document.querySelector('script[src$="common/js/main.js"]');
+const resolveMainAssetUrl = (path) => new URL(path, mainScript?.src ?? window.location.href).toString();
 const I18N_FILE_MAP = {
-    jp: "./common/js/i18n/jp.json",
-    en: "./common/js/i18n/en.json",
-    zh: "./common/js/i18n/zh.json"
+    jp: resolveMainAssetUrl("./i18n/jp.json"),
+    en: resolveMainAssetUrl("./i18n/en.json"),
+    zh: resolveMainAssetUrl("./i18n/zh.json")
 };
 
 const i18nState = {
