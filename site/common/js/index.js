@@ -84,14 +84,22 @@ if (header && navToggle) {
         languageToggle.setAttribute("aria-expanded", "false");
     };
 
-    const closeMenu = () => {
+    const closeNavigationMenu = () => {
         header.classList.remove("is-menu-open");
         navToggle.setAttribute("aria-expanded", "false");
         navToggle.setAttribute("aria-label", "Open navigation");
+    };
+
+    const closeMenu = () => {
+        closeNavigationMenu();
         closeLanguageMenu();
     };
 
     navToggle.addEventListener("click", () => {
+        if (!header.classList.contains("is-menu-open")) {
+            closeLanguageMenu();
+        }
+
         const isOpen = header.classList.toggle("is-menu-open");
         navToggle.setAttribute("aria-expanded", String(isOpen));
         navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
@@ -114,6 +122,10 @@ if (header && navToggle) {
     if (languageMenu && languageToggle) {
         languageToggle.addEventListener("click", (event) => {
             event.stopPropagation();
+            if (!languageMenu.classList.contains("is-open")) {
+                closeNavigationMenu();
+            }
+
             const isOpen = languageMenu.classList.toggle("is-open");
             languageToggle.setAttribute("aria-expanded", String(isOpen));
         });
