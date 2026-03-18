@@ -1,0 +1,75 @@
+{
+    "meta": {
+        "home_title": "Hong XL",
+        "projects_title": "Projects"
+    },
+    "common": {
+        "back_to_top": "返回顶部",
+        "language": "LANGUAGE",
+        "open_navigation": "打开导航",
+        "close_navigation": "关闭导航",
+        "footer": "页脚"
+    },
+    "nav": {
+        "about": "ABOUT",
+        "skill": "SKILL",
+        "works": "WORKS",
+        "contact": "CONTACT"
+    },
+    "home": {
+        "about": {
+            "title": "我是 HONG XL",
+            "body_1": "我目前在日本从事 IT 工程师工作，主要参与 Web 开发，能够同时处理前端到后端的工作。",
+            "body_2": "在团队开发现场，我重视稳定的实现方式和持续改进。"
+        },
+        "skill": {
+            "title": "技能",
+            "frontend_label": "前端",
+            "backend_label": "后端",
+            "cloud_label": "云",
+            "other_label": "其他"
+        },
+        "works": {
+            "title": "项目经历",
+            "body": "我参与过金融、公共服务、汽车、医疗、育儿支援等多个领域的项目，负责过从需求整理到实现的全过程。",
+            "link": "查看项目详情"
+        },
+        "contact": {
+            "title": "联系我",
+            "body_1": "感谢你的访问。",
+            "body_2": "如果你想咨询合作或工作机会，欢迎随时联系我。",
+            "copy_email": "复制邮箱",
+            "copy_github": "复制 GitHub 链接"
+        }
+    },
+    "projects": {
+        "tabs_label": "项目标签",
+        "categories_label": "项目分类",
+        "empty": "No...",
+        "tabs": {
+            "web": "公共",
+            "app": "育儿",
+            "other": "长者"
+        },
+        "content": {
+            "web": {
+                "panelLabel": "公共服务项目",
+                "eyebrow": "公共服务",
+                "title": "便捷导航",
+                "text": "这是一个用于展示公共服务类项目的预览区域，后续可以在这里放卡片、截图和详细说明。"
+            },
+            "app": {
+                "panelLabel": "育儿相关项目",
+                "eyebrow": "育儿支援",
+                "title": "家庭支持",
+                "text": "这里可以用清晰的结构展示育儿支援、家庭服务或预约相关的项目内容。"
+            },
+            "other": {
+                "panelLabel": "高龄者相关项目",
+                "eyebrow": "高龄者支援",
+                "title": "更易理解的信息设计",
+                "text": "这里可以展示面向高龄者的服务、引导系统，以及强调无障碍体验的项目内容。"
+            }
+        }
+    }
+}

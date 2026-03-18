@@ -1,0 +1,75 @@
+{
+    "meta": {
+        "home_title": "Hong XL",
+        "projects_title": "Projects"
+    },
+    "common": {
+        "back_to_top": "Back to top",
+        "language": "LANGUAGE",
+        "open_navigation": "Open navigation",
+        "close_navigation": "Close navigation",
+        "footer": "Footer"
+    },
+    "nav": {
+        "about": "ABOUT",
+        "skill": "SKILL",
+        "works": "WORKS",
+        "contact": "CONTACT"
+    },
+    "home": {
+        "about": {
+            "title": "HONG XL",
+            "body_1": "I work as an IT engineer in Japan and focus on web development from frontend to backend.",
+            "body_2": "In team projects, I value stable implementation and continuous improvement."
+        },
+        "skill": {
+            "title": "Skills",
+            "frontend_label": "Frontend",
+            "backend_label": "Backend",
+            "cloud_label": "Cloud",
+            "other_label": "Other"
+        },
+        "works": {
+            "title": "Projects",
+            "body": "I have worked across finance, public services, automotive, healthcare, and childcare support, covering everything from requirement definition to implementation.",
+            "link": "View project details"
+        },
+        "contact": {
+            "title": "Contact",
+            "body_1": "Thank you for visiting.",
+            "body_2": "If you would like to discuss work opportunities, please feel free to contact me.",
+            "copy_email": "Copy email",
+            "copy_github": "Copy GitHub link"
+        }
+    },
+    "projects": {
+        "tabs_label": "Projects tabs",
+        "categories_label": "Project categories",
+        "empty": "No...",
+        "tabs": {
+            "web": "Public",
+            "app": "Childcare",
+            "other": "Senior"
+        },
+        "content": {
+            "web": {
+                "panelLabel": "Public service projects",
+                "eyebrow": "Public Service",
+                "title": "Convenient Navigation",
+                "text": "A simple preview area for public-service style projects. We can place cards, screenshots, and detail blocks here next."
+            },
+            "app": {
+                "panelLabel": "Child care projects",
+                "eyebrow": "Child Care",
+                "title": "Support For Families",
+                "text": "This area can present child-care, family support, or reservation related projects in a clean and structured way."
+            },
+            "other": {
+                "panelLabel": "Senior citizen projects",
+                "eyebrow": "Senior Citizen",
+                "title": "Accessible Information",
+                "text": "This area can present services for seniors, guidance systems, and accessibility-oriented project work."
+            }
+        }
+    }
+}

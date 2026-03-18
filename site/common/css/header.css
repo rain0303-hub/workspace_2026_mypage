@@ -14,7 +14,7 @@
 
 .header-logo:hover,
 .header-logo:focus-visible {
-    transform: scale(1.06);
+    transform: rotate(-30deg);
 }
 
 .header-logo img {
@@ -60,6 +60,11 @@
 }
 
 @media (max-width: 767px) {
+    .header-logo:hover,
+    .header-logo:focus-visible {
+        transform: scale(1.06);
+    }
+
     .l-header {
         justify-content: space-between;
         gap: 16px;

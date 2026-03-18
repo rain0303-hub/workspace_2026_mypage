@@ -4,6 +4,8 @@ const navLinks = document.querySelectorAll(".navi-btn");
 const languageMenu = document.querySelector(".language-menu");
 const languageToggle = document.querySelector(".language-menu__toggle");
 
+const getMessage = (key, fallback) => window.siteI18n?.t(key) ?? fallback;
+
 const initCopyButtons = () => {
     const contactCopyButtons = document.querySelectorAll(".contact-copy-btn");
 
@@ -104,7 +106,7 @@ const initNavigation = () => {
     const closeNavigationMenu = () => {
         header.classList.remove("is-menu-open");
         navToggle.setAttribute("aria-expanded", "false");
-        navToggle.setAttribute("aria-label", "Open navigation");
+        navToggle.setAttribute("aria-label", getMessage("common.open_navigation", "Open navigation"));
     };
 
     const closeMenu = () => {
@@ -119,7 +121,12 @@ const initNavigation = () => {
 
         const isOpen = header.classList.toggle("is-menu-open");
         navToggle.setAttribute("aria-expanded", String(isOpen));
-        navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+        navToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? getMessage("common.close_navigation", "Close navigation")
+                : getMessage("common.open_navigation", "Open navigation")
+        );
     });
 
     navLinks.forEach((link) => {
@@ -154,6 +161,24 @@ const initNavigation = () => {
         if (!languageMenu.contains(event.target)) {
             closeLanguageMenu();
         }
+    });
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            closeLanguageMenu();
+        },
+        { passive: true }
+    );
+
+    document.addEventListener("site:language-change", () => {
+        const isOpen = header.classList.contains("is-menu-open");
+        navToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? getMessage("common.close_navigation", "Close navigation")
+                : getMessage("common.open_navigation", "Open navigation")
+        );
     });
 };
 

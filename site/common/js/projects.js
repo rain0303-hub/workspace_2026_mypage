@@ -1,24 +1,3 @@
-const projectTabContent = {
-    web: {
-        panelLabel: "Citizen projects",
-        eyebrow: "Citizen",
-        title: "Convenient Navigation",
-        text: "A simple preview area for public-service style projects. We can place cards, screenshots, and detail blocks here next."
-    },
-    app: {
-        panelLabel: "Child care projects",
-        eyebrow: "Child Care",
-        title: "Support For Families",
-        text: "This area can present child-care, family support, or reservation related projects in a clean and structured way."
-    },
-    other: {
-        panelLabel: "Senior citizen projects",
-        eyebrow: "Senior Citizen",
-        title: "Accessible Information",
-        text: "This area can present services for seniors, guidance systems, and accessibility-oriented project work."
-    }
-};
-
 const initProjectsTabs = () => {
     const tabSection = document.querySelector(".projects-tabs");
 
@@ -36,12 +15,18 @@ const initProjectsTabs = () => {
         return;
     }
 
+    let activeTabKey = tabButtons.find((button) => button.classList.contains("is-active"))?.dataset.tab ?? "web";
+
+    const getTabContent = () => window.siteI18n?.t("projects.content") ?? {};
+
     const setActiveTab = (tabKey) => {
-        const content = projectTabContent[tabKey];
+        const content = getTabContent()[tabKey];
 
         if (!content) {
             return;
         }
+
+        activeTabKey = tabKey;
 
         tabButtons.forEach((button) => {
             const isActive = button.dataset.tab === tabKey;
@@ -80,6 +65,12 @@ const initProjectsTabs = () => {
             setActiveTab(nextButton.dataset.tab);
         });
     });
+
+    document.addEventListener("site:language-change", () => {
+        setActiveTab(activeTabKey);
+    });
+
+    setActiveTab(activeTabKey);
 };
 
 document.addEventListener("DOMContentLoaded", initProjectsTabs);

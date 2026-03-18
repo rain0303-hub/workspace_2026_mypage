@@ -3,48 +3,62 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projects</title>
+        <title data-i18n="meta.projects_title">Projects</title>
         <link rel="stylesheet" href="./common/css/base.css">
         <link rel="stylesheet" href="./common/css/header.css">
         <link rel="stylesheet" href="./common/css/navi.css">
         <link rel="stylesheet" href="./common/css/footer.css">
         <link rel="stylesheet" href="./common/css/projects.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+        <script src="./common/js/main.js" defer></script>
         <script src="./common/js/index.js" defer></script>
         <script src="./common/js/projects.js" defer></script>
     </head>
 
-    <body>
+    <body data-page="projects">
         <header class="l-header">
-            <a class="header-logo" href="./index.html" aria-label="Back to top">
+            <a class="header-logo" href="./index.html" aria-label="Back to top" data-i18n-aria-label="common.back_to_top">
                 <img src="./common/images/id.svg" alt="header-logo">
             </a>
 
             <nav class="l-navi" id="site-navigation">
                 <div class="navi-btn-container">
-                    <a class="navi-btn" href="./index.html#about">ABOUT</a>
-                    <a class="navi-btn" href="./index.html#skill">SKILL</a>
-                    <a class="navi-btn" href="./index.html#works">WORKS</a>
-                    <a class="navi-btn" href="./index.html#contact">CONTACT</a>
+                    <a class="navi-btn" href="./index.html#about" data-i18n="nav.about">ABOUT</a>
+                    <a class="navi-btn" href="./index.html#skill" data-i18n="nav.skill">SKILL</a>
+                    <a class="navi-btn" href="./index.html#works" data-i18n="nav.works">WORKS</a>
+                    <a class="navi-btn" href="./index.html#contact" data-i18n="nav.contact">CONTACT</a>
                 </div>
             </nav>
 
             <div class="header-tools">
                 <div class="header-language">
                     <div class="language-menu">
-                        <button class="navi-btn language-menu__toggle" type="button" aria-expanded="false" aria-controls="language-dropdown">
+                        <button
+                            class="navi-btn language-menu__toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="language-dropdown"
+                            data-i18n="common.language"
+                        >
                             <img class="language-menu__icon" src="./common/images/language.svg" alt="">
                             LANGUAGE
                         </button>
                         <div class="language-menu__dropdown" id="language-dropdown">
-                            <button class="language-menu__option" type="button">Chinese</button>
-                            <button class="language-menu__option" type="button">Japanese</button>
-                            <button class="language-menu__option" type="button">English</button>
+                            <button class="language-menu__option" type="button" data-language="zh">中文</button>
+                            <button class="language-menu__option" type="button" data-language="jp">日本語</button>
+                            <button class="language-menu__option" type="button" data-language="en">English</button>
                         </div>
                     </div>
                 </div>
 
-                <button class="navi-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+                <button
+                    class="navi-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-navigation"
+                    aria-label="Open navigation"
+                    data-i18n-aria-label="common.open_navigation"
+                >
                     <span class="navi-toggle__line"></span>
                     <span class="navi-toggle__line"></span>
                     <span class="navi-toggle__line"></span>
@@ -54,25 +68,25 @@
 
         <main>
             <div class="main-shell">
-                <section class="projects-tabs" aria-label="Projects tabs">
-                    <div class="projects-tabs__nav" role="tablist" aria-label="Project categories">
+                <section class="projects-tabs" aria-label="Projects tabs" data-i18n-aria-label="projects.tabs_label">
+                    <div class="projects-tabs__nav" role="tablist" aria-label="Project categories" data-i18n-aria-label="projects.categories_label">
                         <button class="projects-tabs__tab is-active" type="button" role="tab" aria-selected="true" data-tab="web">
                             <span class="projects-tabs__tab-primary">#1</span>
-                            <span class="projects-tabs__tab-secondary">P1</span>
+                            <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.web">P1</span>
                         </button>
                         <button class="projects-tabs__tab" type="button" role="tab" aria-selected="false" data-tab="app">
                             <span class="projects-tabs__tab-primary">#2</span>
-                            <span class="projects-tabs__tab-secondary">P2</span>
+                            <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.app">P2</span>
                         </button>
                         <button class="projects-tabs__tab" type="button" role="tab" aria-selected="false" data-tab="other">
                             <span class="projects-tabs__tab-primary">#3</span>
-                            <span class="projects-tabs__tab-secondary">P3</span>
+                            <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.other">P3</span>
                         </button>
                     </div>
 
                     <div class="projects-tabs__panel" role="tabpanel" aria-label="Citizen projects">
                         <div class="projects-tabs__panel-visual" aria-hidden="true">
-                            <h3>No...</h3>
+                            <h3 data-i18n="projects.empty">No...</h3>
                         </div>
 
                         <div class="projects-tabs__panel-copy">
@@ -90,11 +104,11 @@
         <footer class="l-footer">
             <div class="l-footer__inner">
                 <p class="l-footer__brand">HONG XL</p>
-                <nav class="l-footer__nav" aria-label="Footer">
-                    <a class="l-footer__link" href="./index.html#about">ABOUT</a>
-                    <a class="l-footer__link" href="./index.html#skill">SKILL</a>
-                    <a class="l-footer__link" href="./index.html#works">WORKS</a>
-                    <a class="l-footer__link" href="./index.html#contact">CONTACT</a>
+                <nav class="l-footer__nav" aria-label="Footer" data-i18n-aria-label="common.footer">
+                    <a class="l-footer__link" href="./index.html#about" data-i18n="nav.about">ABOUT</a>
+                    <a class="l-footer__link" href="./index.html#skill" data-i18n="nav.skill">SKILL</a>
+                    <a class="l-footer__link" href="./index.html#works" data-i18n="nav.works">WORKS</a>
+                    <a class="l-footer__link" href="./index.html#contact" data-i18n="nav.contact">CONTACT</a>
                 </nav>
                 <p class="l-footer__copy">© 2026 HONG XL</p>
             </div>

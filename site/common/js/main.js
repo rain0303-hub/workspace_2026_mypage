@@ -1,0 +1,158 @@
+const I18N_STORAGE_KEY = "site-language";
+const I18N_FILE_MAP = {
+    jp: "./common/js/i18n/jp.json",
+    en: "./common/js/i18n/en.json",
+    zh: "./common/js/i18n/zh.json"
+};
+
+const i18nState = {
+    locale: "jp",
+    messages: {},
+    cache: {}
+};
+
+const getByPath = (source, path) =>
+    path.split(".").reduce((value, key) => (value && key in value ? value[key] : undefined), source);
+
+const translate = (key) => getByPath(i18nState.messages, key);
+
+const applyTextTranslations = () => {
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const value = translate(element.dataset.i18n);
+
+        if (typeof value === "string") {
+            element.textContent = value;
+        }
+    });
+};
+
+const applyAttributeTranslations = () => {
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+        const value = translate(element.dataset.i18nAriaLabel);
+
+        if (typeof value === "string") {
+            element.setAttribute("aria-label", value);
+        }
+    });
+};
+
+const applyDocumentLanguage = () => {
+    document.documentElement.lang = i18nState.locale === "jp" ? "ja" : i18nState.locale;
+};
+
+const applyTitleTranslation = () => {
+    const titleElement = document.querySelector("title[data-i18n]");
+
+    if (!titleElement) {
+        return;
+    }
+
+    const value = translate(titleElement.dataset.i18n);
+
+    if (typeof value === "string") {
+        document.title = value;
+    }
+};
+
+const updateLanguageButtons = () => {
+    document.querySelectorAll(".language-menu__option[data-language]").forEach((button) => {
+        const isActive = button.dataset.language === i18nState.locale;
+        button.setAttribute("aria-pressed", String(isActive));
+        button.classList.toggle("is-active", isActive);
+    });
+};
+
+const dispatchLanguageChange = () => {
+    document.dispatchEvent(
+        new CustomEvent("site:language-change", {
+            detail: {
+                locale: i18nState.locale,
+                messages: i18nState.messages
+            }
+        })
+    );
+};
+
+const applyTranslations = () => {
+    applyDocumentLanguage();
+    applyTitleTranslation();
+    applyTextTranslations();
+    applyAttributeTranslations();
+    updateLanguageButtons();
+    dispatchLanguageChange();
+};
+
+const loadMessages = async (locale) => {
+    if (i18nState.cache[locale]) {
+        return i18nState.cache[locale];
+    }
+
+    const response = await fetch(I18N_FILE_MAP[locale]);
+
+    if (!response.ok) {
+        throw new Error(`Failed to load locale: ${locale}`);
+    }
+
+    const messages = await response.json();
+    i18nState.cache[locale] = messages;
+    return messages;
+};
+
+const setLanguage = async (locale) => {
+    const nextLocale = I18N_FILE_MAP[locale] ? locale : "jp";
+    const messages = await loadMessages(nextLocale);
+
+    i18nState.locale = nextLocale;
+    i18nState.messages = messages;
+    window.localStorage.setItem(I18N_STORAGE_KEY, nextLocale);
+    applyTranslations();
+};
+
+const getInitialLocale = () => {
+    const savedLocale = window.localStorage.getItem(I18N_STORAGE_KEY);
+
+    if (savedLocale && I18N_FILE_MAP[savedLocale]) {
+        return savedLocale;
+    }
+
+    const htmlLang = document.documentElement.lang;
+
+    if (htmlLang === "en") {
+        return "en";
+    }
+
+    if (htmlLang === "zh") {
+        return "zh";
+    }
+
+    return "jp";
+};
+
+const initLanguageMenu = () => {
+    document.querySelectorAll(".language-menu__option[data-language]").forEach((button) => {
+        button.addEventListener("click", async () => {
+            await setLanguage(button.dataset.language);
+        });
+    });
+};
+
+const initI18n = async () => {
+    initLanguageMenu();
+
+    try {
+        await setLanguage(getInitialLocale());
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+window.siteI18n = {
+    get locale() {
+        return i18nState.locale;
+    },
+    t: translate
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    void initI18n();
+});

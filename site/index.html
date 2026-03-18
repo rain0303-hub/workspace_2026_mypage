@@ -3,47 +3,61 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hong XL</title>
+        <title data-i18n="meta.home_title">Hong XL</title>
         <link rel="stylesheet" href="./common/css/base.css">
         <link rel="stylesheet" href="./common/css/index.css">
         <link rel="stylesheet" href="./common/css/header.css">
         <link rel="stylesheet" href="./common/css/navi.css">
         <link rel="stylesheet" href="./common/css/footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+        <script src="./common/js/main.js" defer></script>
         <script src="./common/js/index.js" defer></script>
     </head>
 
-    <body>
+    <body data-page="home">
         <header class="l-header">
-            <a class="header-logo" href="./index.html" aria-label="Back to top">
+            <a class="header-logo" href="./index.html" aria-label="Back to top" data-i18n-aria-label="common.back_to_top">
                 <img src="./common/images/id.svg" alt="header-logo">
             </a>
 
             <nav class="l-navi" id="site-navigation">
                 <div class="navi-btn-container">
-                    <a class="navi-btn" href="#about">ABOUT</a>
-                    <a class="navi-btn" href="#skill">SKILL</a>
-                    <a class="navi-btn" href="#works">WORKS</a>
-                    <a class="navi-btn" href="#contact">CONTACT</a>
+                    <a class="navi-btn" href="#about" data-i18n="nav.about">ABOUT</a>
+                    <a class="navi-btn" href="#skill" data-i18n="nav.skill">SKILL</a>
+                    <a class="navi-btn" href="#works" data-i18n="nav.works">WORKS</a>
+                    <a class="navi-btn" href="#contact" data-i18n="nav.contact">CONTACT</a>
                 </div>
             </nav>
 
             <div class="header-tools">
                 <div class="header-language">
                     <div class="language-menu">
-                        <button class="navi-btn language-menu__toggle" type="button" aria-expanded="false" aria-controls="language-dropdown">
+                        <button
+                            class="navi-btn language-menu__toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="language-dropdown"
+                            data-i18n="common.language"
+                        >
                             <img class="language-menu__icon" src="./common/images/language.svg" alt="">
                             LANGUAGE
                         </button>
                         <div class="language-menu__dropdown" id="language-dropdown">
-                            <button class="language-menu__option" type="button">Chinese</button>
-                            <button class="language-menu__option" type="button">Japanese</button>
-                            <button class="language-menu__option" type="button">English</button>
+                            <button class="language-menu__option" type="button" data-language="zh">中文</button>
+                            <button class="language-menu__option" type="button" data-language="jp">日本語</button>
+                            <button class="language-menu__option" type="button" data-language="en">English</button>
                         </div>
                     </div>
                 </div>
 
-                <button class="navi-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+                <button
+                    class="navi-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-navigation"
+                    aria-label="Open navigation"
+                    data-i18n-aria-label="common.open_navigation"
+                >
                     <span class="navi-toggle__line"></span>
                     <span class="navi-toggle__line"></span>
                     <span class="navi-toggle__line"></span>
@@ -66,12 +80,11 @@
                     </div>
 
                     <div class="sub-area-01__text-box">
-                        <h2 class="sub-area-01__title">HONG XLです</h2>
-                        <p class="sub-area-01__text indent">
-                            日本でITエンジニアとして、Web開発に携わっています。
-                            フロントエンドからバックエンドまで一貫して対応しています。
+                        <h2 class="sub-area-01__title" data-i18n="home.about.title">HONG XLです</h2>
+                        <p class="sub-area-01__text indent" data-i18n="home.about.body_1">
+                            日本でITエンジニアとして、Web開発に携わっています。フロントエンドからバックエンドまで一貫して対応しています。
                         </p>
-                        <p class="sub-area-01__text indent">
+                        <p class="sub-area-01__text indent" data-i18n="home.about.body_2">
                             チーム開発の現場で、安定した実装と継続的な改善を大切にしています。
                         </p>
                     </div>
@@ -79,22 +92,22 @@
 
                 <section class="sub-area-02" id="skill">
                     <div class="sub-area-02__text-box">
-                        <h2 class="sub-area-02__title">スキル</h2>
+                        <h2 class="sub-area-02__title" data-i18n="home.skill.title">スキル</h2>
                         <ul class="skill-list">
                             <li class="skill-list__item">
-                                <span class="skill-list__label">フロントエンド</span>
+                                <span class="skill-list__label" data-i18n="home.skill.frontend_label">フロントエンド</span>
                                 <span class="skill-list__value">HTML / CSS / JavaScript / React / Vue</span>
                             </li>
                             <li class="skill-list__item">
-                                <span class="skill-list__label">バックエンド</span>
+                                <span class="skill-list__label" data-i18n="home.skill.backend_label">バックエンド</span>
                                 <span class="skill-list__value">Java / Servlet / MyBatis / Spring / SpringBoot / SpringBatch</span>
                             </li>
                             <li class="skill-list__item">
-                                <span class="skill-list__label">クラウド</span>
+                                <span class="skill-list__label" data-i18n="home.skill.cloud_label">クラウド</span>
                                 <span class="skill-list__value">AWS</span>
                             </li>
                             <li class="skill-list__item">
-                                <span class="skill-list__label">その他</span>
+                                <span class="skill-list__label" data-i18n="home.skill.other_label">その他</span>
                                 <span class="skill-list__value">Shell / VBA / AI Agent</span>
                             </li>
                         </ul>
@@ -111,13 +124,12 @@
                     </div>
 
                     <div class="sub-area-01__text-box">
-                        <h2 class="sub-area-01__title">プロジェクトについて</h2>
-                        <p class="sub-area-01__text indent">
-                            金融、公共、自動車、医療、子育て支援など、
-                            幅広い分野で要件整理から実装まで担当してきました。
+                        <h2 class="sub-area-01__title" data-i18n="home.works.title">プロジェクトについて</h2>
+                        <p class="sub-area-01__text indent" data-i18n="home.works.body">
+                            金融、公共、自動車、医療、子育て支援など、幅広い分野で要件整理から実装まで担当してきました。
                         </p>
                         <a class="project-link" href="./projects.html">
-                            <span class="project-link__label">プロジェクト詳細を見る</span>
+                            <span class="project-link__label" data-i18n="home.works.link">プロジェクト詳細を見る</span>
                             <span class="project-link__circle" aria-hidden="true">
                                 <img class="project-link__arrow" src="./common/images/arrow-next.svg" alt="">
                             </span>
@@ -127,20 +139,20 @@
 
                 <section class="sub-area-02" id="contact">
                     <div class="sub-area-02__text-box">
-                        <h2 class="sub-area-02__title">問い合わせ</h2>
-                        <p class="sub-area-02__text">ご覧いただきありがとうございます。</p>
-                        <p class="sub-area-02__text">お仕事のご相談などございましたら、お気軽にご連絡ください。</p>
+                        <h2 class="sub-area-02__title" data-i18n="home.contact.title">問い合わせ</h2>
+                        <p class="sub-area-02__text" data-i18n="home.contact.body_1">ご覧いただきありがとうございます。</p>
+                        <p class="sub-area-02__text" data-i18n="home.contact.body_2">お仕事のご相談などございましたら、お気軽にご連絡ください。</p>
                         <p class="sub-area-02__text contact-copy-row">
                             <span class="contact-copy-label">Email:</span>
                             <span class="contact-copy-value">...@icloud.com</span>
-                            <button class="contact-copy-btn" type="button" aria-label="Copy email">
+                            <button class="contact-copy-btn" type="button" aria-label="Copy email" data-i18n-aria-label="home.contact.copy_email">
                                 <img class="contact-copy-icon" src="./common/images/copy.svg" alt="">
                             </button>
                         </p>
                         <p class="sub-area-02__text contact-copy-row">
                             <span class="contact-copy-label">GitHub:</span>
                             <span class="contact-copy-value">https://github.com/...</span>
-                            <button class="contact-copy-btn" type="button" aria-label="Copy GitHub link">
+                            <button class="contact-copy-btn" type="button" aria-label="Copy GitHub link" data-i18n-aria-label="home.contact.copy_github">
                                 <img class="contact-copy-icon" src="./common/images/copy.svg" alt="">
                             </button>
                         </p>
@@ -156,11 +168,11 @@
         <footer class="l-footer">
             <div class="l-footer__inner">
                 <p class="l-footer__brand">HONG XL</p>
-                <nav class="l-footer__nav" aria-label="Footer">
-                    <a class="l-footer__link" href="#about">ABOUT</a>
-                    <a class="l-footer__link" href="#skill">SKILL</a>
-                    <a class="l-footer__link" href="#works">WORKS</a>
-                    <a class="l-footer__link" href="#contact">CONTACT</a>
+                <nav class="l-footer__nav" aria-label="Footer" data-i18n-aria-label="common.footer">
+                    <a class="l-footer__link" href="#about" data-i18n="nav.about">ABOUT</a>
+                    <a class="l-footer__link" href="#skill" data-i18n="nav.skill">SKILL</a>
+                    <a class="l-footer__link" href="#works" data-i18n="nav.works">WORKS</a>
+                    <a class="l-footer__link" href="#contact" data-i18n="nav.contact">CONTACT</a>
                 </nav>
                 <p class="l-footer__copy">© 2026 HONG XL</p>
             </div>
