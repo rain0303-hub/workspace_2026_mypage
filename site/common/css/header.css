@@ -14,7 +14,7 @@
 
 .header-logo:hover,
 .header-logo:focus-visible {
-    transform: rotate(-30deg);
+    transform: rotate(-30deg) scale(1.14);
 }
 
 .header-logo img {
@@ -62,7 +62,7 @@
 @media (max-width: 767px) {
     .header-logo:hover,
     .header-logo:focus-visible {
-        transform: scale(1.06);
+        transform: none;
     }
 
     .l-header {

@@ -115,16 +115,6 @@ const getInitialLocale = () => {
         return savedLocale;
     }
 
-    const htmlLang = document.documentElement.lang;
-
-    if (htmlLang === "en") {
-        return "en";
-    }
-
-    if (htmlLang === "zh") {
-        return "zh";
-    }
-
     return "jp";
 };
 
