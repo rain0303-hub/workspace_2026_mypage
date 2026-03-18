@@ -59,7 +59,7 @@
     align-items: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
     .header-logo:hover,
     .header-logo:focus-visible {
         transform: none;
@@ -87,5 +87,28 @@
 
     .l-header.is-menu-open {
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 932px) and (max-height: 540px) and (orientation: landscape) {
+    .header-logo {
+        width: 32px;
+        height: 32px;
+        margin-left: 20px;
+    }
+
+    .header-logo:hover,
+    .header-logo:focus-visible {
+        transform: rotate(-30deg) scale(1.08);
+    }
+
+    .l-header {
+        height: 60px;
+        gap: 20px;
+    }
+
+    .header-tools {
+        gap: 8px;
+        padding-right: 20px;
     }
 }
