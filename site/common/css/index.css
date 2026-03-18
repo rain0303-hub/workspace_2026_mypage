@@ -43,7 +43,7 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: left 18%;
+    object-position: left center;
 }
 
 .sub-area-01 {
@@ -325,7 +325,11 @@ main {
 
 @media (max-width: 900px) {
     .main-img {
-        height: 370px;
+        height: 389px;
+    }
+
+    .main-img img {
+        object-position: left 18%;
     }
 
     .sub-area-01,
