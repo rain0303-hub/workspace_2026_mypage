@@ -3,16 +3,16 @@
 .l-footer {
     margin-top: 96px;
     position: relative;
-    background-color: #f6f3ee;
+    background-color: var(--color-bg);
 }
 
 .l-footer::before {
     content: "";
     display: block;
-    width: min(1000px, calc(100% - 48px));
+    width: min(var(--content-width), calc(100% - 48px));
     height: 1px;
     margin: 0 auto;
-    background-color: rgba(34, 34, 34, 0.14);
+    background-color: var(--color-border);
 }
 
 .l-footer__inner {
@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    max-width: 1000px;
+    max-width: var(--content-width);
     margin: 0 auto;
     padding: 28px 24px 32px;
     box-sizing: border-box;
@@ -29,7 +29,7 @@
 .l-footer__brand,
 .l-footer__copy {
     margin: 0;
-    color: #222222;
+    color: var(--color-text);
 }
 
 .l-footer__brand {
@@ -54,7 +54,7 @@
 
 .l-footer__link:hover,
 .l-footer__link:focus-visible {
-    color: #222222;
+    color: var(--color-text);
 }
 
 .l-footer__copy {

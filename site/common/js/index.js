@@ -1,59 +1,72 @@
-const contactCopyButtons = document.querySelectorAll(".contact-copy-btn");
 const header = document.querySelector(".l-header");
 const navToggle = document.querySelector(".navi-toggle");
 const navLinks = document.querySelectorAll(".navi-btn");
 const languageMenu = document.querySelector(".language-menu");
 const languageToggle = document.querySelector(".language-menu__toggle");
-let activeCopyState = null;
-let lastScrollY = window.scrollY;
 
-const resetCopyState = (state) => {
-    if (!state) {
+const initCopyButtons = () => {
+    const contactCopyButtons = document.querySelectorAll(".contact-copy-btn");
+
+    if (!contactCopyButtons.length) {
         return;
     }
 
-    window.clearTimeout(state.timeoutId);
-    state.icon.src = "./common/images/copy.svg";
-    state.icon.classList.remove("contact-copy-icon--checked");
-    delete state.button.dataset.copied;
+    let activeCopyState = null;
 
-    if (activeCopyState === state) {
-        activeCopyState = null;
-    }
-};
-
-contactCopyButtons.forEach((button) => {
-    button.addEventListener("click", async () => {
-        const row = button.closest(".contact-copy-row");
-        const value = row?.querySelector(".contact-copy-value")?.textContent?.trim();
-        const icon = button.querySelector(".contact-copy-icon");
-
-        if (!value || !icon) {
+    const resetCopyState = (state) => {
+        if (!state) {
             return;
         }
 
-        try {
-            if (activeCopyState && activeCopyState.button !== button) {
-                resetCopyState(activeCopyState);
+        window.clearTimeout(state.timeoutId);
+        state.icon.src = "./common/images/copy.svg";
+        state.icon.classList.remove("contact-copy-icon--checked");
+        delete state.button.dataset.copied;
+
+        if (activeCopyState === state) {
+            activeCopyState = null;
+        }
+    };
+
+    contactCopyButtons.forEach((button) => {
+        button.addEventListener("click", async () => {
+            const row = button.closest(".contact-copy-row");
+            const value = row?.querySelector(".contact-copy-value")?.textContent?.trim();
+            const icon = button.querySelector(".contact-copy-icon");
+
+            if (!value || !icon) {
+                return;
             }
 
-            await navigator.clipboard.writeText(value);
-            icon.src = "./common/images/check.svg";
-            icon.classList.add("contact-copy-icon--checked");
-            button.dataset.copied = "true";
+            try {
+                if (activeCopyState && activeCopyState.button !== button) {
+                    resetCopyState(activeCopyState);
+                }
 
-            const timeoutId = window.setTimeout(() => {
-                resetCopyState({ button, icon, timeoutId });
-            }, 1200);
+                await navigator.clipboard.writeText(value);
+                icon.src = "./common/images/check.svg";
+                icon.classList.add("contact-copy-icon--checked");
+                button.dataset.copied = "true";
 
-            activeCopyState = { button, icon, timeoutId };
-        } catch (error) {
-            button.dataset.copied = "false";
-        }
+                const timeoutId = window.setTimeout(() => {
+                    resetCopyState({ button, icon, timeoutId });
+                }, 1200);
+
+                activeCopyState = { button, icon, timeoutId };
+            } catch (error) {
+                button.dataset.copied = "false";
+            }
+        });
     });
-});
+};
 
-if (header) {
+const initHeaderScroll = () => {
+    if (!header || getComputedStyle(header).position !== "fixed") {
+        return;
+    }
+
+    let lastScrollY = window.scrollY;
+
     window.addEventListener("scroll", () => {
         const currentScrollY = window.scrollY;
         const scrollDelta = currentScrollY - lastScrollY;
@@ -72,9 +85,13 @@ if (header) {
 
         lastScrollY = currentScrollY;
     });
-}
+};
 
-if (header && navToggle) {
+const initNavigation = () => {
+    if (!header || !navToggle) {
+        return;
+    }
+
     const closeLanguageMenu = () => {
         if (!languageMenu || !languageToggle) {
             return;
@@ -119,21 +136,27 @@ if (header && navToggle) {
         }
     });
 
-    if (languageMenu && languageToggle) {
-        languageToggle.addEventListener("click", (event) => {
-            event.stopPropagation();
-            if (!languageMenu.classList.contains("is-open")) {
-                closeNavigationMenu();
-            }
-
-            const isOpen = languageMenu.classList.toggle("is-open");
-            languageToggle.setAttribute("aria-expanded", String(isOpen));
-        });
-
-        document.addEventListener("click", (event) => {
-            if (!languageMenu.contains(event.target)) {
-                closeLanguageMenu();
-            }
-        });
+    if (!languageMenu || !languageToggle) {
+        return;
     }
-}
+
+    languageToggle.addEventListener("click", (event) => {
+        event.stopPropagation();
+        if (!languageMenu.classList.contains("is-open")) {
+            closeNavigationMenu();
+        }
+
+        const isOpen = languageMenu.classList.toggle("is-open");
+        languageToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!languageMenu.contains(event.target)) {
+            closeLanguageMenu();
+        }
+    });
+};
+
+initCopyButtons();
+initHeaderScroll();
+initNavigation();

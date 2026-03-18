@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+:root {
+    --color-bg: #f6f3ee;
+    --color-surface: #ffffff;
+    --color-text: #222222;
+    --color-text-muted: #6f6f6f;
+    --color-border: rgba(34, 34, 34, 0.14);
+    --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.08);
+    --shadow-card-hover: 0 24px 52px rgba(0, 0, 0, 0.16);
+    --content-width: 1000px;
+    --page-padding: 24px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: "Inter Tight", sans-serif;
+}
+
+main {
+    padding-top: 0;
+}
+
+.main-shell {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 575px) {
+    :root {
+        --page-padding: 20px;
+    }
+}
