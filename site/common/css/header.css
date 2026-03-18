@@ -8,6 +8,13 @@
     width: 40px;
     margin-left: 40px;
     text-decoration: none;
+    transform-origin: center;
+    transition: transform 0.2s ease;
+}
+
+.header-logo:hover,
+.header-logo:focus-visible {
+    transform: scale(1.06);
 }
 
 .header-logo img {
