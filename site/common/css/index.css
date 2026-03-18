@@ -70,6 +70,7 @@
     box-sizing: border-box;
     box-shadow: var(--shadow-card);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    touch-action: manipulation;
 }
 
 .sub-area-01__text-box {

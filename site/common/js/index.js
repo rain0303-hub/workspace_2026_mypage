@@ -62,6 +62,38 @@ const initCopyButtons = () => {
     });
 };
 
+const initMobileDoubleTapNavigation = () => {
+    if (!header) {
+        return;
+    }
+
+    let lastTapTime = 0;
+    document.addEventListener(
+        "touchend",
+        (event) => {
+            if (window.innerWidth > 767) {
+                return;
+            }
+
+            const currentTapTime = Date.now();
+            const isDoubleTap = currentTapTime - lastTapTime < 320;
+            lastTapTime = currentTapTime;
+
+            if (!isDoubleTap) {
+                return;
+            }
+
+            if (header.contains(event.target)) {
+                return;
+            }
+
+            event.preventDefault();
+            header.classList.toggle("is-hidden");
+        },
+        { passive: false }
+    );
+};
+
 const initHeaderScroll = () => {
     if (!header || getComputedStyle(header).position !== "fixed") {
         return;
@@ -218,5 +250,6 @@ const initNavigation = () => {
 };
 
 initCopyButtons();
+initMobileDoubleTapNavigation();
 initHeaderScroll();
 initNavigation();
