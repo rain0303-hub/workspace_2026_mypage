@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "MichromaLocal";
+    src: url("../../assets/fonts02/Michroma/Michroma-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 .l-navi {
     display: flex;
 }
@@ -41,9 +49,12 @@
 .navi-btn {
     text-decoration: none;
     color: #111111;
-    font-size: 1rem;
-    font-weight: 450;
-    font-family: "Inter Tight", sans-serif;
+    font-size: 0.94rem;
+    font-weight: 400;
+    font-family: "MichromaLocal", "Inter Tight", sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.35px currentColor, 0 0 0.35px currentColor;
     padding: 12px 18px;
     border-radius: 999px;
     transform-origin: center;
@@ -104,8 +115,11 @@
     border-radius: 14px;
     background: rgba(246, 243, 238, 0.82);
     color: #111111;
-    font-family: "Inter Tight", sans-serif;
-    font-size: 0.98rem;
+    font-family: "MichromaLocal", "Inter Tight", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+    text-shadow: 0 0 0.3px currentColor, 0 0 0.3px currentColor;
     text-align: left;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
@@ -164,10 +178,10 @@
         box-sizing: border-box;
         border-radius: 16px;
         background-color: rgba(246, 243, 238, 0.82);
-        font-size: 1.05rem;
-        font-weight: 500;
+        font-size: 0.98rem;
+        font-weight: 400;
         line-height: 1;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.1em;
         white-space: nowrap;
         -webkit-tap-highlight-color: transparent;
         transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
