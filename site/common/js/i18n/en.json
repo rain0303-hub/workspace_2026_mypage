@@ -52,11 +52,15 @@
             "project04": "Project 04",
             "project05": "Project 05",
             "project06": "Project 06",
+            "project07": "Project 07",
+            "project08": "Project 08",
             "overview": "Overview"
         },
         "panel": {
             "left": {
+                "project_name_label": "Project:",
                 "period_label": "Period:",
+                "position_label": "Position:",
                 "overview_label": "Overview:"
             },
             "center": {
@@ -65,13 +69,17 @@
             "right": {
                 "os_label": "OS:",
                 "language_label": "Language:",
+                "framework_label": "Framework:",
+                "ide_label": "IDE:",
                 "db_label": "DB:"
             }
         },
         "content": {
             "project01": {
                 "left": {
+                    "project_name": "Project 01",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "Project summary goes here."
                 },
                 "center": {
@@ -80,12 +88,16 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "Java / JavaScript",
+                    "framework": "Spring Boot",
+                    "ide": "Eclipse",
                     "db": "PostgreSQL"
                 }
             },
             "project02": {
                 "left": {
+                    "project_name": "Project 02",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "Project summary goes here."
                 },
                 "center": {
@@ -94,12 +106,16 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "TypeScript / Python",
+                    "framework": "React / FastAPI",
+                    "ide": "VS Code",
                     "db": "MySQL"
                 }
             },
             "project03": {
                 "left": {
+                    "project_name": "Project 03",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "Project summary goes here."
                 },
                 "center": {
@@ -108,12 +124,16 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "PHP / SQL",
+                    "framework": "Laravel",
+                    "ide": "PhpStorm",
                     "db": "Oracle"
                 }
             },
             "project04": {
                 "left": {
+                    "project_name": "Project 04",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "Project summary goes here."
                 },
                 "center": {
@@ -122,12 +142,16 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "C# / SQL",
+                    "framework": ".NET",
+                    "ide": "Visual Studio",
                     "db": "SQL Server"
                 }
             },
             "project05": {
                 "left": {
+                    "project_name": "Project 05",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "Project summary goes here."
                 },
                 "center": {
@@ -136,12 +160,16 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "Go / TypeScript",
+                    "framework": "Gin / Next.js",
+                    "ide": "VS Code",
                     "db": "PostgreSQL"
                 }
             },
             "project06": {
                 "left": {
+                    "project_name": "Project 06",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "Project summary goes here."
                 },
                 "center": {
@@ -150,7 +178,45 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "Python / JavaScript",
+                    "framework": "Django",
+                    "ide": "PyCharm",
                     "db": "MySQL"
+                }
+            },
+            "project07": {
+                "left": {
+                    "project_name": "Project 07",
+                    "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
+                    "overview": "Project summary goes here."
+                },
+                "center": {
+                    "content": "Add the detailed description for Project 07 here."
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "",
+                    "framework": "",
+                    "ide": "",
+                    "db": ""
+                }
+            },
+            "project08": {
+                "left": {
+                    "project_name": "Project 08",
+                    "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
+                    "overview": "Project summary goes here."
+                },
+                "center": {
+                    "content": "Add the detailed description for Project 08 here."
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "",
+                    "framework": "",
+                    "ide": "",
+                    "db": ""
                 }
             }
         }

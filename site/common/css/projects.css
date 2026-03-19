@@ -2,13 +2,13 @@
 
 html,
 body {
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body {
-    display: grid;
-    grid-template-rows: 80px 1fr auto;
+    display: block;
 }
 
 .l-header {
@@ -16,18 +16,16 @@ body {
 }
 
 main {
-    min-height: 0;
     display: flex;
+    padding-top: 80px;
 }
 
 .main-shell {
-    flex: 1 1 auto;
-    min-height: 0;
     width: 100%;
     padding: 20px 28px;
     box-sizing: border-box;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -37,11 +35,8 @@ main {
 
 .projects-tabs {
     width: 100%;
-    flex: 1 1 auto;
-    align-self: stretch;
-    min-height: 0;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto;
 }
 
 @media (max-width: 767px) {

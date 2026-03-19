@@ -90,7 +90,7 @@
                             <span class="projects-tabs__tab-primary">#5</span>
                             <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.project05">案件05</span>
                         </button>
-                        <button class="projects-tabs__tab" type="button" role="tab" aria-selected="false" data-tab="project06">
+                        <button class="projects-tabs__tab projects-tabs__tab--overflow" type="button" role="tab" aria-selected="false" data-tab="project06">
                             <span class="projects-tabs__tab-primary">#6</span>
                             <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.project06">案件06</span>
                         </button>
@@ -112,8 +112,16 @@
                         <div class="projects-tabs__panel-default">
                             <div class="projects-tabs__panel-column">
                                 <div class="projects-tabs__panel-group">
+                                    <h3 data-i18n="projects.panel.left.project_name_label">Project:</h3>
+                                    <p data-project-field="left.project_name"></p>
+                                </div>
+                                <div class="projects-tabs__panel-group">
                                     <h3 data-i18n="projects.panel.left.period_label">Period:</h3>
                                     <p data-project-field="left.period"></p>
+                                </div>
+                                <div class="projects-tabs__panel-group">
+                                    <h3 data-i18n="projects.panel.left.position_label">Position:</h3>
+                                    <p data-project-field="left.position"></p>
                                 </div>
                                 <div class="projects-tabs__panel-group">
                                     <h3 data-i18n="projects.panel.left.overview_label">Overview:</h3>
@@ -123,7 +131,7 @@
                             <div class="projects-tabs__panel-column">
                                 <div class="projects-tabs__panel-group">
                                     <h3 data-i18n="projects.panel.center.content_label">Content:</h3>
-                                    <p data-project-field="center.content"></p>
+                                    <div data-project-field="center.content" data-project-field-type="rich"></div>
                                 </div>
                             </div>
                             <div class="projects-tabs__panel-column">
@@ -134,6 +142,14 @@
                                 <div class="projects-tabs__panel-group">
                                     <h3 data-i18n="projects.panel.right.language_label">Language:</h3>
                                     <p data-project-field="right.language"></p>
+                                </div>
+                                <div class="projects-tabs__panel-group">
+                                    <h3 data-i18n="projects.panel.right.framework_label">Framework:</h3>
+                                    <p data-project-field="right.framework"></p>
+                                </div>
+                                <div class="projects-tabs__panel-group">
+                                    <h3 data-i18n="projects.panel.right.ide_label">IDE:</h3>
+                                    <p data-project-field="right.ide"></p>
                                 </div>
                                 <div class="projects-tabs__panel-group">
                                     <h3 data-i18n="projects.panel.right.db_label">DB:</h3>
@@ -178,6 +194,18 @@
                                     <button class="projects-tabs__overview-button" type="button" data-overview-target="project06">
                                         <span class="projects-tabs__overview-bullet">#06</span>
                                         <span data-i18n="projects.tabs.project06">案件06</span>
+                                    </button>
+                                </li>
+                                <li class="projects-tabs__overview-item">
+                                    <button class="projects-tabs__overview-button" type="button" data-overview-target="project07">
+                                        <span class="projects-tabs__overview-bullet">#07</span>
+                                        <span data-i18n="projects.tabs.project07">案件07</span>
+                                    </button>
+                                </li>
+                                <li class="projects-tabs__overview-item">
+                                    <button class="projects-tabs__overview-button" type="button" data-overview-target="project08">
+                                        <span class="projects-tabs__overview-bullet">#08</span>
+                                        <span data-i18n="projects.tabs.project08">案件08</span>
                                     </button>
                                 </li>
                             </ul>

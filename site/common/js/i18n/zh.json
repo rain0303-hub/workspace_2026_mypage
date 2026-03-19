@@ -52,11 +52,15 @@
             "project04": "\u6848\u4ef604",
             "project05": "\u6848\u4ef605",
             "project06": "\u6848\u4ef606",
+            "project07": "\u6848\u4ef607",
+            "project08": "\u6848\u4ef608",
             "overview": "\u6848\u4ef6\u4e00\u89c8"
         },
         "panel": {
             "left": {
+                "project_name_label": "\u9879\u76ee\u540d:",
                 "period_label": "\u671f\u95f4:",
+                "position_label": "\u804c\u4f4d:",
                 "overview_label": "\u6982\u8981:"
             },
             "center": {
@@ -65,13 +69,17 @@
             "right": {
                 "os_label": "OS:",
                 "language_label": "\u8bed\u8a00:",
+                "framework_label": "\u6846\u67b6:",
+                "ide_label": "IDE:",
                 "db_label": "DB:"
             }
         },
         "content": {
             "project01": {
                 "left": {
+                    "project_name": "\u6848\u4ef601",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
                 },
                 "center": {
@@ -80,12 +88,16 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "Java / JavaScript",
+                    "framework": "Spring Boot",
+                    "ide": "Eclipse",
                     "db": "PostgreSQL"
                 }
             },
             "project02": {
                 "left": {
+                    "project_name": "\u6848\u4ef602",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
                 },
                 "center": {
@@ -94,12 +106,16 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "TypeScript / Python",
+                    "framework": "React / FastAPI",
+                    "ide": "VS Code",
                     "db": "MySQL"
                 }
             },
             "project03": {
                 "left": {
+                    "project_name": "\u6848\u4ef603",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
                 },
                 "center": {
@@ -108,12 +124,16 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "PHP / SQL",
+                    "framework": "Laravel",
+                    "ide": "PhpStorm",
                     "db": "Oracle"
                 }
             },
             "project04": {
                 "left": {
+                    "project_name": "\u6848\u4ef604",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
                 },
                 "center": {
@@ -122,12 +142,16 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "C# / SQL",
+                    "framework": ".NET",
+                    "ide": "Visual Studio",
                     "db": "SQL Server"
                 }
             },
             "project05": {
                 "left": {
+                    "project_name": "\u6848\u4ef605",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
                 },
                 "center": {
@@ -136,21 +160,63 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "Go / TypeScript",
+                    "framework": "Gin / Next.js",
+                    "ide": "VS Code",
                     "db": "PostgreSQL"
                 }
             },
             "project06": {
                 "left": {
+                    "project_name": "\u6848\u4ef606",
                     "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
                     "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
                 },
                 "center": {
-                    "content": "\u5728\u8fd9\u91cc\u586b\u5199\u6848\u4ef606\u7684\u8be6\u7ec6\u8bf4\u660e\u3002"
+                    "content": "金融 / 口座管理系统"
                 },
                 "right": {
                     "os": "Windows / Linux",
                     "language": "Python / JavaScript",
+                    "framework": "",
+                    "ide": "",
                     "db": "MySQL"
+                }
+            },
+            "project07": {
+                "left": {
+                    "project_name": "\u6848\u4ef607",
+                    "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
+                    "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
+                },
+                "center": {
+                    "content": "\u5728\u8fd9\u91cc\u586b\u5199\u6848\u4ef607\u7684\u8be6\u7ec6\u8bf4\u660e\u3002"
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "",
+                    "framework": "",
+                    "ide": "",
+                    "db": ""
+                }
+            },
+            "project08": {
+                "left": {
+                    "project_name": "\u6848\u4ef608",
+                    "period": "YYYY.MM - YYYY.MM",
+                    "position": "",
+                    "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
+                },
+                "center": {
+                    "content": "\u5728\u8fd9\u91cc\u586b\u5199\u6848\u4ef608\u7684\u8be6\u7ec6\u8bf4\u660e\u3002"
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "",
+                    "framework": "",
+                    "ide": "",
+                    "db": ""
                 }
             }
         }

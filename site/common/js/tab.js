@@ -1,4 +1,10 @@
 const OVERVIEW_TAB_KEY = "overview";
+const OVERFLOW_SLOT_BASE_KEY = "project06";
+
+const getProjectTabNumber = (tabKey) => {
+    const match = /^project(\d+)$/.exec(tabKey ?? "");
+    return match ? Number(match[1]) : null;
+};
 
 const initTabs = () => {
     document.querySelectorAll(".projects-tabs").forEach((tabSection, sectionIndex) => {
@@ -8,6 +14,7 @@ const initTabs = () => {
         const defaultPanel = tabSection.querySelector(".projects-tabs__panel-default");
         const overviewPanel = tabSection.querySelector("[data-overview-panel]");
         const overviewButtons = Array.from(tabSection.querySelectorAll("[data-overview-target]"));
+        const overflowButton = tabSection.querySelector(".projects-tabs__tab--overflow");
 
         if (!tabButtons.length || !panel) {
             return;
@@ -17,10 +24,57 @@ const initTabs = () => {
         let lastProjectTabKey =
             tabButtons.find((button) => (button.dataset.tab ?? "") !== OVERVIEW_TAB_KEY)?.dataset.tab ?? "";
 
+        const updateOverflowButton = (tabKey = OVERFLOW_SLOT_BASE_KEY) => {
+            if (!overflowButton) {
+                return;
+            }
+
+            const tabNumber = getProjectTabNumber(tabKey);
+            const representedTabKey = tabNumber && tabNumber >= 6 ? tabKey : OVERFLOW_SLOT_BASE_KEY;
+            const representedTabNumber = getProjectTabNumber(representedTabKey) ?? 6;
+            const primary = overflowButton.querySelector(".projects-tabs__tab-primary");
+            const secondary = overflowButton.querySelector(".projects-tabs__tab-secondary");
+
+            overflowButton.dataset.representedTab = representedTabKey;
+
+            if (primary) {
+                primary.textContent = `#${representedTabNumber}`;
+            }
+
+            if (secondary) {
+                secondary.textContent =
+                    window.siteI18n?.t(`projects.tabs.${representedTabKey}`) ?? `Project ${representedTabNumber}`;
+            }
+        };
+
+        const getButtonActionTabKey = (button) => {
+            if (button === overflowButton) {
+                return button.dataset.representedTab ?? button.dataset.tab ?? "";
+            }
+
+            return button.dataset.tab ?? "";
+        };
+
+        const getButtonForTabKey = (tabKey) => {
+            const directButton = tabButtons.find((button) => button.dataset.tab === tabKey);
+
+            if (directButton) {
+                return directButton;
+            }
+
+            if ((getProjectTabNumber(tabKey) ?? 0) >= 6 && overflowButton) {
+                return overflowButton;
+            }
+
+            return null;
+        };
+
         const updateMobileTabVisibility = () => {
             tabButtons.forEach((button) => {
                 const tabKey = button.dataset.tab ?? "";
-                const shouldShow = tabKey === OVERVIEW_TAB_KEY || tabKey === lastProjectTabKey;
+                const representedTabKey = button === overflowButton ? button.dataset.representedTab ?? tabKey : tabKey;
+                const shouldShow = tabKey === OVERVIEW_TAB_KEY || representedTabKey === lastProjectTabKey;
+
                 button.classList.toggle("is-mobile-visible", shouldShow);
             });
         };
@@ -30,6 +84,7 @@ const initTabs = () => {
 
             projectFields.forEach((field) => {
                 const path = field.dataset.projectField;
+                const fieldType = field.dataset.projectFieldType ?? "text";
 
                 if (!path) {
                     return;
@@ -38,12 +93,40 @@ const initTabs = () => {
                 const value = content
                     ? path.split(".").reduce((currentValue, key) => currentValue?.[key], content)
                     : "";
+
+                if (fieldType === "rich") {
+                    field.replaceChildren();
+
+                    if (Array.isArray(value)) {
+                        const list = document.createElement("ul");
+                        list.className = "projects-tabs__content-list";
+
+                        value.forEach((item) => {
+                            if (typeof item !== "string" || !item) {
+                                return;
+                            }
+
+                            const listItem = document.createElement("li");
+                            listItem.textContent = item;
+                            list.appendChild(listItem);
+                        });
+
+                        field.appendChild(list);
+                        return;
+                    }
+
+                    field.textContent = typeof value === "string" ? value : "";
+                    return;
+                }
+
                 field.textContent = typeof value === "string" ? value : "";
             });
         };
 
         const setActiveTab = (tabKey) => {
-            const activeButton = tabButtons.find((button) => button.dataset.tab === tabKey);
+            updateOverflowButton(tabKey);
+
+            const activeButton = getButtonForTabKey(tabKey);
 
             if (!activeButton) {
                 return;
@@ -88,14 +171,14 @@ const initTabs = () => {
         };
 
         tabButtons.forEach((button, index) => {
-            const tabKey = button.dataset.tab ?? `tab-${index + 1}`;
-            const buttonId = button.id || `projects-tab-${sectionIndex + 1}-${tabKey}`;
+            const buttonTabKey = button.dataset.tab ?? `tab-${index + 1}`;
+            const buttonId = button.id || `projects-tab-${sectionIndex + 1}-${buttonTabKey}`;
 
             button.id = buttonId;
             button.setAttribute("aria-controls", panel.id || `projects-tabpanel-${sectionIndex + 1}`);
 
             button.addEventListener("click", () => {
-                setActiveTab(tabKey);
+                setActiveTab(getButtonActionTabKey(button));
             });
 
             button.addEventListener("keydown", (event) => {
@@ -111,7 +194,7 @@ const initTabs = () => {
                         : (index - 1 + tabButtons.length) % tabButtons.length;
 
                 tabButtons[nextIndex].focus();
-                setActiveTab(tabButtons[nextIndex].dataset.tab ?? "");
+                setActiveTab(getButtonActionTabKey(tabButtons[nextIndex]));
             });
         });
 
@@ -138,7 +221,7 @@ const initTabs = () => {
 
         document.addEventListener("site:language-change", () => {
             if (activeTabKey) {
-                setProjectFieldValues(activeTabKey);
+                setActiveTab(activeTabKey);
             }
         });
     });
