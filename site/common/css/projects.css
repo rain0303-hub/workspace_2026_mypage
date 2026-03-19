@@ -52,11 +52,21 @@ main {
     }
 
     body {
-        grid-template-rows: 72px 1fr auto;
+        display: block;
+    }
+
+    .l-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
     }
 
     main {
+        display: block;
         min-height: auto;
+        padding-top: 72px;
     }
 
     .main-shell {
