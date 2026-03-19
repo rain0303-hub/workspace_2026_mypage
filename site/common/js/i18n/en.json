@@ -31,7 +31,7 @@
         },
         "works": {
             "title": "Projects",
-            "body": "I’ve worked on projects in various industries like finance, government, automotive, healthcare, and beauty, taking part in everything from defining requirements to implementation.",
+            "body": "I've worked on projects in various industries like finance, government, automotive, healthcare, and beauty, taking part in everything from defining requirements to implementation.",
             "link": "View project details"
         },
         "contact": {
@@ -45,31 +45,10 @@
     "projects": {
         "tabs_label": "Projects tabs",
         "categories_label": "Project categories",
-        "empty": "No...",
         "tabs": {
-            "web": "Public",
-            "app": "Childcare",
-            "other": "Senior"
-        },
-        "content": {
-            "web": {
-                "panelLabel": "Public service projects",
-                "eyebrow": "Public Service",
-                "title": "Convenient Navigation",
-                "text": "A simple preview area for public-service style projects. We can place cards, screenshots, and detail blocks here next."
-            },
-            "app": {
-                "panelLabel": "Child care projects",
-                "eyebrow": "Child Care",
-                "title": "Support For Families",
-                "text": "This area can present child-care, family support, or reservation related projects in a clean and structured way."
-            },
-            "other": {
-                "panelLabel": "Senior citizen projects",
-                "eyebrow": "Senior Citizen",
-                "title": "Accessible Information",
-                "text": "This area can present services for seniors, guidance systems, and accessibility-oriented project work."
-            }
+            "project01": "Project 01",
+            "project02": "Project 02",
+            "project03": "Project 03"
         }
     }
 }

@@ -12,7 +12,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
         <script src="./common/js/main.js" defer></script>
         <script src="./common/js/index.js" defer></script>
-        <script src="./common/js/projects.js" defer></script>
     </head>
 
     <body data-page="projects">
@@ -69,33 +68,21 @@
             <div class="main-shell">
                 <section class="projects-tabs" aria-label="Projects tabs" data-i18n-aria-label="projects.tabs_label">
                     <div class="projects-tabs__nav" role="tablist" aria-label="Project categories" data-i18n-aria-label="projects.categories_label">
-                        <button class="projects-tabs__tab is-active" type="button" role="tab" aria-selected="true" data-tab="web">
+                        <button class="projects-tabs__tab is-active" type="button" role="tab" aria-selected="true" data-tab="project01">
                             <span class="projects-tabs__tab-primary">#1</span>
-                            <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.web">P1</span>
+                            <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.project01">P1</span>
                         </button>
-                        <button class="projects-tabs__tab" type="button" role="tab" aria-selected="false" data-tab="app">
+                        <button class="projects-tabs__tab" type="button" role="tab" aria-selected="false" data-tab="project02">
                             <span class="projects-tabs__tab-primary">#2</span>
-                            <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.app">P2</span>
+                            <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.project02">P2</span>
                         </button>
-                        <button class="projects-tabs__tab" type="button" role="tab" aria-selected="false" data-tab="other">
+                        <button class="projects-tabs__tab" type="button" role="tab" aria-selected="false" data-tab="project03">
                             <span class="projects-tabs__tab-primary">#3</span>
-                            <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.other">P3</span>
+                            <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.project03">P3</span>
                         </button>
                     </div>
 
-                    <div class="projects-tabs__panel" role="tabpanel" aria-label="Citizen projects">
-                        <div class="projects-tabs__panel-visual" aria-hidden="true">
-                            <h3 data-i18n="projects.empty">No...</h3>
-                        </div>
-
-                        <div class="projects-tabs__panel-copy">
-                            <p class="projects-tabs__eyebrow" data-tab-eyebrow>Citizen</p>
-                            <h1 class="projects-tabs__title" data-tab-title>Convenient Navigation</h1>
-                            <p class="projects-tabs__text" data-tab-text>
-                                A simple preview area for each tab. We can place cards, screenshots, and project details here next.
-                            </p>
-                        </div>
-                    </div>
+                    <div class="projects-tabs__panel" role="tabpanel"></div>
                 </section>
             </div>
         </main>
