@@ -27,7 +27,6 @@
 }
 
 .projects-tabs__tab.is-active {
-    position: relative;
     z-index: 1;
     background: #ffffff;
 }
@@ -69,9 +68,9 @@
     min-height: 0;
     margin-top: -1px;
     border: 1px solid #d0d0d0;
+    background: #ffffff;
     min-height: 320px;
     padding: 0;
-    transition: background-color 0.24s ease, border-color 0.24s ease;
 }
 
 .projects-tabs__panel-column {
@@ -118,21 +117,6 @@
 .projects-tabs__panel-group p {
     margin-top: 8px;
     line-height: 1.7;
-}
-
-.projects-tabs__panel[data-active-tab="project01"] {
-    background: linear-gradient(180deg, #ffffff 0%, #faf7ff 100%);
-    border-color: #d4c5ee;
-}
-
-.projects-tabs__panel[data-active-tab="project02"] {
-    background: linear-gradient(180deg, #ffffff 0%, #fff5f8 100%);
-    border-color: #f2c1d0;
-}
-
-.projects-tabs__panel[data-active-tab="project03"] {
-    background: linear-gradient(180deg, #ffffff 0%, #f5fbf7 100%);
-    border-color: #bfd7c8;
 }
 
 @media (max-width: 767px) {

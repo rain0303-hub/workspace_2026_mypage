@@ -52,16 +52,16 @@
         },
         "panel": {
             "left": {
-                "period_label": "Period",
-                "overview_label": "Overview"
+                "period_label": "Period:",
+                "overview_label": "Overview:"
             },
             "center": {
-                "content_label": "Content"
+                "content_label": "Content:"
             },
             "right": {
-                "os_label": "OS",
-                "language_label": "Language",
-                "db_label": "DB"
+                "os_label": "・OS:",
+                "language_label": "・Language:",
+                "db_label": "・DB:"
             }
         },
         "content": {

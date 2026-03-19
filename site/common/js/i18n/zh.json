@@ -52,16 +52,16 @@
         },
         "panel": {
             "left": {
-                "period_label": "期间",
-                "overview_label": "概要"
+                "period_label": "期间:",
+                "overview_label": "概要:"
             },
             "center": {
-                "content_label": "内容"
+                "content_label": "内容:"
             },
             "right": {
-                "os_label": "OS",
-                "language_label": "语言",
-                "db_label": "DB"
+                "os_label": "・OS:",
+                "language_label": "・语言:",
+                "db_label": "・DB:"
             }
         },
         "content": {
