@@ -76,28 +76,24 @@
     transform: scale(1.2);
 }
 
-.projects-tabs__tab[data-tab="project01"] .projects-tabs__tab-secondary {
+.projects-tabs__tab[data-color-index="0"] .projects-tabs__tab-secondary {
     color: #9b78d1;
 }
 
-.projects-tabs__tab[data-tab="project02"] .projects-tabs__tab-secondary {
+.projects-tabs__tab[data-color-index="1"] .projects-tabs__tab-secondary {
     color: #ef93ad;
 }
 
-.projects-tabs__tab[data-tab="project03"] .projects-tabs__tab-secondary {
+.projects-tabs__tab[data-color-index="2"] .projects-tabs__tab-secondary {
     color: #8bb49d;
 }
 
-.projects-tabs__tab[data-tab="project04"] .projects-tabs__tab-secondary {
+.projects-tabs__tab[data-color-index="3"] .projects-tabs__tab-secondary {
     color: #7c97c9;
 }
 
-.projects-tabs__tab[data-tab="project05"] .projects-tabs__tab-secondary {
+.projects-tabs__tab[data-color-index="4"] .projects-tabs__tab-secondary {
     color: #d3a16a;
-}
-
-.projects-tabs__tab[data-tab="project06"] .projects-tabs__tab-secondary {
-    color: #73a8b2;
 }
 
 .projects-tabs__tab[data-tab="overview"] .projects-tabs__tab-secondary {

@@ -1,5 +1,5 @@
 const OVERVIEW_TAB_KEY = "overview";
-const OVERFLOW_SLOT_BASE_KEY = "project06";
+const OVERFLOW_SLOT_BASE_KEY = "project04";
 const tabScript =
     document.currentScript ??
     document.querySelector('script[src$="/common/js/tab.js"]') ??
@@ -10,6 +10,11 @@ const overviewNewIconUrl = resolveTabAssetUrl("../images/new.svg");
 const getProjectTabNumber = (tabKey) => {
     const match = /^project(\d+)$/.exec(tabKey ?? "");
     return match ? Number(match[1]) : null;
+};
+
+const getProjectColorIndex = (tabKey) => {
+    const projectNumber = getProjectTabNumber(tabKey);
+    return projectNumber ? String((projectNumber - 1) % 5) : "";
 };
 
 const initTabs = () => {
@@ -31,18 +36,28 @@ const initTabs = () => {
         let lastProjectTabKey =
             tabButtons.find((button) => (button.dataset.tab ?? "") !== OVERVIEW_TAB_KEY)?.dataset.tab ?? "";
 
+        tabButtons.forEach((button) => {
+            const tabKey = button.dataset.tab ?? "";
+            const colorIndex = getProjectColorIndex(tabKey);
+
+            if (colorIndex) {
+                button.dataset.colorIndex = colorIndex;
+            }
+        });
+
         const updateOverflowButton = (tabKey = OVERFLOW_SLOT_BASE_KEY) => {
             if (!overflowButton) {
                 return;
             }
 
             const tabNumber = getProjectTabNumber(tabKey);
-            const representedTabKey = tabNumber && tabNumber >= 6 ? tabKey : OVERFLOW_SLOT_BASE_KEY;
-            const representedTabNumber = getProjectTabNumber(representedTabKey) ?? 6;
+            const representedTabKey = tabNumber && tabNumber <= 4 ? tabKey : OVERFLOW_SLOT_BASE_KEY;
+            const representedTabNumber = getProjectTabNumber(representedTabKey) ?? 4;
             const primary = overflowButton.querySelector(".projects-tabs__tab-primary");
             const secondary = overflowButton.querySelector(".projects-tabs__tab-secondary");
 
             overflowButton.dataset.representedTab = representedTabKey;
+            overflowButton.dataset.colorIndex = getProjectColorIndex(representedTabKey);
 
             if (primary) {
                 primary.textContent = `#${representedTabNumber}`;
@@ -69,7 +84,7 @@ const initTabs = () => {
                 return directButton;
             }
 
-            if ((getProjectTabNumber(tabKey) ?? 0) >= 6 && overflowButton) {
+            if ((getProjectTabNumber(tabKey) ?? 0) <= 4 && overflowButton) {
                 return overflowButton;
             }
 
@@ -300,6 +315,7 @@ const initTabs = () => {
         panel.id = panel.id || `projects-tabpanel-${sectionIndex + 1}`;
 
         const initialActiveTab =
+            tabSection.dataset.initialTab ??
             tabButtons.find((button) => button.classList.contains("is-active"))?.dataset.tab ??
             tabButtons[0].dataset.tab ??
             "";
