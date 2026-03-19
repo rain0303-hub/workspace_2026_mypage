@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+.projects-tabs__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: end;
+    justify-content: flex-start;
+}
+
+.projects-tabs__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    gap: 14px;
+    min-width: 180px;
+    min-height: 56px;
+    padding: 8px 14px 7px;
+    border: 1px solid #d0d0d0;
+    border-bottom: none;
+    background: #f3f3f3;
+    color: #1f1f1f;
+    font-family: "Inter Tight", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.projects-tabs__tab.is-active {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+}
+
+.projects-tabs__tab:focus-visible {
+    outline: 2px solid #1f1f1f;
+    outline-offset: 3px;
+}
+
+.projects-tabs__tab-primary {
+    font-size: clamp(1.35rem, 1.9vw, 2.2rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+.projects-tabs__tab-secondary {
+    font-size: clamp(0.95rem, 1.1vw, 1.3rem);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.projects-tabs__tab[data-tab="project01"] .projects-tabs__tab-secondary {
+    color: #9b78d1;
+}
+
+.projects-tabs__tab[data-tab="project02"] .projects-tabs__tab-secondary {
+    color: #ef93ad;
+}
+
+.projects-tabs__tab[data-tab="project03"] .projects-tabs__tab-secondary {
+    color: #8bb49d;
+}
+
+.projects-tabs__panel {
+    min-height: 0;
+    margin-top: -1px;
+    border: 1px solid #d0d0d0;
+    min-height: 320px;
+    padding: 42px 56px;
+    transition: background-color 0.24s ease, border-color 0.24s ease;
+}
+
+.projects-tabs__panel[data-active-tab="project01"] {
+    background: linear-gradient(180deg, #ffffff 0%, #faf7ff 100%);
+    border-color: #d4c5ee;
+}
+
+.projects-tabs__panel[data-active-tab="project02"] {
+    background: linear-gradient(180deg, #ffffff 0%, #fff5f8 100%);
+    border-color: #f2c1d0;
+}
+
+.projects-tabs__panel[data-active-tab="project03"] {
+    background: linear-gradient(180deg, #ffffff 0%, #f5fbf7 100%);
+    border-color: #bfd7c8;
+}
+
+@media (max-width: 767px) {
+    .projects-tabs__nav {
+        gap: 8px;
+    }
+
+    .projects-tabs__tab {
+        min-width: 120px;
+        min-height: 48px;
+        padding: 8px 10px;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .projects-tabs__tab-primary {
+        font-size: 1.1rem;
+    }
+
+    .projects-tabs__tab-secondary {
+        font-size: 0.78rem;
+    }
+
+    .projects-tabs__panel {
+        min-height: 180px;
+        padding: 28px 22px;
+    }
+}
