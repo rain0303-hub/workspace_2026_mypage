@@ -54,9 +54,16 @@ const initTabs = () => {
 
             tabButtons.forEach((button) => {
                 const isActive = button === activeButton;
+                const tabIcon = button.querySelector(".projects-tabs__tab-icon");
                 button.classList.toggle("is-active", isActive);
                 button.setAttribute("aria-selected", String(isActive));
                 button.tabIndex = isActive ? 0 : -1;
+
+                if (tabIcon) {
+                    tabIcon.src = isActive
+                        ? tabIcon.dataset.tabIconOpen ?? tabIcon.src
+                        : tabIcon.dataset.tabIconClosed ?? tabIcon.src;
+                }
             });
 
             panel.dataset.activeTab = tabKey;

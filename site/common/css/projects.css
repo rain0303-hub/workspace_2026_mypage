@@ -45,12 +45,23 @@ main {
 }
 
 @media (max-width: 767px) {
+    html,
+    body {
+        height: auto;
+        overflow: auto;
+    }
+
     body {
         grid-template-rows: 72px 1fr auto;
     }
 
+    main {
+        min-height: auto;
+    }
+
     .main-shell {
         padding: 14px 16px;
+        min-height: auto;
     }
 
 }

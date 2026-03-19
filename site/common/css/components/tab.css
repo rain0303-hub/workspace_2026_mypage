@@ -19,6 +19,7 @@
     padding: 8px 14px 7px;
     border: 1px solid #d0d0d0;
     border-bottom: none;
+    border-radius: 6px 6px 0 0;
     background: #f3f3f3;
     color: #1f1f1f;
     font-family: "Inter Tight", sans-serif;
@@ -46,6 +47,23 @@
     font-weight: 600;
     line-height: 1;
     letter-spacing: 0.02em;
+}
+
+.projects-tabs__tab-primary--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-tabs__tab-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    object-fit: contain;
+}
+
+.projects-tabs__tab--overview .projects-tabs__tab-icon {
+    display: none;
 }
 
 .projects-tabs__tab-secondary {
@@ -115,6 +133,7 @@
 
 .projects-tabs__overview-item {
     margin: 0;
+    position: relative;
 }
 
 .projects-tabs__overview-button {
@@ -123,8 +142,8 @@
     gap: 12px;
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid #e2e2e2;
-    background: #ffffff;
+    border: 0;
+    background: transparent;
     color: #1f1f1f;
     font: inherit;
     font-size: clamp(1rem, 1.2vw, 1.2rem);
@@ -133,6 +152,16 @@
     text-align: left;
     cursor: pointer;
     transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.projects-tabs__overview-item + .projects-tabs__overview-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 16px;
+    right: 16px;
+    height: 1px;
+    background: #d9d9d9;
 }
 
 .projects-tabs__overview-button:focus-visible {
@@ -147,7 +176,6 @@
 @media (hover: hover) and (pointer: fine) {
     .projects-tabs__overview-button:hover {
         background: #f7f7f7;
-        border-color: #d0d0d0;
     }
 }
 
@@ -229,6 +257,16 @@
         font-size: 1rem;
     }
 
+    .projects-tabs__tab-icon {
+        width: 22px;
+        height: 22px;
+        display: block;
+    }
+
+    .projects-tabs__tab--overview .projects-tabs__tab-icon {
+        display: block;
+    }
+
     .projects-tabs__tab-secondary {
         font-size: 0.82rem;
     }
@@ -266,11 +304,17 @@
     }
 
     .projects-tabs__panel-column + .projects-tabs__panel-column::before {
-        display: none;
+        display: block;
+        left: 16px;
+        right: 16px;
+        top: 0;
+        bottom: auto;
+        width: auto;
+        height: 1px;
     }
 
     .projects-tabs__panel-column + .projects-tabs__panel-column {
-        border-top: 1px solid #e3e3e3;
+        border-top: none;
     }
 
     .projects-tabs__tab.is-active .projects-tabs__tab-secondary {
