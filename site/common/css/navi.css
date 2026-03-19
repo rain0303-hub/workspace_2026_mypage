@@ -187,6 +187,8 @@
 @media (max-width: 767px) and (orientation: portrait) {
     .navi-toggle {
         display: inline-flex;
+        width: 53px;
+        height: 53px;
     }
 
     .navi-toggle:hover,
@@ -280,10 +282,10 @@
 
     .language-menu__toggle {
         justify-content: center;
-        width: 44px;
-        height: 44px;
+        width: 53px;
+        height: 53px;
         padding: 0;
-        min-height: 44px;
+        min-height: 53px;
         background: transparent;
         box-shadow: none;
         transform: none;
@@ -295,8 +297,8 @@
     }
 
     .language-menu__icon {
-        width: 24.5px;
-        height: 24.5px;
+        width: 30px;
+        height: 30px;
     }
 
     .language-menu__toggle:hover,
