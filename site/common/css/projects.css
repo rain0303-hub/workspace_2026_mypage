@@ -11,10 +11,6 @@ body {
     display: block;
 }
 
-.l-header {
-    position: static;
-}
-
 main {
     display: flex;
     padding-top: 80px;
