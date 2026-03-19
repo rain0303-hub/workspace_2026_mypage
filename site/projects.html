@@ -82,38 +82,52 @@
                             <span class="projects-tabs__tab-primary">#3</span>
                             <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.project03">P3</span>
                         </button>
+                        <button class="projects-tabs__tab projects-tabs__tab--overview" type="button" role="tab" aria-selected="false" data-tab="project04">
+                            <span class="projects-tabs__tab-primary">##</span>
+                            <span class="projects-tabs__tab-secondary" data-i18n="projects.tabs.project04">案件一览</span>
+                        </button>
                     </div>
 
                     <div class="projects-tabs__panel" role="tabpanel">
-                        <div class="projects-tabs__panel-column">
-                            <div class="projects-tabs__panel-group">
-                                <h3 data-i18n="projects.panel.left.period_label">Period</h3>
-                                <p data-project-field="left.period"></p>
+                        <div class="projects-tabs__panel-default">
+                            <div class="projects-tabs__panel-column">
+                                <div class="projects-tabs__panel-group">
+                                    <h3 data-i18n="projects.panel.left.period_label">Period</h3>
+                                    <p data-project-field="left.period"></p>
+                                </div>
+                                <div class="projects-tabs__panel-group">
+                                    <h3 data-i18n="projects.panel.left.overview_label">Overview</h3>
+                                    <p data-project-field="left.overview"></p>
+                                </div>
                             </div>
-                            <div class="projects-tabs__panel-group">
-                                <h3 data-i18n="projects.panel.left.overview_label">Overview</h3>
-                                <p data-project-field="left.overview"></p>
+                            <div class="projects-tabs__panel-column">
+                                <div class="projects-tabs__panel-group">
+                                    <h3 data-i18n="projects.panel.center.content_label">Content</h3>
+                                    <p data-project-field="center.content"></p>
+                                </div>
+                            </div>
+                            <div class="projects-tabs__panel-column">
+                                <div class="projects-tabs__panel-group">
+                                    <h3 data-i18n="projects.panel.right.os_label">OS</h3>
+                                    <p data-project-field="right.os"></p>
+                                </div>
+                                <div class="projects-tabs__panel-group">
+                                    <h3 data-i18n="projects.panel.right.language_label">Language</h3>
+                                    <p data-project-field="right.language"></p>
+                                </div>
+                                <div class="projects-tabs__panel-group">
+                                    <h3 data-i18n="projects.panel.right.db_label">DB</h3>
+                                    <p data-project-field="right.db"></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="projects-tabs__panel-column">
-                            <div class="projects-tabs__panel-group">
-                                <h3 data-i18n="projects.panel.center.content_label">Content</h3>
-                                <p data-project-field="center.content"></p>
-                            </div>
-                        </div>
-                        <div class="projects-tabs__panel-column">
-                            <div class="projects-tabs__panel-group">
-                                <h3 data-i18n="projects.panel.right.os_label">OS</h3>
-                                <p data-project-field="right.os"></p>
-                            </div>
-                            <div class="projects-tabs__panel-group">
-                                <h3 data-i18n="projects.panel.right.language_label">Language</h3>
-                                <p data-project-field="right.language"></p>
-                            </div>
-                            <div class="projects-tabs__panel-group">
-                                <h3 data-i18n="projects.panel.right.db_label">DB</h3>
-                                <p data-project-field="right.db"></p>
-                            </div>
+                        <div class="projects-tabs__panel-overview" data-overview-panel hidden>
+                            <ul class="projects-tabs__overview-list">
+                                <li class="projects-tabs__overview-item">・#01</li>
+                                <li class="projects-tabs__overview-item">・#02</li>
+                                <li class="projects-tabs__overview-item">・#03</li>
+                                <li class="projects-tabs__overview-item">・#04</li>
+                            </ul>
                         </div>
                     </div>
                 </section>

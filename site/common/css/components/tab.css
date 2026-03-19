@@ -26,6 +26,10 @@
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+.projects-tabs__tab--overview {
+    margin-left: auto;
+}
+
 .projects-tabs__tab.is-active {
     z-index: 1;
     background: #ffffff;
@@ -69,16 +73,50 @@
     color: #8bb49d;
 }
 
+.projects-tabs__tab[data-tab="project04"] .projects-tabs__tab-secondary {
+    color: #7c97c9;
+}
+
 .projects-tabs__panel {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
     min-height: 0;
     margin-top: -1px;
     border: 1px solid #d0d0d0;
     background: #ffffff;
     min-height: 320px;
     padding: 0;
+}
+
+.projects-tabs__panel-default {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    min-height: 100%;
+}
+
+.projects-tabs__panel-overview {
+    min-height: 100%;
+    padding: 24px 28px;
+    box-sizing: border-box;
+}
+
+.projects-tabs__panel-default[hidden],
+.projects-tabs__panel-overview[hidden] {
+    display: none !important;
+}
+
+.projects-tabs__overview-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.projects-tabs__overview-item {
+    color: #1f1f1f;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-weight: 500;
+    line-height: 1.6;
 }
 
 .projects-tabs__panel-column {
@@ -135,6 +173,10 @@
         align-items: stretch;
     }
 
+    .projects-tabs__tab--overview {
+        margin-left: 0;
+    }
+
     .projects-tabs__tab {
         min-width: 0;
         min-height: 56px;
@@ -152,10 +194,25 @@
     }
 
     .projects-tabs__panel {
-        grid-template-columns: 1fr;
-        gap: 0;
         min-height: 180px;
         padding: 0;
+    }
+
+    .projects-tabs__panel-default {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .projects-tabs__panel-overview {
+        padding: 16px 18px;
+    }
+
+    .projects-tabs__overview-list {
+        gap: 10px;
+    }
+
+    .projects-tabs__overview-item {
+        font-size: 0.95rem;
     }
 
     .projects-tabs__panel-column {

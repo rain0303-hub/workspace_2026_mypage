@@ -48,7 +48,8 @@
         "tabs": {
             "project01": "案件01",
             "project02": "案件02",
-            "project03": "案件03"
+            "project03": "案件03",
+            "project04": "案件一覧"
         },
         "panel": {
             "left": {

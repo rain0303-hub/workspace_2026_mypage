@@ -48,7 +48,8 @@
         "tabs": {
             "project01": "Project 01",
             "project02": "Project 02",
-            "project03": "Project 03"
+            "project03": "Project 03",
+            "project04": "Project Overview"
         },
         "panel": {
             "left": {

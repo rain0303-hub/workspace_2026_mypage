@@ -3,6 +3,8 @@ const initTabs = () => {
         const tabButtons = Array.from(tabSection.querySelectorAll(".projects-tabs__tab"));
         const panel = tabSection.querySelector(".projects-tabs__panel");
         const projectFields = Array.from(tabSection.querySelectorAll("[data-project-field]"));
+        const defaultPanel = tabSection.querySelector(".projects-tabs__panel-default");
+        const overviewPanel = tabSection.querySelector("[data-overview-panel]");
 
         if (!tabButtons.length || !panel) {
             return;
@@ -13,10 +15,6 @@ const initTabs = () => {
         const setProjectFieldValues = (tabKey) => {
             const content = window.siteI18n?.t(`projects.content.${tabKey}`);
 
-            if (!content) {
-                return;
-            }
-
             projectFields.forEach((field) => {
                 const path = field.dataset.projectField;
 
@@ -24,7 +22,9 @@ const initTabs = () => {
                     return;
                 }
 
-                const value = path.split(".").reduce((currentValue, key) => currentValue?.[key], content);
+                const value = content
+                    ? path.split(".").reduce((currentValue, key) => currentValue?.[key], content)
+                    : "";
                 field.textContent = typeof value === "string" ? value : "";
             });
         };
@@ -47,6 +47,15 @@ const initTabs = () => {
 
             panel.dataset.activeTab = tabKey;
             panel.setAttribute("aria-labelledby", activeButton.id);
+
+            const isOverviewTab = tabKey === "project04";
+            if (defaultPanel) {
+                defaultPanel.hidden = isOverviewTab;
+            }
+            if (overviewPanel) {
+                overviewPanel.hidden = !isOverviewTab;
+            }
+
             setProjectFieldValues(tabKey);
         };
 
