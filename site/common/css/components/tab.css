@@ -298,7 +298,7 @@
     }
 
     .projects-tabs__tab-primary {
-        font-size: 1rem;
+        font-size: 1.22rem;
     }
 
     .projects-tabs__tab-icon {
@@ -312,7 +312,7 @@
     }
 
     .projects-tabs__tab-secondary {
-        font-size: 0.82rem;
+        font-size: 1rem;
     }
 
     .projects-tabs__panel {

@@ -219,7 +219,7 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "Shell / Java / VBA / VBS",
-                    "framework": "Spring Boot / Spring Batch /",
+                    "framework": "Spring Boot / Spring Batch",
                     "ide": "Eclipse",
                     "db": "PostgreSQL",
                     "cloud": "-",

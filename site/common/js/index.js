@@ -4,6 +4,7 @@ const navToggle = document.querySelector(".navi-toggle");
 const navLinks = document.querySelectorAll(".navi-btn");
 const languageMenu = document.querySelector(".language-menu");
 const languageToggle = document.querySelector(".language-menu__toggle");
+const scrollTopButton = document.querySelector(".scroll-top-btn");
 const indexScript =
     document.currentScript ??
     document.querySelector('script[src$="/common/js/index.js"]') ??
@@ -187,6 +188,26 @@ const initHeaderScroll = () => {
     window.addEventListener("mousemove", updateHeaderVisibilityOnPointerMove);
 };
 
+const initScrollTopButton = () => {
+    if (!scrollTopButton) {
+        return;
+    }
+
+    const toggleScrollTopButton = () => {
+        scrollTopButton.classList.toggle("is-visible", window.scrollY > 0);
+    };
+
+    scrollTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    window.addEventListener("scroll", toggleScrollTopButton, { passive: true });
+    toggleScrollTopButton();
+};
+
 const initNavigation = () => {
     if (!header || !navToggle) {
         return;
@@ -315,3 +336,4 @@ initHeaderLogoTapAnimation();
 initMobileDoubleTapNavigation();
 initHeaderScroll();
 initNavigation();
+initScrollTopButton();
