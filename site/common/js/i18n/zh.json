@@ -71,7 +71,9 @@
                 "language_label": "\u8bed\u8a00:",
                 "framework_label": "\u6846\u67b6:",
                 "ide_label": "IDE:",
-                "db_label": "DB:"
+                "db_label": "DB:",
+                "cloud_label": "\u4e91:",
+                "tools_label": "\u5de5\u5177:"
             }
         },
         "content": {
@@ -90,7 +92,9 @@
                     "language": "Java / JavaScript",
                     "framework": "Spring Boot",
                     "ide": "Eclipse",
-                    "db": "PostgreSQL"
+                    "db": "PostgreSQL",
+                    "cloud": "",
+                    "tools": ""
                 }
             },
             "project02": {
@@ -108,7 +112,9 @@
                     "language": "TypeScript / Python",
                     "framework": "React / FastAPI",
                     "ide": "VS Code",
-                    "db": "MySQL"
+                    "db": "MySQL",
+                    "cloud": "",
+                    "tools": ""
                 }
             },
             "project03": {
@@ -126,7 +132,9 @@
                     "language": "PHP / SQL",
                     "framework": "Laravel",
                     "ide": "PhpStorm",
-                    "db": "Oracle"
+                    "db": "Oracle",
+                    "cloud": "",
+                    "tools": ""
                 }
             },
             "project04": {
@@ -144,7 +152,9 @@
                     "language": "C# / SQL",
                     "framework": ".NET",
                     "ide": "Visual Studio",
-                    "db": "SQL Server"
+                    "db": "SQL Server",
+                    "cloud": "",
+                    "tools": ""
                 }
             },
             "project05": {
@@ -162,7 +172,9 @@
                     "language": "Go / TypeScript",
                     "framework": "Gin / Next.js",
                     "ide": "VS Code",
-                    "db": "PostgreSQL"
+                    "db": "PostgreSQL",
+                    "cloud": "",
+                    "tools": ""
                 }
             },
             "project06": {
@@ -180,7 +192,9 @@
                     "language": "Python / JavaScript",
                     "framework": "",
                     "ide": "",
-                    "db": "MySQL"
+                    "db": "MySQL",
+                    "cloud": "",
+                    "tools": ""
                 }
             },
             "project07": {
@@ -198,7 +212,9 @@
                     "language": "",
                     "framework": "",
                     "ide": "",
-                    "db": ""
+                    "db": "",
+                    "cloud": "",
+                    "tools": ""
                 }
             },
             "project08": {
@@ -216,7 +232,9 @@
                     "language": "",
                     "framework": "",
                     "ide": "",
-                    "db": ""
+                    "db": "",
+                    "cloud": "",
+                    "tools": ""
                 }
             }
         }

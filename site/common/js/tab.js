@@ -98,6 +98,53 @@ const initTabs = () => {
                     field.replaceChildren();
 
                     if (Array.isArray(value)) {
+                        const hasSectionItems = value.some(
+                            (item) => item && typeof item === "object" && !Array.isArray(item) && Array.isArray(item.items)
+                        );
+
+                        if (hasSectionItems) {
+                            const sections = document.createElement("div");
+                            sections.className = "projects-tabs__content-sections";
+
+                            value.forEach((item) => {
+                                if (!item || typeof item !== "object" || Array.isArray(item)) {
+                                    return;
+                                }
+
+                                const section = document.createElement("section");
+                                section.className = "projects-tabs__content-section";
+
+                                if (typeof item.title === "string" && item.title) {
+                                    const title = document.createElement("h4");
+                                    title.className = "projects-tabs__content-section-title";
+                                    title.textContent = item.title;
+                                    section.appendChild(title);
+                                }
+
+                                if (Array.isArray(item.items) && item.items.length) {
+                                    const list = document.createElement("ul");
+                                    list.className = "projects-tabs__content-list";
+
+                                    item.items.forEach((listEntry) => {
+                                        if (typeof listEntry !== "string" || !listEntry) {
+                                            return;
+                                        }
+
+                                        const listItem = document.createElement("li");
+                                        listItem.textContent = listEntry;
+                                        list.appendChild(listItem);
+                                    });
+
+                                    section.appendChild(list);
+                                }
+
+                                sections.appendChild(section);
+                            });
+
+                            field.appendChild(sections);
+                            return;
+                        }
+
                         const list = document.createElement("ul");
                         list.className = "projects-tabs__content-list";
 
