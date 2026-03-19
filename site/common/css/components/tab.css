@@ -23,7 +23,7 @@
     color: #1f1f1f;
     font-family: "Inter Tight", sans-serif;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .projects-tabs__tab.is-active {
@@ -47,6 +47,14 @@
     font-size: clamp(0.95rem, 1.1vw, 1.3rem);
     font-weight: 600;
     line-height: 1;
+}
+
+.projects-tabs__tab-secondary {
+    transition: transform 0.2s ease;
+}
+
+.projects-tabs__tab.is-active .projects-tabs__tab-secondary {
+    transform: scale(1.2);
 }
 
 .projects-tabs__tab[data-tab="project01"] .projects-tabs__tab-secondary {
@@ -148,5 +156,9 @@
 
     .projects-tabs__panel-column {
         padding: 12px 18px;
+    }
+
+    .projects-tabs__tab.is-active .projects-tabs__tab-secondary {
+        transform: none;
     }
 }
