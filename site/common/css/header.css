@@ -83,6 +83,10 @@
         transform: none;
     }
 
+    .header-logo.is-tapping {
+        animation: none;
+    }
+
     .l-header {
         justify-content: space-between;
         gap: 16px;
@@ -118,7 +122,11 @@
 
     .header-logo:hover,
     .header-logo:focus-visible {
-        transform: rotate(-30deg) scale(1.08);
+        transform: none;
+    }
+
+    .header-logo.is-tapping {
+        animation: none;
     }
 
     .l-header {
