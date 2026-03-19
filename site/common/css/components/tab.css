@@ -27,6 +27,7 @@
 }
 
 .projects-tabs__tab--overview {
+    display: none;
     margin-left: auto;
 }
 
@@ -113,16 +114,47 @@
 }
 
 .projects-tabs__overview-item {
+    margin: 0;
+}
+
+.projects-tabs__overview-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e2e2e2;
+    background: #ffffff;
     color: #1f1f1f;
+    font: inherit;
     font-size: clamp(1rem, 1.2vw, 1.2rem);
     font-weight: 500;
     line-height: 1.6;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.projects-tabs__overview-button:focus-visible {
+    outline: 2px solid #1f1f1f;
+    outline-offset: 3px;
+}
+
+.projects-tabs__overview-bullet {
+    font-weight: 600;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .projects-tabs__overview-button:hover {
+        background: #f7f7f7;
+        border-color: #d0d0d0;
+    }
 }
 
 .projects-tabs__panel-column {
     position: relative;
     min-width: 0;
-    min-height: 100%;
+    min-height: 0;
     padding: 16px 24px;
     box-sizing: border-box;
 }
@@ -168,9 +200,17 @@
 @media (max-width: 767px) {
     .projects-tabs__nav {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
         align-items: stretch;
+    }
+
+    .projects-tabs__tab {
+        display: none;
+    }
+
+    .projects-tabs__tab.is-mobile-visible {
+        display: flex;
     }
 
     .projects-tabs__tab--overview {
@@ -194,16 +234,19 @@
     }
 
     .projects-tabs__panel {
-        min-height: 180px;
+        min-height: 0;
+        height: auto;
         padding: 0;
     }
 
     .projects-tabs__panel-default {
         grid-template-columns: 1fr;
         gap: 0;
+        min-height: 0;
     }
 
     .projects-tabs__panel-overview {
+        min-height: 0;
         padding: 16px 18px;
     }
 
@@ -211,13 +254,15 @@
         gap: 10px;
     }
 
-    .projects-tabs__overview-item {
-        font-size: 0.95rem;
-    }
-
     .projects-tabs__panel-column {
         padding: 12px 18px;
         min-height: auto;
+    }
+
+    .projects-tabs__overview-button {
+        padding: 12px 14px;
+        gap: 10px;
+        font-size: 0.95rem;
     }
 
     .projects-tabs__panel-column + .projects-tabs__panel-column::before {

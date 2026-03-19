@@ -5,12 +5,22 @@ const initTabs = () => {
         const projectFields = Array.from(tabSection.querySelectorAll("[data-project-field]"));
         const defaultPanel = tabSection.querySelector(".projects-tabs__panel-default");
         const overviewPanel = tabSection.querySelector("[data-overview-panel]");
+        const overviewButtons = Array.from(tabSection.querySelectorAll("[data-overview-target]"));
 
         if (!tabButtons.length || !panel) {
             return;
         }
 
         let activeTabKey = "";
+        let lastProjectTabKey = tabButtons.find((button) => button.dataset.tab !== "project04")?.dataset.tab ?? "";
+
+        const updateMobileTabVisibility = () => {
+            tabButtons.forEach((button) => {
+                const tabKey = button.dataset.tab ?? "";
+                const shouldShow = tabKey === "project04" || tabKey === lastProjectTabKey;
+                button.classList.toggle("is-mobile-visible", shouldShow);
+            });
+        };
 
         const setProjectFieldValues = (tabKey) => {
             const content = window.siteI18n?.t(`projects.content.${tabKey}`);
@@ -38,6 +48,10 @@ const initTabs = () => {
 
             activeTabKey = tabKey;
 
+            if (tabKey !== "project04") {
+                lastProjectTabKey = tabKey;
+            }
+
             tabButtons.forEach((button) => {
                 const isActive = button === activeButton;
                 button.classList.toggle("is-active", isActive);
@@ -56,6 +70,7 @@ const initTabs = () => {
                 overviewPanel.hidden = !isOverviewTab;
             }
 
+            updateMobileTabVisibility();
             setProjectFieldValues(tabKey);
         };
 
@@ -84,6 +99,18 @@ const initTabs = () => {
 
                 tabButtons[nextIndex].focus();
                 setActiveTab(tabButtons[nextIndex].dataset.tab);
+            });
+        });
+
+        overviewButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const tabKey = button.dataset.overviewTarget;
+
+                if (!tabKey) {
+                    return;
+                }
+
+                setActiveTab(tabKey);
             });
         });
 
