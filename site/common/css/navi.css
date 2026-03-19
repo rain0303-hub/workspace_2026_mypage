@@ -108,6 +108,10 @@
     flex: 0 0 auto;
 }
 
+.language-menu__icon.is-pressing {
+    animation: language-icon-pop 0.34s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
 .language-menu__label {
     display: inline;
 }
@@ -161,6 +165,23 @@
 .language-menu__option:focus-visible {
     background-color: #eef3ea;
     transform: translateX(4px);
+}
+
+@keyframes language-icon-pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    40% {
+        transform: scale(0.08);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 767px) and (orientation: portrait) {
@@ -266,6 +287,7 @@
         background: transparent;
         box-shadow: none;
         transform: none;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .language-menu__label {
@@ -279,9 +301,15 @@
 
     .language-menu__toggle:hover,
     .language-menu__toggle:focus-visible {
-        background: rgba(255, 255, 255, 0.52);
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.36), 0 8px 20px rgba(41, 45, 50, 0.08);
-        transform: scale(1.04);
+        background: transparent;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .language-menu__toggle:active {
+        background: transparent;
+        box-shadow: none;
+        transform: none;
     }
 
     .language-menu__dropdown {

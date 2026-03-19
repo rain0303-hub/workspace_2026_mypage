@@ -221,8 +221,27 @@ const initNavigation = () => {
         return;
     }
 
+    const languageIcon = languageToggle.querySelector(".language-menu__icon");
+    let languageIconAnimationTimeoutId = 0;
+
+    const triggerLanguageIconAnimation = () => {
+        if (!languageIcon || window.innerWidth > 767) {
+            return;
+        }
+
+        window.clearTimeout(languageIconAnimationTimeoutId);
+        languageIcon.classList.remove("is-pressing");
+        void languageIcon.offsetWidth;
+        languageIcon.classList.add("is-pressing");
+
+        languageIconAnimationTimeoutId = window.setTimeout(() => {
+            languageIcon.classList.remove("is-pressing");
+        }, 360);
+    };
+
     languageToggle.addEventListener("click", (event) => {
         event.stopPropagation();
+        triggerLanguageIconAnimation();
         if (!languageMenu.classList.contains("is-open")) {
             closeNavigationMenu();
         }
