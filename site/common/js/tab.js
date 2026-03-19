@@ -1,3 +1,5 @@
+const OVERVIEW_TAB_KEY = "overview";
+
 const initTabs = () => {
     document.querySelectorAll(".projects-tabs").forEach((tabSection, sectionIndex) => {
         const tabButtons = Array.from(tabSection.querySelectorAll(".projects-tabs__tab"));
@@ -12,12 +14,13 @@ const initTabs = () => {
         }
 
         let activeTabKey = "";
-        let lastProjectTabKey = tabButtons.find((button) => button.dataset.tab !== "project04")?.dataset.tab ?? "";
+        let lastProjectTabKey =
+            tabButtons.find((button) => (button.dataset.tab ?? "") !== OVERVIEW_TAB_KEY)?.dataset.tab ?? "";
 
         const updateMobileTabVisibility = () => {
             tabButtons.forEach((button) => {
                 const tabKey = button.dataset.tab ?? "";
-                const shouldShow = tabKey === "project04" || tabKey === lastProjectTabKey;
+                const shouldShow = tabKey === OVERVIEW_TAB_KEY || tabKey === lastProjectTabKey;
                 button.classList.toggle("is-mobile-visible", shouldShow);
             });
         };
@@ -48,13 +51,14 @@ const initTabs = () => {
 
             activeTabKey = tabKey;
 
-            if (tabKey !== "project04") {
+            if (tabKey !== OVERVIEW_TAB_KEY) {
                 lastProjectTabKey = tabKey;
             }
 
             tabButtons.forEach((button) => {
                 const isActive = button === activeButton;
                 const tabIcon = button.querySelector(".projects-tabs__tab-icon");
+
                 button.classList.toggle("is-active", isActive);
                 button.setAttribute("aria-selected", String(isActive));
                 button.tabIndex = isActive ? 0 : -1;
@@ -69,10 +73,12 @@ const initTabs = () => {
             panel.dataset.activeTab = tabKey;
             panel.setAttribute("aria-labelledby", activeButton.id);
 
-            const isOverviewTab = tabKey === "project04";
+            const isOverviewTab = tabKey === OVERVIEW_TAB_KEY;
+
             if (defaultPanel) {
                 defaultPanel.hidden = isOverviewTab;
             }
+
             if (overviewPanel) {
                 overviewPanel.hidden = !isOverviewTab;
             }
@@ -105,7 +111,7 @@ const initTabs = () => {
                         : (index - 1 + tabButtons.length) % tabButtons.length;
 
                 tabButtons[nextIndex].focus();
-                setActiveTab(tabButtons[nextIndex].dataset.tab);
+                setActiveTab(tabButtons[nextIndex].dataset.tab ?? "");
             });
         });
 
@@ -125,7 +131,8 @@ const initTabs = () => {
 
         const initialActiveTab =
             tabButtons.find((button) => button.classList.contains("is-active"))?.dataset.tab ??
-            tabButtons[0].dataset.tab;
+            tabButtons[0].dataset.tab ??
+            "";
 
         setActiveTab(initialActiveTab);
 

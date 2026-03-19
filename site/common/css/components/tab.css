@@ -96,6 +96,18 @@
     color: #7c97c9;
 }
 
+.projects-tabs__tab[data-tab="project05"] .projects-tabs__tab-secondary {
+    color: #d3a16a;
+}
+
+.projects-tabs__tab[data-tab="project06"] .projects-tabs__tab-secondary {
+    color: #73a8b2;
+}
+
+.projects-tabs__tab[data-tab="overview"] .projects-tabs__tab-secondary {
+    color: #7c97c9;
+}
+
 .projects-tabs__panel {
     min-height: 0;
     margin-top: -1px;
@@ -258,8 +270,8 @@
     }
 
     .projects-tabs__tab-icon {
-        width: 22px;
-        height: 22px;
+        width: 26px;
+        height: 26px;
         display: block;
     }
 
