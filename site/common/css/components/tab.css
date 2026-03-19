@@ -162,6 +162,13 @@
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
+.projects-tabs__overview-new {
+    width: 42px;
+    height: auto;
+    flex: 0 0 auto;
+    object-fit: contain;
+}
+
 .projects-tabs__overview-item + .projects-tabs__overview-item::before {
     content: "";
     position: absolute;
@@ -342,6 +349,10 @@
         padding: 12px 14px;
         gap: 10px;
         font-size: 0.95rem;
+    }
+
+    .projects-tabs__overview-new {
+        width: 36px;
     }
 
     .projects-tabs__panel-column + .projects-tabs__panel-column::before {

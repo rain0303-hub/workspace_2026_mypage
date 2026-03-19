@@ -1,5 +1,11 @@
 const OVERVIEW_TAB_KEY = "overview";
 const OVERFLOW_SLOT_BASE_KEY = "project06";
+const tabScript =
+    document.currentScript ??
+    document.querySelector('script[src$="/common/js/tab.js"]') ??
+    document.querySelector('script[src$="common/js/tab.js"]');
+const resolveTabAssetUrl = (path) => new URL(path, tabScript?.src ?? window.location.href).toString();
+const overviewNewIconUrl = resolveTabAssetUrl("../images/new.svg");
 
 const getProjectTabNumber = (tabKey) => {
     const match = /^project(\d+)$/.exec(tabKey ?? "");
@@ -81,6 +87,8 @@ const initTabs = () => {
         };
 
         const updateOverviewLabels = () => {
+            const latestOverviewTabKey = overviewButtons[0]?.dataset.overviewTarget ?? "";
+
             overviewLabels.forEach((label) => {
                 const tabKey = label.dataset.overviewLabel;
 
@@ -92,6 +100,21 @@ const initTabs = () => {
                     window.siteI18n?.t(`projects.content.${tabKey}.left.project_name`) ??
                     window.siteI18n?.t(`projects.tabs.${tabKey}`) ??
                     label.textContent;
+
+                const parentButton = label.closest(".projects-tabs__overview-button");
+                const existingBadge = parentButton?.querySelector(".projects-tabs__overview-new");
+
+                if (tabKey === latestOverviewTabKey) {
+                    if (!existingBadge && parentButton) {
+                        const badge = document.createElement("img");
+                        badge.className = "projects-tabs__overview-new";
+                        badge.src = overviewNewIconUrl;
+                        badge.alt = "New";
+                        parentButton.appendChild(badge);
+                    }
+                } else {
+                    existingBadge?.remove();
+                }
             });
         };
 
