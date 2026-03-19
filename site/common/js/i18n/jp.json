@@ -219,17 +219,17 @@
                 "right": {
                     "os": "Windows / Linux",
                     "language": "Shell / Java / VBA / VBS",
-                    "framework": "Spring Boot / Spring Batch / Eclipse / Git / Hinemos / Systemwalker",
+                    "framework": "Spring Boot / Spring Batch /",
                     "ide": "Eclipse",
                     "db": "PostgreSQL",
-                    "cloud": "",
-                    "tools": ""
+                    "cloud": "-",
+                    "tools": " Git / Hinemos / Systemwalker"
                 }
             },
             "project08": {
                 "left": {
                     "project_name": "官公庁関連複数案件 / 開発・SE・AWS移行支援",
-                    "period": "2026.01 - 現在",
+                    "period": "2026.01 - ",
                     "position": "SE / PG",
                     "overview": "官公庁関連の複数案件に並行して参画。新規画面開発・改修・試験・顧客調整などのSE業務に加え、別案件ではAWS移行に伴う試験、障害調査、データ移行も担当。"
                 },
@@ -238,7 +238,7 @@
                         {
                             "title": "担当① : 官公庁向け複数案件（開発・SE業務）",
                             "items": [
-                                "要件確認、修正方針整理、および顧客との調整対応",
+                                "要件確認、修正方針整理、顧客との調整対応",
                                 "新規画面・既存画面の設計、製造、試験、改修対応",
                                 "既存機能の改修、不具合対応、品質確認",
                                 "複数案件を並行しながら、開発・保守運用を支援"

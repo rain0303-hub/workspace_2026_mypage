@@ -11,6 +11,7 @@ const initTabs = () => {
         const tabButtons = Array.from(tabSection.querySelectorAll(".projects-tabs__tab"));
         const panel = tabSection.querySelector(".projects-tabs__panel");
         const projectFields = Array.from(tabSection.querySelectorAll("[data-project-field]"));
+        const overviewLabels = Array.from(tabSection.querySelectorAll("[data-overview-label]"));
         const defaultPanel = tabSection.querySelector(".projects-tabs__panel-default");
         const overviewPanel = tabSection.querySelector("[data-overview-panel]");
         const overviewButtons = Array.from(tabSection.querySelectorAll("[data-overview-target]"));
@@ -76,6 +77,21 @@ const initTabs = () => {
                 const shouldShow = tabKey === OVERVIEW_TAB_KEY || representedTabKey === lastProjectTabKey;
 
                 button.classList.toggle("is-mobile-visible", shouldShow);
+            });
+        };
+
+        const updateOverviewLabels = () => {
+            overviewLabels.forEach((label) => {
+                const tabKey = label.dataset.overviewLabel;
+
+                if (!tabKey) {
+                    return;
+                }
+
+                label.textContent =
+                    window.siteI18n?.t(`projects.content.${tabKey}.left.project_name`) ??
+                    window.siteI18n?.t(`projects.tabs.${tabKey}`) ??
+                    label.textContent;
             });
         };
 
@@ -172,6 +188,7 @@ const initTabs = () => {
 
         const setActiveTab = (tabKey) => {
             updateOverflowButton(tabKey);
+            updateOverviewLabels();
 
             const activeButton = getButtonForTabKey(tabKey);
 
