@@ -246,6 +246,7 @@ const initNavigation = () => {
     }
 
     const languageIcon = languageToggle.querySelector(".language-menu__icon");
+    const languageOptions = Array.from(languageMenu.querySelectorAll(".language-menu__option[data-language]"));
     let languageIconAnimationTimeoutId = 0;
 
     const triggerLanguageIconAnimation = () => {
@@ -274,7 +275,17 @@ const initNavigation = () => {
         languageToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
+    languageOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+            closeLanguageMenu();
+        });
+    });
+
     document.addEventListener("click", (event) => {
+        if (window.innerWidth <= 767 && header.classList.contains("is-menu-open") && !header.contains(event.target)) {
+            closeNavigationMenu();
+        }
+
         if (!languageMenu.contains(event.target)) {
             closeLanguageMenu();
         }
