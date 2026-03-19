@@ -2,10 +2,32 @@ const initTabs = () => {
     document.querySelectorAll(".projects-tabs").forEach((tabSection, sectionIndex) => {
         const tabButtons = Array.from(tabSection.querySelectorAll(".projects-tabs__tab"));
         const panel = tabSection.querySelector(".projects-tabs__panel");
+        const projectFields = Array.from(tabSection.querySelectorAll("[data-project-field]"));
 
         if (!tabButtons.length || !panel) {
             return;
         }
+
+        let activeTabKey = "";
+
+        const setProjectFieldValues = (tabKey) => {
+            const content = window.siteI18n?.t(`projects.content.${tabKey}`);
+
+            if (!content) {
+                return;
+            }
+
+            projectFields.forEach((field) => {
+                const path = field.dataset.projectField;
+
+                if (!path) {
+                    return;
+                }
+
+                const value = path.split(".").reduce((currentValue, key) => currentValue?.[key], content);
+                field.textContent = typeof value === "string" ? value : "";
+            });
+        };
 
         const setActiveTab = (tabKey) => {
             const activeButton = tabButtons.find((button) => button.dataset.tab === tabKey);
@@ -13,6 +35,8 @@ const initTabs = () => {
             if (!activeButton) {
                 return;
             }
+
+            activeTabKey = tabKey;
 
             tabButtons.forEach((button) => {
                 const isActive = button === activeButton;
@@ -23,6 +47,7 @@ const initTabs = () => {
 
             panel.dataset.activeTab = tabKey;
             panel.setAttribute("aria-labelledby", activeButton.id);
+            setProjectFieldValues(tabKey);
         };
 
         tabButtons.forEach((button, index) => {
@@ -60,6 +85,12 @@ const initTabs = () => {
             tabButtons[0].dataset.tab;
 
         setActiveTab(initialActiveTab);
+
+        document.addEventListener("site:language-change", () => {
+            if (activeTabKey) {
+                setProjectFieldValues(activeTabKey);
+            }
+        });
     });
 };
 

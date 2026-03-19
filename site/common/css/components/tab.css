@@ -110,6 +110,16 @@
     min-height: 0;
 }
 
+.projects-tabs__panel-group h3,
+.projects-tabs__panel-group p {
+    margin: 0;
+}
+
+.projects-tabs__panel-group p {
+    margin-top: 8px;
+    line-height: 1.7;
+}
+
 .projects-tabs__panel[data-active-tab="project01"] {
     background: linear-gradient(180deg, #ffffff 0%, #faf7ff 100%);
     border-color: #d4c5ee;

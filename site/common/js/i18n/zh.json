@@ -49,6 +49,64 @@
             "project01": "案件01",
             "project02": "案件02",
             "project03": "案件03"
+        },
+        "panel": {
+            "left": {
+                "period_label": "期间",
+                "overview_label": "概要"
+            },
+            "center": {
+                "content_label": "内容"
+            },
+            "right": {
+                "os_label": "OS",
+                "language_label": "语言",
+                "db_label": "DB"
+            }
+        },
+        "content": {
+            "project01": {
+                "left": {
+                    "period": "YYYY.MM - YYYY.MM",
+                    "overview": "在这里填写项目概要。"
+                },
+                "center": {
+                    "content": "在这里填写案件01的详细说明。"
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "Java / JavaScript",
+                    "db": "PostgreSQL"
+                }
+            },
+            "project02": {
+                "left": {
+                    "period": "YYYY.MM - YYYY.MM",
+                    "overview": "在这里填写项目概要。"
+                },
+                "center": {
+                    "content": "在这里填写案件02的详细说明。"
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "TypeScript / Python",
+                    "db": "MySQL"
+                }
+            },
+            "project03": {
+                "left": {
+                    "period": "YYYY.MM - YYYY.MM",
+                    "overview": "在这里填写项目概要。"
+                },
+                "center": {
+                    "content": "在这里填写案件03的详细说明。"
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "PHP / SQL",
+                    "db": "Oracle"
+                }
+            }
         }
     }
 }

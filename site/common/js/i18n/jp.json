@@ -19,7 +19,7 @@
     "home": {
         "about": {
             "title": "HONG XLです",
-            "body_1": "日本でITエンジニアとして、Web開発に携わっています。フロントエンドからバックエンドまで一貫して対応しています。",
+            "body_1": "日本でITエンジニアとしてWeb開発に携わっています。フロントエンドからバックエンドまで一貫して対応しています。",
             "body_2": "チーム開発では、安定した実装と継続的な改善を大切にしています。"
         },
         "skill": {
@@ -49,6 +49,64 @@
             "project01": "案件01",
             "project02": "案件02",
             "project03": "案件03"
+        },
+        "panel": {
+            "left": {
+                "period_label": "期間",
+                "overview_label": "概要"
+            },
+            "center": {
+                "content_label": "内容"
+            },
+            "right": {
+                "os_label": "OS",
+                "language_label": "言語",
+                "db_label": "DB"
+            }
+        },
+        "content": {
+            "project01": {
+                "left": {
+                    "period": "YYYY.MM - YYYY.MM",
+                    "overview": "案件概要をここに記入します。"
+                },
+                "center": {
+                    "content": "案件01の詳細内容をここに記入します。"
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "Java / JavaScript",
+                    "db": "PostgreSQL"
+                }
+            },
+            "project02": {
+                "left": {
+                    "period": "YYYY.MM - YYYY.MM",
+                    "overview": "案件概要をここに記入します。"
+                },
+                "center": {
+                    "content": "案件02の詳細内容をここに記入します。"
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "TypeScript / Python",
+                    "db": "MySQL"
+                }
+            },
+            "project03": {
+                "left": {
+                    "period": "YYYY.MM - YYYY.MM",
+                    "overview": "案件概要をここに記入します。"
+                },
+                "center": {
+                    "content": "案件03の詳細内容をここに記入します。"
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "PHP / SQL",
+                    "db": "Oracle"
+                }
+            }
         }
     }
 }

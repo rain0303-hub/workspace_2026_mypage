@@ -49,6 +49,64 @@
             "project01": "Project 01",
             "project02": "Project 02",
             "project03": "Project 03"
+        },
+        "panel": {
+            "left": {
+                "period_label": "Period",
+                "overview_label": "Overview"
+            },
+            "center": {
+                "content_label": "Content"
+            },
+            "right": {
+                "os_label": "OS",
+                "language_label": "Language",
+                "db_label": "DB"
+            }
+        },
+        "content": {
+            "project01": {
+                "left": {
+                    "period": "YYYY.MM - YYYY.MM",
+                    "overview": "Project summary goes here."
+                },
+                "center": {
+                    "content": "Add the detailed description for Project 01 here."
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "Java / JavaScript",
+                    "db": "PostgreSQL"
+                }
+            },
+            "project02": {
+                "left": {
+                    "period": "YYYY.MM - YYYY.MM",
+                    "overview": "Project summary goes here."
+                },
+                "center": {
+                    "content": "Add the detailed description for Project 02 here."
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "TypeScript / Python",
+                    "db": "MySQL"
+                }
+            },
+            "project03": {
+                "left": {
+                    "period": "YYYY.MM - YYYY.MM",
+                    "overview": "Project summary goes here."
+                },
+                "center": {
+                    "content": "Add the detailed description for Project 03 here."
+                },
+                "right": {
+                    "os": "Windows / Linux",
+                    "language": "PHP / SQL",
+                    "db": "Oracle"
+                }
+            }
         }
     }
 }
