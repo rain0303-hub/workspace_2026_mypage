@@ -24,6 +24,24 @@
     object-fit: contain;
 }
 
+.header-logo.is-tapping {
+    animation: header-logo-tap 0.34s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes header-logo-tap {
+    0% {
+        transform: rotate(0);
+    }
+
+    45% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
 .l-header {
     position: fixed;
     top: 0;
@@ -73,6 +91,7 @@
 
     .header-logo {
         margin-left: 20px;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .header-tools {

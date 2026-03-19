@@ -1,4 +1,5 @@
 const header = document.querySelector(".l-header");
+const headerLogo = document.querySelector(".header-logo");
 const navToggle = document.querySelector(".navi-toggle");
 const navLinks = document.querySelectorAll(".navi-btn");
 const languageMenu = document.querySelector(".language-menu");
@@ -12,6 +13,29 @@ const copyIconUrl = resolveIndexAssetUrl("../images/copy.svg");
 const checkIconUrl = resolveIndexAssetUrl("../images/check.svg");
 
 const getMessage = (key, fallback) => window.siteI18n?.t(key) ?? fallback;
+
+const initHeaderLogoTapAnimation = () => {
+    if (!headerLogo) {
+        return;
+    }
+
+    let tapTimeoutId = 0;
+
+    headerLogo.addEventListener("click", () => {
+        if (window.innerWidth > 767) {
+            return;
+        }
+
+        window.clearTimeout(tapTimeoutId);
+        headerLogo.classList.remove("is-tapping");
+        void headerLogo.offsetWidth;
+        headerLogo.classList.add("is-tapping");
+
+        tapTimeoutId = window.setTimeout(() => {
+            headerLogo.classList.remove("is-tapping");
+        }, 360);
+    });
+};
 
 const initCopyButtons = () => {
     const contactCopyButtons = document.querySelectorAll(".contact-copy-btn");
@@ -276,6 +300,7 @@ const initNavigation = () => {
 };
 
 initCopyButtons();
+initHeaderLogoTapAnimation();
 initMobileDoubleTapNavigation();
 initHeaderScroll();
 initNavigation();
