@@ -409,6 +409,11 @@
     .project-link__circle {
         width: 56px;
         height: 56px;
+        transition: --ring-angle 0.14s ease;
+    }
+
+    .project-link__label::after {
+        transition: transform 0.14s ease;
     }
 
     .skill-list__item {
