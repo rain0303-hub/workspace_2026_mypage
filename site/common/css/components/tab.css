@@ -185,6 +185,10 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+    .projects-tabs__tab:not(.is-active):hover {
+        background: #fafafa;
+    }
+
     .projects-tabs__overview-button:hover {
         background: #f7f7f7;
     }
