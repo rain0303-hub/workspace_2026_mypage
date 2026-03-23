@@ -199,22 +199,31 @@
             },
             "project07": {
                 "left": {
-                    "project_name": "\u6848\u4ef607",
-                    "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
+                    "project_name": "金融 / 账户管理系统",
+                    "period": "2025.09 - 2025.12",
+                    "position": "PG",
+                    "overview": "参与面向银行的账户管理系统二次开发项目。通过整合印鉴登记、身份认证信息及KYC数据库，并实现与外部终端的数据联动，提升业务处理的准确性与效率。"
                 },
                 "center": {
-                    "content": "\u5728\u8fd9\u91cc\u586b\u5199\u6848\u4ef607\u7684\u8be6\u7ec6\u8bf4\u660e\u3002"
+                    "content": [
+                        "参与外部终端 IF 平台验证及数据联动流程优化",
+                        "负责 Shell / VBA 工具参数设计、共通化及脚本修改",
+                        "支持包含 SFTP 密钥认证（私钥 / MAC 配置）的外部联动环境搭建",
+                        "进行 HULFT / Systemwalker 批处理分析、日志调查及问题定位",
+                        "编写单体测试、结合测试、综合测试书，并处理相关缺陷",
+                        "通过优化 IF 说明书及处理流程提升质量",
+                        "进行 PostgreSQL Schema / 函数确认、大规模数据准备及联动流程验证",
+                        "验证从 Check Upload 到导入的一整套联动处理流程"
+                    ]
                 },
                 "right": {
                     "os": "Windows / Linux",
-                    "language": "",
-                    "framework": "",
-                    "ide": "",
-                    "db": "",
-                    "cloud": "",
-                    "tools": ""
+                    "language": "Shell / Java / VBA / VBS",
+                    "framework": "Spring Boot / Spring Batch",
+                    "ide": "Eclipse",
+                    "db": "PostgreSQL",
+                    "cloud": "-",
+                    "tools": "Git / Hinemos / Systemwalker"
                 }
             },
             "project08": {

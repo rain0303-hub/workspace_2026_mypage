@@ -199,22 +199,31 @@
             },
             "project07": {
                 "left": {
-                    "project_name": "Project 07",
-                    "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "Project summary goes here."
+                    "project_name": "Financial / Account Management System",
+                    "period": "2025.09 - 2025.12",
+                    "position": "PG",
+                    "overview": "Participated in a secondary development project for a banking account management system.Handled integrated management of seal registration, identity verification data, and KYCDB, along with data linkage with external terminals to improve processing accuracy and efficiency."
                 },
                 "center": {
-                    "content": "Add the detailed description for Project 07 here."
+                    "content": [
+                        "Verified external terminal IF platform and optimized data linkage flow",
+                        "Designed and standardized parameters for Shell / VBA tools, and modified scripts",
+                        "Supported external integration environment setup, including SFTP key authentication (private key / MAC settings)",
+                        "Analyzed batch processes and investigated logs using Hinemos / Systemwalker to identify issues",
+                        "Created unit and integration test specifications and handled defects",
+                        "通过优化 IF Improved IF specifications and processing flows to enhance quality",
+                        "Verified PostgreSQL schema / functions, prepared large-scale data, and tested data linkage processes",
+                        "Validated the full process from check upload to data import"
+                    ]
                 },
                 "right": {
                     "os": "Windows / Linux",
-                    "language": "",
-                    "framework": "",
-                    "ide": "",
-                    "db": "",
-                    "cloud": "",
-                    "tools": ""
+                    "language": "Shell / Java / VBA / VBS",
+                    "framework": "Spring Boot / Spring Batch",
+                    "ide": "Eclipse",
+                    "db": "PostgreSQL",
+                    "cloud": "-",
+                    "tools": "Git / Hinemos / Systemwalker"
                 }
             },
             "project08": {
