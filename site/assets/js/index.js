@@ -14,6 +14,28 @@ const copyIconUrl = resolveIndexAssetUrl("../images/copy.svg");
 const checkIconUrl = resolveIndexAssetUrl("../images/check.svg");
 
 const getMessage = (key, fallback) => window.siteI18n?.t(key) ?? fallback;
+const getContentAssetUrl = (key) => {
+    const path = window.siteContent?.get(key);
+    return path ? window.siteContent.resolveAssetUrl(path) : "";
+};
+
+const applyConfiguredImages = () => {
+    document.querySelectorAll("[data-content-src]").forEach((element) => {
+        const assetUrl = getContentAssetUrl(element.dataset.contentSrc);
+
+        if (assetUrl) {
+            element.setAttribute("src", assetUrl);
+        }
+    });
+
+    document.querySelectorAll("[data-content-srcset]").forEach((element) => {
+        const assetUrl = getContentAssetUrl(element.dataset.contentSrcset);
+
+        if (assetUrl) {
+            element.setAttribute("srcset", assetUrl);
+        }
+    });
+};
 
 const initHeaderLogoTapAnimation = () => {
     if (!headerLogo) {
@@ -331,6 +353,9 @@ const initNavigation = () => {
     });
 };
 
+document.addEventListener("site:content-change", applyConfiguredImages);
+
+applyConfiguredImages();
 initCopyButtons();
 initHeaderLogoTapAnimation();
 initMobileDoubleTapNavigation();

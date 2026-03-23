@@ -4,6 +4,7 @@ const mainScript =
     document.querySelector('script[src$="/assets/js/main.js"]') ??
     document.querySelector('script[src$="assets/js/main.js"]');
 const resolveMainAssetUrl = (path) => new URL(path, mainScript?.src ?? window.location.href).toString();
+const CONTENT_FILE_URL = resolveMainAssetUrl("../i18n/content.json");
 const I18N_FILE_MAP = {
     jp: resolveMainAssetUrl("../i18n/jp.json"),
     en: resolveMainAssetUrl("../i18n/en.json"),
@@ -15,11 +16,17 @@ const i18nState = {
     messages: {},
     cache: {}
 };
+const contentState = {
+    data: null
+};
 
 const getByPath = (source, path) =>
     path.split(".").reduce((value, key) => (value && key in value ? value[key] : undefined), source);
 
 const translate = (key) => getByPath(i18nState.messages, key);
+const getContent = (key) => getByPath(contentState.data, key);
+const resolveContentAssetUrl = (path) =>
+    typeof path === "string" && path ? new URL(path, CONTENT_FILE_URL).toString() : "";
 
 const applyTextTranslations = () => {
     document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -78,6 +85,16 @@ const dispatchLanguageChange = () => {
     );
 };
 
+const dispatchContentChange = () => {
+    document.dispatchEvent(
+        new CustomEvent("site:content-change", {
+            detail: {
+                content: contentState.data
+            }
+        })
+    );
+};
+
 const applyTranslations = () => {
     applyDocumentLanguage();
     applyTitleTranslation();
@@ -101,6 +118,21 @@ const loadMessages = async (locale) => {
     const messages = await response.json();
     i18nState.cache[locale] = messages;
     return messages;
+};
+
+const loadContent = async () => {
+    if (contentState.data) {
+        return contentState.data;
+    }
+
+    const response = await fetch(CONTENT_FILE_URL);
+
+    if (!response.ok) {
+        throw new Error("Failed to load content config.");
+    }
+
+    contentState.data = await response.json();
+    return contentState.data;
 };
 
 const loadMessagesWithFallback = async (locale) => {
@@ -154,6 +186,15 @@ const initI18n = async () => {
     }
 };
 
+const initContent = async () => {
+    try {
+        await loadContent();
+        dispatchContentChange();
+    } catch (error) {
+        console.error(error);
+    }
+};
+
 window.siteI18n = {
     get locale() {
         return i18nState.locale;
@@ -161,6 +202,16 @@ window.siteI18n = {
     t: translate
 };
 
+window.siteContent = {
+    get(path) {
+        return getContent(path);
+    },
+    resolveAssetUrl(path) {
+        return resolveContentAssetUrl(path);
+    }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     void initI18n();
+    void initContent();
 });

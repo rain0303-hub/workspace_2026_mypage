@@ -1,0 +1,20 @@
+{
+    "home": {
+        "main_image": {
+            "desktop": "../images/banners/bana_PC.jpg",
+            "mobile": "../images/banners/bana_SP.jpg"
+        },
+        "about": {
+            "image": "../images/projects/img01.jpg"
+        },
+        "skill": {
+            "image": "../images/projects/img02.jpg"
+        },
+        "works": {
+            "image": "../images/projects/img03.jpg"
+        },
+        "contact": {
+            "image": "../images/projects/img04.jpg"
+        }
+    }
+}
