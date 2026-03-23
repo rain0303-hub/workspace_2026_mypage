@@ -159,22 +159,28 @@
             },
             "project05": {
                 "left": {
-                    "project_name": "\u6848\u4ef605",
+                    "project_name": "SAP业务门户支援开发",
                     "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
+                    "position": "PG",
+                    "overview": "参与与 SAP S/4HANA 联动的业务门户开发支持。主要负责页面功能实现、既有功能改修以及测试相关工作。"
                 },
                 "center": {
-                    "content": "\u5728\u8fd9\u91cc\u586b\u5199\u6848\u4ef605\u7684\u8be6\u7ec6\u8bf4\u660e\u3002"
+                    "content": [
+                        "新规页面的开发及既有功能的修改",
+                        "对通过 API 获取的数据进行加工，并实现页面展示与控制处理",
+                        "页面UI调整及共通 CSS 的修改",
+                        "问题复现、原因排查及修复",
+                        "编写单体测试、集成测试、综合测试说明书，并进行缺陷调查与修复"
+                    ]
                 },
                 "right": {
-                    "os": "Windows / Linux",
-                    "language": "Go / TypeScript",
-                    "framework": "Gin / Next.js",
-                    "ide": "VS Code",
+                    "os": "Windows",
+                    "language": "HTML / CSS / JavaScript",
+                    "framework": "Vue / TailwindCSS",
+                    "ide": "VS Code / Eclipse",
                     "db": "PostgreSQL",
-                    "cloud": "",
-                    "tools": ""
+                    "cloud": "SAP BTP",
+                    "tools": "Git"
                 }
             },
             "project06": {

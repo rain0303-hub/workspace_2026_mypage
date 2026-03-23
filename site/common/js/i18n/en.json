@@ -159,22 +159,28 @@
             },
             "project05": {
                 "left": {
-                    "project_name": "Project 05",
+                    "project_name": "SAP Business Portal Development Support",
                     "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "Project summary goes here."
+                    "position": "PG",
+                    "overview": "Participated in the development support of a business portal integrated with SAP S/4HANA.Mainly responsible for front-end implementation, feature modifications, and testing activities."
                 },
                 "center": {
-                    "content": "Add the detailed description for Project 05 here."
+                    "content": [
+                        "Implemented new UI screens and modified existing features",
+                        "Processed data retrieved via APIs and handled UI rendering and control logic",
+                        "Adjusted layout and modified shared CSS styles",
+                        "Reproduced issues, investigated causes, and implemented fixes",
+                        "Created unit, integration, and system test specifications, and handled defect resolution"
+                    ]
                 },
                 "right": {
-                    "os": "Windows / Linux",
-                    "language": "Go / TypeScript",
-                    "framework": "Gin / Next.js",
-                    "ide": "VS Code",
+                    "os": "Windows",
+                    "language": "HTML / CSS / JavaScript",
+                    "framework": "Vue / TailwindCSS",
+                    "ide": "VS Code / Eclipse",
                     "db": "PostgreSQL",
-                    "cloud": "",
-                    "tools": ""
+                    "cloud": "SAP BTP",
+                    "tools": "Git"
                 }
             },
             "project06": {
