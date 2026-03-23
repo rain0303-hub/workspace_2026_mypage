@@ -219,22 +219,41 @@
             },
             "project08": {
                 "left": {
-                    "project_name": "\u6848\u4ef608",
-                    "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
+                    "project_name": "政府机关相关多项目 / 开发 · SE · AWS迁移支持",
+                    "period": "2026.01 - ",
+                    "position": "SE / PG",
+                    "overview": "同时参与多个政府机关相关系统项目，负责从需求确认到设计、开发、测试及运维支持的全流程工作。在此基础上，参与AWS迁移项目，承担测试设计、故障排查及数据迁移等关键任务，具备跨项目协调与问题解决能力。"
                 },
                 "center": {
-                    "content": "\u5728\u8fd9\u91cc\u586b\u5199\u6848\u4ef608\u7684\u8be6\u7ec6\u8bf4\u660e\u3002"
+                    "content": [
+                        {
+                            "title": "担当① : 政府机关项目（开发 / SE业务）",
+                            "items": [
+                                "负责需求分析及修正方案制定，与客户进行直接沟通与需求协调",
+                                "独立完成新功能开发及既有系统改修（设计～实现～测试）",
+                                "进行缺陷分析与修复，保障系统质量与稳定性",
+                                "在多项目并行环境下推进开发与运维工作，提高整体交付效率"
+                            ]
+                        },
+                        {
+                            "title": "担当② : AWS迁移项目(政府)",
+                            "items": [
+                                "负责迁移相关测试方案设计及测试执行",
+                                "参与现场环境故障排查，完成问题复现及原因定位",
+                                "对Java系统进行逻辑分析，评估迁移影响",
+                                "执行数据迁移（数据复制、迁移实施、结果验证）"
+                            ]
+                        }
+                    ]
                 },
                 "right": {
                     "os": "Windows / Linux",
-                    "language": "",
-                    "framework": "",
-                    "ide": "",
-                    "db": "",
-                    "cloud": "",
-                    "tools": ""
+                    "language": "HTML / CSS / JavaScript / Java / VBA",
+                    "framework": "React",
+                    "ide": "IDEA / VS Code / Eclipse",
+                    "db": "Oracle",
+                    "cloud": "AWS",
+                    "tools": "Git / GitHub / SVN"
                 }
             }
         }

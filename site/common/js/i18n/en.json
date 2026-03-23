@@ -219,22 +219,41 @@
             },
             "project08": {
                 "left": {
-                    "project_name": "Project 08",
-                    "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "Project summary goes here."
+                    "project_name": "Government Systems / Development · SE · AWS Migration",
+                    "period": "2026.01 - ",
+                    "position": "SE / PG",
+                    "overview": "Participating in multiple government-related system projects in parallel, responsible for end-to-end development lifecycle including requirements analysis, design, development, testing, and client coordination.Additionally involved in AWS migration projects, handling test design, issue investigation, and data migration tasks, demonstrating strong cross-project coordination and problem-solving capabilities."
                 },
                 "center": {
-                    "content": "Add the detailed description for Project 08 here."
+                    "content": [
+                        {
+                            "title": "Project ①: Government System Projects (Development / SE)",
+                            "items": [
+                                "Conducted requirements analysis and organized change requests, coordinating directly with clients",
+                                "Designed, developed, tested, and enhanced both new and existing system screens",
+                                "Performed defect analysis, bug fixing, and quality assurance to ensure system stability",
+                                "Supported development and maintenance operations across multiple concurrent projects"
+                            ]
+                        },
+                        {
+                            "title": "Project ②: AWS Migration Support(Government)",
+                            "items": [
+                                "Created test specifications and executed testing for AWS migration processes",
+                                "Investigated system issues on-site, including reproduction and root cause analysis",
+                                "Analyzed Java processing logic and assessed migration impact",
+                                "Executed data migration tasks, including data copying, migration execution, and post-migration validation"
+                            ]
+                        }
+                    ]
                 },
                 "right": {
                     "os": "Windows / Linux",
-                    "language": "",
-                    "framework": "",
-                    "ide": "",
-                    "db": "",
-                    "cloud": "",
-                    "tools": ""
+                    "language": "HTML / CSS / JavaScript / Java / VBA",
+                    "framework": "React",
+                    "ide": "IDEA / VS Code / Eclipse",
+                    "db": "Oracle",
+                    "cloud": "AWS",
+                    "tools": "Git / GitHub / SVN"
                 }
             }
         }
