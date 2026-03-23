@@ -5,7 +5,7 @@ const tabScript =
     document.querySelector('script[src$="/assets/js/tab.js"]') ??
     document.querySelector('script[src$="assets/js/tab.js"]');
 const resolveTabAssetUrl = (path) => new URL(path, tabScript?.src ?? window.location.href).toString();
-const overviewNewIconUrl = resolveTabAssetUrl("../images/new.svg");
+const overviewNewIconUrl = resolveTabAssetUrl("../images/icons/new.svg");
 
 const getProjectTabNumber = (tabKey) => {
     const match = /^project(\d+)$/.exec(tabKey ?? "");

@@ -10,8 +10,8 @@ const indexScript =
     document.querySelector('script[src$="/assets/js/index.js"]') ??
     document.querySelector('script[src$="assets/js/index.js"]');
 const resolveIndexAssetUrl = (path) => new URL(path, indexScript?.src ?? window.location.href).toString();
-const copyIconUrl = resolveIndexAssetUrl("../images/copy.svg");
-const checkIconUrl = resolveIndexAssetUrl("../images/check.svg");
+const copyIconUrl = resolveIndexAssetUrl("../images/icons/copy.svg");
+const checkIconUrl = resolveIndexAssetUrl("../images/icons/check.svg");
 
 const getMessage = (key, fallback) => window.siteI18n?.t(key) ?? fallback;
 const getContentAssetUrl = (key) => {
