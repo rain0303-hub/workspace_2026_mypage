@@ -25,9 +25,13 @@
         "skill": {
             "title": "技术栈",
             "frontend_label": "前端",
+            "frontend_value": "HTML / CSS / JavaScript / React / Vue",
             "backend_label": "后端",
+            "backend_value": "Java / Servlet / MyBatis / Spring / SpringBoot / SpringBatch",
             "cloud_label": "云",
-            "other_label": "其他"
+            "cloud_value": "AWS",
+            "other_label": "其他",
+            "other_value": "Shell / VBA / AI Agent"
         },
         "works": {
             "title": "项目经历",

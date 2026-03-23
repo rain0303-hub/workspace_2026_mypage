@@ -25,9 +25,13 @@
         "skill": {
             "title": "スタック",
             "frontend_label": "フロントエンド",
+            "frontend_value": "HTML / CSS / JavaScript / React / Vue",
             "backend_label": "バックエンド",
+            "backend_value": "Java / Servlet / MyBatis / Spring / SpringBoot / SpringBatch",
             "cloud_label": "クラウド",
-            "other_label": "その他"
+            "cloud_value": "AWS",
+            "other_label": "その他",
+            "other_value": "Shell / VBA / AI Agent"
         },
         "works": {
             "title": "プロジェクトについて",

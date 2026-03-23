@@ -25,9 +25,13 @@
         "skill": {
             "title": "Stack",
             "frontend_label": "Frontend",
+            "frontend_value": "HTML / CSS / JavaScript / React / Vue",
             "backend_label": "Backend",
+            "backend_value": "Java / Servlet / MyBatis / Spring / SpringBoot / SpringBatch",
             "cloud_label": "Cloud",
-            "other_label": "Other"
+            "cloud_value": "AWS",
+            "other_label": "Other",
+            "other_value": "Shell / VBA / AI Agent"
         },
         "works": {
             "title": "Projects",
