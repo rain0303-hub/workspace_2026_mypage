@@ -14,7 +14,9 @@
             "image": "../images/projects/img03.webp"
         },
         "contact": {
-            "image": "../images/projects/img04.webp"
+            "image": "../images/projects/img04.webp",
+            "email": "...@icloud.com",
+            "github": "https://github.com/..."
         }
     }
 }

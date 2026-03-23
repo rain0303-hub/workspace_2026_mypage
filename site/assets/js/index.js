@@ -35,6 +35,14 @@ const applyConfiguredImages = () => {
             element.setAttribute("srcset", assetUrl);
         }
     });
+
+    document.querySelectorAll("[data-content-text]").forEach((element) => {
+        const value = window.siteContent?.get(element.dataset.contentText);
+
+        if (typeof value === "string") {
+            element.textContent = value;
+        }
+    });
 };
 
 const initHeaderLogoTapAnimation = () => {
