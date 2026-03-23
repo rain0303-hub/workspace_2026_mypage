@@ -179,28 +179,36 @@
             },
             "project06": {
                 "left": {
-                    "project_name": "\u6848\u4ef606",
-                    "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "\u5728\u8fd9\u91cc\u586b\u5199\u9879\u76ee\u6982\u8981\u3002"
+                    "project_name": "汽车 / 零部件库存管理系统支援开发",
+                    "period": "2025.04 - 2025.12",
+                    "position": "PG",
+                    "overview": "参与汽车制造流程中零部件库存管理系统的开发支持。以实现库存实时管理为目标，围绕提升库存管理业务效率，负责画面功能开发与改修、设计资料整理以及测试对应等工作。"
                 },
                 "center": {
-                    "content": "金融 / 口座管理系统"
+                    "content": [
+                        "参与零部件库存信息（查询 / 登记 / 出库管理）功能的设计支持及开发实现",
+                        "参与发注处理及配送状态跟踪功能的开发与改修",
+                        "负责统计页面中库存变化及部件使用情况图表展示功能的实现",
+                        "编写并维护数据库表定义书、ER图、画面流程及接口相关文档",
+                        "进行共通组件及共通CSS的修改，并推进页面间统一化处理",
+                        "编写单体测试、集成测试、综合测试说明书，并进行缺陷调查与修复",
+                        "与相关人员协作，支持从开发到测试的一体化流程推进"
+                    ]
                 },
                 "right": {
-                    "os": "Windows / Linux",
-                    "language": "Python / JavaScript",
-                    "framework": "",
-                    "ide": "",
-                    "db": "MySQL",
-                    "cloud": "",
-                    "tools": ""
+                    "os": "Windows",
+                    "language": "HTML / CSS / TypeScript / Java",
+                    "framework": "React / Bootsrap / SpringBoot / SpringBatch",
+                    "ide": "VS Code / Eclipse",
+                    "db": "Oracle",
+                    "cloud": "AWS",
+                    "tools": "SVN"
                 }
             },
             "project07": {
                 "left": {
                     "project_name": "金融 / 账户管理系统",
-                    "period": "2025.09 - 2025.12",
+                    "period": "2025.04 - 2025.12",
                     "position": "PG",
                     "overview": "参与面向银行的账户管理系统二次开发项目。通过整合印鉴登记、身份认证信息及KYC数据库，并实现与外部终端的数据联动，提升业务处理的准确性与效率。"
                 },
@@ -209,7 +217,7 @@
                         "参与外部终端 IF 平台验证及数据联动流程优化",
                         "负责 Shell / VBA 工具参数设计、共通化及脚本修改",
                         "支持包含 SFTP 密钥认证（私钥 / MAC 配置）的外部联动环境搭建",
-                        "进行 HULFT / Systemwalker 批处理分析、日志调查及问题定位",
+                        "进行 Hinemos / Systemwalker 批处理分析、日志调查及问题定位",
                         "编写单体测试、结合测试、综合测试书，并处理相关缺陷",
                         "通过优化 IF 说明书及处理流程提升质量",
                         "进行 PostgreSQL Schema / 函数确认、大规模数据准备及联动流程验证",

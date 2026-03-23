@@ -179,28 +179,36 @@
             },
             "project06": {
                 "left": {
-                    "project_name": "Project 06",
-                    "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "Project summary goes here."
+                    "project_name": "Automotive / Parts Inventory Management System",
+                    "period": "2025.04 - 2025.12",
+                    "position": "PG",
+                    "overview": "Participated in the development support of a parts inventory management system for automotive manufacturing processes.Focused on improving operational efficiency through real-time inventory management, including screen development, documentation, and testing activities."
                 },
                 "center": {
-                    "content": "Add the detailed description for Project 06 here."
+                    "content": [
+                        "Supported the design and implementation of inventory functions (search / registration / outbound management)",
+                        "Developed and enhanced order processing and delivery tracking features",
+                        "Implemented statistical dashboards for inventory trends and parts usage visualization",
+                        "Created and maintained database definition documents, ER diagrams, and interface-related documentation",
+                        "Modified shared components and common CSS, and supported UI standardization across screens",
+                        "Created unit, integration, and system test specifications, and handled defect investigation and fixes",
+                        "Collaborated with team members to support the full development lifecycle from implementation to testing"
+                    ]
                 },
                 "right": {
-                    "os": "Windows / Linux",
-                    "language": "Python / JavaScript",
-                    "framework": "Django",
-                    "ide": "PyCharm",
-                    "db": "MySQL",
-                    "cloud": "",
-                    "tools": ""
+                    "os": "Windows",
+                    "language": "HTML / CSS / TypeScript / Java",
+                    "framework": "React / Bootsrap / SpringBoot / SpringBatch",
+                    "ide": "VS Code / Eclipse",
+                    "db": "Oracle",
+                    "cloud": "AWS",
+                    "tools": "SVN"
                 }
             },
             "project07": {
                 "left": {
                     "project_name": "Financial / Account Management System",
-                    "period": "2025.09 - 2025.12",
+                    "period": "2025.04 - 2025.12",
                     "position": "PG",
                     "overview": "Participated in a secondary development project for a banking account management system.Handled integrated management of seal registration, identity verification data, and KYCDB, along with data linkage with external terminals to improve processing accuracy and efficiency."
                 },
