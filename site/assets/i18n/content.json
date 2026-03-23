@@ -1,20 +1,20 @@
 {
     "home": {
         "main_image": {
-            "desktop": "../images/banners/bana_PC.jpg",
-            "mobile": "../images/banners/bana_SP.jpg"
+            "desktop": "../images/banners/bana_PC.webp",
+            "mobile": "../images/banners/bana_SP.webp"
         },
         "about": {
-            "image": "../images/projects/img01.jpg"
+            "image": "../images/projects/img01.webp"
         },
         "skill": {
-            "image": "../images/projects/img02.jpg"
+            "image": "../images/projects/img02.webp"
         },
         "works": {
-            "image": "../images/projects/img03.jpg"
+            "image": "../images/projects/img03.webp"
         },
         "contact": {
-            "image": "../images/projects/img04.jpg"
+            "image": "../images/projects/img04.webp"
         }
     }
 }
