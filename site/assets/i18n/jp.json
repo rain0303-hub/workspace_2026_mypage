@@ -16,6 +16,10 @@
         "works": "WORKS",
         "contact": "CONTACT"
     },
+    "footer": {
+        "brand": "HONG XL",
+        "copy": "© 2026 HONG XL"
+    },
     "home": {
         "about": {
             "title": "HONG XLです",
