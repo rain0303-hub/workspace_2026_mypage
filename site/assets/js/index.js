@@ -7,8 +7,8 @@ const languageToggle = document.querySelector(".language-menu__toggle");
 const scrollTopButton = document.querySelector(".scroll-top-btn");
 const indexScript =
     document.currentScript ??
-    document.querySelector('script[src$="/common/js/index.js"]') ??
-    document.querySelector('script[src$="common/js/index.js"]');
+    document.querySelector('script[src$="/assets/js/index.js"]') ??
+    document.querySelector('script[src$="assets/js/index.js"]');
 const resolveIndexAssetUrl = (path) => new URL(path, indexScript?.src ?? window.location.href).toString();
 const copyIconUrl = resolveIndexAssetUrl("../images/copy.svg");
 const checkIconUrl = resolveIndexAssetUrl("../images/check.svg");

@@ -1,13 +1,13 @@
 const I18N_STORAGE_KEY = "site-language";
 const mainScript =
     document.currentScript ??
-    document.querySelector('script[src$="/common/js/main.js"]') ??
-    document.querySelector('script[src$="common/js/main.js"]');
+    document.querySelector('script[src$="/assets/js/main.js"]') ??
+    document.querySelector('script[src$="assets/js/main.js"]');
 const resolveMainAssetUrl = (path) => new URL(path, mainScript?.src ?? window.location.href).toString();
 const I18N_FILE_MAP = {
-    jp: resolveMainAssetUrl("./i18n/jp.json"),
-    en: resolveMainAssetUrl("./i18n/en.json"),
-    zh: resolveMainAssetUrl("./i18n/zh.json")
+    jp: resolveMainAssetUrl("../i18n/jp.json"),
+    en: resolveMainAssetUrl("../i18n/en.json"),
+    zh: resolveMainAssetUrl("../i18n/zh.json")
 };
 
 const i18nState = {
@@ -103,13 +103,26 @@ const loadMessages = async (locale) => {
     return messages;
 };
 
+const loadMessagesWithFallback = async (locale) => {
+    try {
+        return await loadMessages(locale);
+    } catch (error) {
+        if (locale !== "en") {
+            console.error(`Failed to load locale "${locale}", falling back to English.`, error);
+            return loadMessages("en");
+        }
+
+        throw error;
+    }
+};
+
 const setLanguage = async (locale) => {
     const nextLocale = I18N_FILE_MAP[locale] ? locale : "jp";
-    const messages = await loadMessages(nextLocale);
+    const messages = await loadMessagesWithFallback(nextLocale);
 
-    i18nState.locale = nextLocale;
+    i18nState.locale = messages === i18nState.cache[nextLocale] ? nextLocale : "en";
     i18nState.messages = messages;
-    window.localStorage.setItem(I18N_STORAGE_KEY, nextLocale);
+    window.localStorage.setItem(I18N_STORAGE_KEY, i18nState.locale);
     applyTranslations();
 };
 

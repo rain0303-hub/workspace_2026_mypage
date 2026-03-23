@@ -2,8 +2,8 @@ const OVERVIEW_TAB_KEY = "overview";
 const OVERFLOW_SLOT_BASE_KEY = "project04";
 const tabScript =
     document.currentScript ??
-    document.querySelector('script[src$="/common/js/tab.js"]') ??
-    document.querySelector('script[src$="common/js/tab.js"]');
+    document.querySelector('script[src$="/assets/js/tab.js"]') ??
+    document.querySelector('script[src$="assets/js/tab.js"]');
 const resolveTabAssetUrl = (path) => new URL(path, tabScript?.src ?? window.location.href).toString();
 const overviewNewIconUrl = resolveTabAssetUrl("../images/new.svg");
 
