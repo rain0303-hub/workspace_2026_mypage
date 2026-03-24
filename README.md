@@ -4,7 +4,7 @@
 
 ## 🇯🇵 日本語
 
-モダンでシンプルなポートフォリオ用Webテンプレートです。  
+シンプルで分かりやすい情報紹介用のWebテンプレートです。  
 日本語・英語・中国語の多言語に対応しており、個人利用・商用利用の両方に適しています。
 
 ---
@@ -95,7 +95,7 @@ HONG XL（Xiaolin Hong）
 
 ## 🇺🇸 English
 
-A modern and clean portfolio website template with multi-language support (JP / EN / ZH).  
+A clean portfolio website template with multi-language support (JP / EN / ZH).  
 Suitable for both personal and commercial use.
 
 ---
@@ -186,7 +186,7 @@ You are NOT allowed to:
 
 ## 🇨🇳 中文
 
-一个现代、简洁的个人作品集网页模板，支持多语言（中文 / 日文 / 英文）。
+一个简洁的个人作品集网页模板，支持多语言（中文 / 日文 / 英文）。
 适用于个人展示或商业项目。
 
 ---
