@@ -49,9 +49,7 @@ site/
 #### 2. テキストの編集
 
 以下のファイルを編集してください：
-assets/data/jp.json
-assets/data/zh.json
-assets/data/en.json
+site/assets/i18n/*.json 
 
 ---
 
@@ -140,9 +138,7 @@ Please use a local server (recommended):
 #### 2. Edit content
 
 Edit the following files:
-assets/data/jp.json
-assets/data/zh.json
-assets/data/en.json
+site/assets/i18n/*.json 
 
 ---
 
@@ -231,9 +227,7 @@ site/
 #### 2. 修改文字内容
 
 编辑以下文件：
-assets/data/jp.json
-assets/data/zh.json
-assets/data/en.json
+site/assets/i18n/*.json 
 
 ---
 
