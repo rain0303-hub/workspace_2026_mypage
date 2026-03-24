@@ -132,7 +132,7 @@
     padding: 0;
     list-style: none;
     display: grid;
-    gap: 12px;
+    gap: 0;
 }
 
 .projects-tabs__overview-item {
@@ -333,7 +333,7 @@
     }
 
     .projects-tabs__overview-list {
-        gap: 10px;
+        gap: 0;
     }
 
     .projects-tabs__panel-column {
@@ -345,6 +345,10 @@
         padding: 12px 14px;
         gap: 10px;
         font-size: 0.95rem;
+    }
+
+    .projects-tabs__overview-item + .projects-tabs__overview-item::before {
+        top: 0;
     }
 
     .projects-tabs__overview-new {
