@@ -7,10 +7,6 @@ body {
     overflow-y: auto;
 }
 
-body {
-    display: block;
-}
-
 main {
     display: flex;
     padding-top: 80px;
@@ -40,10 +36,6 @@ main {
     body {
         height: auto;
         overflow: auto;
-    }
-
-    body {
-        display: block;
     }
 
     .l-header {

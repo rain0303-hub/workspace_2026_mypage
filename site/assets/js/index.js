@@ -85,7 +85,6 @@ const initCopyButtons = () => {
         window.clearTimeout(state.timeoutId);
         state.icon.src = copyIconUrl;
         state.icon.classList.remove("contact-copy-icon--checked");
-        delete state.button.dataset.copied;
 
         if (activeCopyState === state) {
             activeCopyState = null;
@@ -110,7 +109,6 @@ const initCopyButtons = () => {
                 await navigator.clipboard.writeText(value);
                 icon.src = checkIconUrl;
                 icon.classList.add("contact-copy-icon--checked");
-                button.dataset.copied = "true";
 
                 const timeoutId = window.setTimeout(() => {
                     resetCopyState({ button, icon, timeoutId });
@@ -118,7 +116,7 @@ const initCopyButtons = () => {
 
                 activeCopyState = { button, icon, timeoutId };
             } catch (error) {
-                button.dataset.copied = "false";
+                console.error("Failed to copy contact value.", error);
             }
         });
     });

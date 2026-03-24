@@ -202,10 +202,6 @@
     box-sizing: border-box;
 }
 
-.projects-tabs__panel-column + .projects-tabs__panel-column {
-    border-left: none;
-}
-
 .projects-tabs__panel-column + .projects-tabs__panel-column::before {
     content: "";
     position: absolute;
@@ -363,10 +359,6 @@
         bottom: auto;
         width: auto;
         height: 1px;
-    }
-
-    .projects-tabs__panel-column + .projects-tabs__panel-column {
-        border-top: none;
     }
 
     .projects-tabs__tab.is-active .projects-tabs__tab-secondary {
