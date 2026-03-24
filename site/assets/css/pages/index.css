@@ -105,6 +105,15 @@
     color: var(--color-text);
 }
 
+.eyebrow {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 10px;
+}
+
 .sub-area-01__text,
 .sub-area-02__text,
 .skill-list__value,
