@@ -3,13 +3,43 @@
 :root {
     --color-bg: #f6f3ee;
     --color-surface: #ffffff;
+    --color-surface-soft: #fafafa;
+    --color-surface-muted: #f7f7f7;
+    --color-surface-subtle: #f3f3f3;
     --color-text: #222222;
+    --color-text-strong: #1f1f1f;
     --color-text-muted: #6f6f6f;
+    --color-text-light: #888888;
+    --color-text-inverse: #111111;
+    --color-text-black: #000000;
     --color-border: rgba(34, 34, 34, 0.14);
+    --color-border-soft: rgba(34, 34, 34, 0.08);
+    --color-border-strong: #d0d0d0;
+    --color-border-muted: #d9d9d9;
+    --color-border-subtle: #dddddd;
+    --color-accent-blue: #1f3a75;
+    --color-accent-red: #d63d34;
+    --color-accent-success: #8bb49d;
+    --color-accent-violet: #9b78d1;
+    --color-accent-pink: #ef93ad;
+    --color-accent-indigo: #7c97c9;
+    --color-accent-gold: #d3a16a;
     --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.08);
     --shadow-card-hover: 0 24px 52px rgba(0, 0, 0, 0.16);
+    --shadow-float: 0 18px 36px rgba(41, 45, 50, 0.12);
+    --shadow-float-strong: 0 22px 44px rgba(0, 0, 0, 0.12);
     --content-width: 1000px;
     --page-padding: 24px;
+    --font-family-sans: "Inter Tight", sans-serif;
+    --font-family-display: "MichromaLocal", "Inter Tight", sans-serif;
+    --radius-pill: 999px;
+    --radius-card: 6px;
+    --radius-panel: 14px;
+    --radius-panel-lg: 20px;
+    --radius-panel-xl: 24px;
+    --transition-fast: 0.2s ease;
+    --transition-ui: 0.22s ease;
+    --transition-panel: 0.26s ease;
 }
 
 html {
@@ -20,7 +50,7 @@ body {
     margin: 0;
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: "Inter Tight", sans-serif;
+    font-family: var(--font-family-sans);
 }
 
 .scroll-top-btn {
@@ -35,7 +65,7 @@ body {
     height: 64px;
     padding: 0;
     border: 1px solid rgba(255, 255, 255, 0.72);
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.68) 100%);
     box-shadow:
@@ -49,7 +79,7 @@ body {
     visibility: hidden;
     pointer-events: none;
     transform: translateY(14px);
-    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease, box-shadow 0.22s ease;
+    transition: opacity var(--transition-ui), transform var(--transition-ui), visibility var(--transition-ui), box-shadow var(--transition-ui);
 }
 
 .scroll-top-btn.is-visible {

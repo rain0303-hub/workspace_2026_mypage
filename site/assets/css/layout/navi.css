@@ -28,16 +28,16 @@
     box-shadow: none;
     backdrop-filter: none;
     cursor: pointer;
-    transition: opacity 0.22s ease, transform 0.22s ease;
+    transition: opacity var(--transition-ui), transform var(--transition-ui);
 }
 
 .navi-toggle__line {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: #111111;
-    border-radius: 999px;
-    transition: transform 0.22s ease, opacity 0.22s ease;
+    background-color: var(--color-text-inverse);
+    border-radius: var(--radius-pill);
+    transition: transform var(--transition-ui), opacity var(--transition-ui);
 }
 
 .navi-btn-container {
@@ -49,17 +49,17 @@
 .navi-btn {
     position: relative;
     text-decoration: none;
-    color: #111111;
+    color: var(--color-text-inverse);
     font-size: 0.94rem;
     font-weight: 400;
-    font-family: "MichromaLocal", "Inter Tight", sans-serif;
+    font-family: var(--font-family-display);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     text-shadow: 0 0 0.35px currentColor, 0 0 0.35px currentColor;
     padding: 9px 18px;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     transform-origin: center;
-    transition: color 0.2s ease, opacity 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    transition: color var(--transition-fast), opacity var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .navi-btn::after {
@@ -69,15 +69,15 @@
     right: 18px;
     bottom: 6px;
     height: 2px;
-    background-color: #111111;
+    background-color: var(--color-text-inverse);
     transform: scaleX(0);
     transform-origin: left center;
-    transition: transform 0.22s ease;
+    transition: transform var(--transition-ui);
 }
 
 .navi-btn:hover,
 .navi-btn:focus-visible {
-    color: #000000;
+    color: var(--color-text-black);
     opacity: 1;
     text-shadow: 0 0 0.35px currentColor, 0 0 0.35px currentColor;
     transform: scale(1.06);
@@ -125,16 +125,16 @@
     min-width: 140px;
     padding: 10px;
     border: 1px solid rgba(17, 17, 17, 0.08);
-    border-radius: 20px;
+    border-radius: var(--radius-panel-lg);
     background: rgba(255, 255, 255, 0.84);
-    box-shadow: 0 18px 36px rgba(41, 45, 50, 0.12);
+    box-shadow: var(--shadow-float);
     backdrop-filter: blur(18px);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transform: translateY(-14px);
-    clip-path: inset(0 0 100% 0 round 20px);
-    transition: clip-path 0.26s ease, transform 0.26s ease, opacity 0.2s ease, visibility 0.26s ease;
+    clip-path: inset(0 0 100% 0 round var(--radius-panel-lg));
+    transition: clip-path var(--transition-panel), transform var(--transition-panel), opacity var(--transition-fast), visibility var(--transition-panel);
 }
 
 .language-menu.is-open .language-menu__dropdown {
@@ -142,23 +142,23 @@
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
-    clip-path: inset(0 0 0 0 round 20px);
+    clip-path: inset(0 0 0 0 round var(--radius-panel-lg));
 }
 
 .language-menu__option {
     padding: 12px 16px;
     border: none;
-    border-radius: 14px;
+    border-radius: var(--radius-panel);
     background: rgba(246, 243, 238, 0.82);
-    color: #111111;
-    font-family: "MichromaLocal", "Inter Tight", sans-serif;
+    color: var(--color-text-inverse);
+    font-family: var(--font-family-display);
     font-weight: 400;
     letter-spacing: 0.08em;
     font-size: 0.9rem;
     text-shadow: 0 0 0.3px currentColor, 0 0 0.3px currentColor;
     text-align: left;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .language-menu__option:hover,
@@ -204,7 +204,7 @@
         pointer-events: none;
         transform: translateY(-14px);
         clip-path: inset(0 0 100% 0 round 24px);
-        transition: clip-path 0.28s ease, transform 0.28s ease, opacity 0.2s ease, visibility 0.28s ease;
+        transition: clip-path 0.28s ease, transform 0.28s ease, opacity var(--transition-fast), visibility 0.28s ease;
     }
 
     .l-header.is-menu-open .l-navi {
@@ -223,8 +223,8 @@
         min-width: 154px;
         background: rgba(255, 255, 255, 0.84);
         border: 1px solid rgba(17, 17, 17, 0.08);
-        border-radius: 24px;
-        box-shadow: 0 22px 44px rgba(0, 0, 0, 0.12);
+        border-radius: var(--radius-panel-xl);
+        box-shadow: var(--shadow-float-strong);
         backdrop-filter: blur(18px);
     }
 
@@ -244,7 +244,7 @@
         letter-spacing: 0.1em;
         white-space: nowrap;
         -webkit-tap-highlight-color: transparent;
-        transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+        transition: background-color var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
     }
 
     .navi-btn::after {
@@ -253,14 +253,14 @@
 
     .navi-btn:hover,
     .navi-btn:focus-visible {
-        color: #000000;
+        color: var(--color-text-black);
         text-shadow: 0 0 0.35px currentColor, 0 0 0.35px currentColor;
         transform: translateX(4px);
     }
 
     .navi-btn:focus:not(:focus-visible),
     .navi-btn:active {
-        color: #111111;
+        color: var(--color-text-inverse);
         text-shadow: 0 0 0.35px currentColor, 0 0 0.35px currentColor;
         transform: none;
     }
@@ -268,7 +268,7 @@
     .navi-btn:focus,
     .navi-btn:active,
     .navi-btn:visited {
-        color: #111111;
+        color: var(--color-text-inverse);
     }
 
     .language-menu {
@@ -317,7 +317,7 @@
         margin-top: 8px;
         padding: 10px;
         border-radius: 16px;
-        box-shadow: 0 18px 36px rgba(41, 45, 50, 0.12);
+        box-shadow: var(--shadow-float);
         background: rgba(255, 255, 255, 0.82);
         clip-path: inset(0 0 100% 0 round 16px);
     }

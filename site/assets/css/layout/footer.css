@@ -30,7 +30,7 @@
 .l-footer__copy {
     margin: 0;
     color: var(--color-text);
-    font-family: "MichromaLocal", "Inter Tight", sans-serif;
+    font-family: var(--font-family-display);
 }
 
 .l-footer__brand {
@@ -51,7 +51,7 @@
     color: #5e5e5e;
     text-decoration: none;
     font-size: 0.95rem;
-    font-family: "MichromaLocal", "Inter Tight", sans-serif;
+    font-family: var(--font-family-display);
     letter-spacing: 0.04em;
 }
 
@@ -62,10 +62,10 @@
     right: 0;
     bottom: -4px;
     height: 1px;
-    background-color: #111111;
+    background-color: var(--color-text-inverse);
     transform: scaleX(0);
     transform-origin: left center;
-    transition: transform 0.22s ease;
+    transition: transform var(--transition-ui);
 }
 
 .l-footer__link:hover,

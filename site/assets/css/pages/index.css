@@ -66,7 +66,7 @@
     min-height: 270px;
     padding: 40px;
     background-color: var(--color-surface);
-    border-radius: 6px;
+    border-radius: var(--radius-card);
     box-sizing: border-box;
     box-shadow: var(--shadow-card);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -110,7 +110,7 @@
     font-size: 12px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #888;
+    color: var(--color-text-light);
     margin-bottom: 10px;
 }
 
@@ -185,7 +185,7 @@
     box-sizing: border-box;
     background: conic-gradient(
         from -90deg,
-        #d63d34 0deg var(--ring-angle),
+        var(--color-accent-red) 0deg var(--ring-angle),
         #c9c9c9 var(--ring-angle) 360deg
     );
     transition: --ring-angle 0.25s ease;
@@ -232,7 +232,7 @@
     align-items: start;
     gap: 16px;
     padding-top: 10px;
-    border-top: 1px solid rgba(34, 34, 34, 0.08);
+    border-top: 1px solid var(--color-border-soft);
 }
 
 .skill-list__item:first-child {
@@ -263,7 +263,7 @@
 
 .contact-copy-label {
     flex: 0 0 auto;
-    color: #1f3a75;
+    color: var(--color-accent-blue);
 }
 
 .contact-copy-value {
@@ -287,7 +287,7 @@
     width: 25px;
     height: 25px;
     flex: 0 0 auto;
-    transition: width 0.2s ease, height 0.2s ease;
+    transition: width var(--transition-fast), height var(--transition-fast);
 }
 
 .contact-copy-icon--checked {
