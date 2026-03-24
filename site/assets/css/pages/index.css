@@ -73,6 +73,11 @@
     touch-action: manipulation;
 }
 
+.text-box__content {
+    width: 100%;
+    margin-top: 27px;
+}
+
 .sub-area-01__text-box {
     margin-left: -60px;
 }
@@ -96,6 +101,7 @@
     margin: 0 0 20px;
     font-size: 2.2rem;
     line-height: 1.2;
+    letter-spacing: 0.04em;
     color: var(--color-text);
 }
 
@@ -110,11 +116,16 @@
 .sub-area-02__text,
 .skill-list__value {
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
 }
 
 .sub-area-01__text {
-    margin: 1em 0 0;
+    margin: 0;
+}
+
+.sub-area-01__text + .sub-area-01__text {
+    margin-bottom: 0.8em;
 }
 
 .sub-area-02__text {
@@ -122,7 +133,7 @@
 }
 
 .indent {
-    text-indent: 1em;
+    text-indent: 0;
 }
 
 .project-link {
@@ -135,6 +146,7 @@
 
 .project-link__label {
     position: relative;
+    margin: 0;
     font-size: 1.05rem;
     line-height: 1.4;
 }
@@ -220,10 +232,17 @@
 }
 
 .skill-list__label {
+    margin: 0;
     color: var(--color-text);
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.02em;
+}
+
+.skill-list__value,
+.contact-copy-label,
+.contact-copy-value {
+    margin: 0;
 }
 
 .contact-copy-row {
@@ -319,6 +338,10 @@
         padding: 24px;
     }
 
+    .text-box__content {
+        margin-top: 44px;
+    }
+
     #skill .sub-area-02__text-box {
         padding: 20px 24px;
     }
@@ -396,8 +419,12 @@
     .sub-area-02__text-box {
         order: 2;
         margin-top: -32px;
-        padding: 28px;
+        padding: 20px;
         border-radius: 0;
+    }
+
+    .text-box__content {
+        margin-top: 32px;
     }
 
     .sub-area-01__text-box:hover,

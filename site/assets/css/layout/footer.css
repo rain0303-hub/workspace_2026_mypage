@@ -30,6 +30,7 @@
 .l-footer__copy {
     margin: 0;
     color: var(--color-text);
+    font-family: "MichromaLocal", "Inter Tight", sans-serif;
 }
 
 .l-footer__brand {
@@ -49,6 +50,7 @@
     color: #5e5e5e;
     text-decoration: none;
     font-size: 0.95rem;
+    font-family: "MichromaLocal", "Inter Tight", sans-serif;
     letter-spacing: 0.04em;
 }
 
