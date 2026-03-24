@@ -22,6 +22,7 @@
     },
     "home": {
         "about": {
+            "eyebrow": "Web Developer",
             "title": "Hi! I'm HONG",
             "body_1": "I work as an IT engineer in Japan and focus on web development from frontend to backend.",
             "body_2": "I value building stable systems and continuously improving them."

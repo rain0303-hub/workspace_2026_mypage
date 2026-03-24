@@ -47,6 +47,7 @@
 }
 
 .l-footer__link {
+    position: relative;
     color: #5e5e5e;
     text-decoration: none;
     font-size: 0.95rem;
@@ -54,9 +55,27 @@
     letter-spacing: 0.04em;
 }
 
+.l-footer__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 1px;
+    background-color: #111111;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.22s ease;
+}
+
 .l-footer__link:hover,
 .l-footer__link:focus-visible {
     color: var(--color-text);
+}
+
+.l-footer__link:hover::after,
+.l-footer__link:focus-visible::after {
+    transform: scaleX(1);
 }
 
 .l-footer__copy {
@@ -81,5 +100,9 @@
 
     .l-footer__nav {
         gap: 14px;
+    }
+
+    .l-footer__link::after {
+        content: none;
     }
 }

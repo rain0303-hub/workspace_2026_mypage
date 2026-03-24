@@ -22,6 +22,7 @@
     },
     "home": {
         "about": {
+            "eyebrow": "Web Developer",
             "title": "HONG XLです",
             "body_1": "日本で IT エンジニアとして Web 開発に携わっています。",
             "body_2": "フロントエンドからバックエンドまで一貫して対応しています。"
