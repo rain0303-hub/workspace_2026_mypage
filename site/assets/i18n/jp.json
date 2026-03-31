@@ -88,68 +88,87 @@
         "content": {
             "project01": {
                 "left": {
-                    "project_name": "案件01",
-                    "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "案件概要をここに記入します。"
+                    "project_name": "食品・飲料製造管理システム保守支援",
+                    "period": "2020.07 - 2021.03",
+                    "position": "PG",
+                    "overview": "食品・飲料製造業向けに、原材料から製品までの工程を管理するシステムの保守支援を担当。既存機能の改修、画面開発、テスト対応を通じて、運用中システムの安定稼働と品質向上に従事。"
                 },
                 "center": {
-                    "content": "案件01の詳細内容をここに記入します。"
+                    "content": [
+                        "在庫管理機能の開発・改修",
+                        "共通部品、CSSの作成および修正",
+                        "複数画面の改修対応",
+                        "単体テスト・結合テスト・総合テスト仕様書の作成および不具合対応"
+                    ]
                 },
                 "right": {
-                    "os": "Windows / Linux",
-                    "language": "Java / JavaScript",
-                    "framework": "Spring Boot",
-                    "ide": "Eclipse",
+                    "os": "Windows",
+                    "language": "HTML / CSS / TypeScript",
+                    "framework": "Angular",
+                    "ide": "VS Code",
                     "db": "PostgreSQL",
-                    "cloud": "",
-                    "tools": ""
+                    "cloud": "-",
+                    "tools": "Git"
                 }
             },
             "project02": {
                 "left": {
-                    "project_name": "案件02",
-                    "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "案件概要をここに記入します。"
+                    "project_name": "通信サービス管理システム開発支援",
+                    "period": "2021.04 - 2021.12",
+                    "position": "PG",
+                    "overview": "通信サービス向け契約・請求管理システムの開発支援案件。既存機能の改修、画面改善、バッチ処理の修正、不具合対応を担当。"
                 },
                 "center": {
-                    "content": "案件02の詳細内容をここに記入します。"
+                    "content": [
+                        "契約者情報の検索・登録・編集機能の開発",
+                        "通信量および請求情報の自動集計バッチの改修",
+                        "プラン変更時におけるシミュレーション機能の追加",
+                        "障害発生時の履歴照会・復旧対応画面の開発",
+                        "サポートセンター向け対応記録画面のUI改善",
+                        "既存機能の不具合修正および品質向上対応"
+                    ]
                 },
                 "right": {
-                    "os": "Windows / Linux",
-                    "language": "TypeScript / Python",
-                    "framework": "React / FastAPI",
-                    "ide": "VS Code",
-                    "db": "MySQL",
-                    "cloud": "",
-                    "tools": ""
+                    "os": "Windows",
+                    "language": "HTML / CSS / TypeScript / Java",
+                    "framework": "Vue",
+                    "ide": "VS Code / Eclipse",
+                    "db": "PostgreSQL",
+                    "cloud": "-",
+                    "tools": "Git / SVN"
                 }
             },
             "project03": {
                 "left": {
-                    "project_name": "案件03",
-                    "period": "YYYY.MM - YYYY.MM",
-                    "position": "",
-                    "overview": "案件概要をここに記入します。"
+                    "project_name": "美容・理容業管理システム保守開発",
+                    "period": "2022.01 - 2022.09",
+                    "position": "PG",
+                    "overview": "美容・理容サロン向けに、顧客管理・予約管理・在庫管理を一元化する業務システムの保守開発を担当。GeneXusを用いた既存機能の改修、画面修正、不具合対応を中心に、運用中システムの安定稼働と業務効率化に従事。"
                 },
                 "center": {
-                    "content": "案件03の詳細内容をここに記入します。"
+                    "content": [
+                        "顧客管理・予約管理・在庫管理機能の改修",
+                        "既存画面の修正および操作性改善",
+                        "帳票・一覧・検索機能の保守対応",
+                        "不具合調査、原因切り分け、修正対応",
+                        "単体テスト・結合テスト・総合テスト仕様書の作成、不具合調査・改修対応",
+                        "運用中システムに対する保守開発対応"
+                    ]
                 },
                 "right": {
-                    "os": "Windows / Linux",
-                    "language": "PHP / SQL",
-                    "framework": "Laravel",
-                    "ide": "PhpStorm",
-                    "db": "Oracle",
-                    "cloud": "",
-                    "tools": ""
+                    "os": "Windows",
+                    "language": "GeneXus / Java / SQL",
+                    "framework": "GeneXus",
+                    "ide": "GeneXus / Eclipse",
+                    "db": "PostgreSQL",
+                    "cloud": "-",
+                    "tools": "Git"
                 }
             },
             "project04": {
                 "left": {
                     "project_name": "教育 / 研究管理システム二次開発",
-                    "period": "YYYY.MM - YYYY.MM",
+                    "period": "2022.10 - 2023.08",
                     "position": "PG",
                     "overview": "教育機関向けの学生情報・授業情報・研究データを管理するシステムの二次開発に参画。主に画面機能の実装および既存機能の改修、テスト対応を担当。"
                 },
@@ -240,7 +259,7 @@
                         "SFTP鍵認証（秘密鍵／MAC設定）を含む外部連携環境構築支援",
                         "Hinemos／Systemwalkerによるバッチ処理解析、ログ調査、問題切り分け",
                         "単体テスト・結合テスト・総合テスト仕様書の作成および不具合対応",
-                        "IF仕様書・処理フロー改善による品質向上",
+                        "IF仕様書・処理フロー改修",
                         "PostgreSQLのスキーマ／関数確認、大規模データ準備、連携プロセス検証",
                         "チェックアップロード～取込までの一連処理の検証"
                     ]
@@ -279,7 +298,7 @@
                                 "AWS移行に伴う試験仕様書作成および試験実施",
                                 "現地サーバ室における障害調査、再現確認、原因切り分け支援",
                                 "Java処理の調査および移行影響確認",
-                                "データコピー、データ移行、移行後検証"
+                                "データコピー、データ移行、移行後の不具合調査・修正対応・動作検証"
                             ]
                         }
                     ]
